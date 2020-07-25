@@ -1,7 +1,7 @@
 <?php
 namespace MonthlyBasis\ContentModeration\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 class Index extends AbstractActionController
 {
