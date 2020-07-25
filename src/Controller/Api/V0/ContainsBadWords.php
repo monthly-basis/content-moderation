@@ -17,8 +17,21 @@ class ContainsBadWords extends AbstractActionController
             'application/json'
         );
 
+        if (isset($_GET['string'])) {
+            $array = [
+                'success' => true,
+            ];
+        } else {
+            $array = [
+                'success' => false,
+            ];
+        }
+
         $viewModel = new ViewModel();
         $viewModel->setTerminal(true);
+        $viewModel->setVariables([
+            'array' => $array,
+        ]);
         return $viewModel;
     }
 }
