@@ -15,6 +15,9 @@ class Module
         return [
             'controllers' => [
                 'factories' => [
+                    ContentModerationController\Api\V0\ContainsBadWords::class => function ($sm) {
+                        return new ContentModerationController\Api\V0\ContainsBadWords();
+                    },
                     ContentModerationController\Index::class => function ($sm) {
                         return new ContentModerationController\Index();
                     },
@@ -29,6 +32,35 @@ class Module
                             'defaults' => [
                                 'controller' => ContentModerationController\Index::class,
                                 'action'     => 'index',
+                            ],
+                        ],
+                    ],
+                    'api' => [
+                        'type' => Literal::class,
+                        'options' => [
+                            'route'    => '/api',
+                        ],
+                        'may_terminate' => false,
+                        'child_routes' => [
+                            'v0' => [
+                                'type' => Literal::class,
+                                'options' => [
+                                    'route'    => '/v0',
+                                ],
+                                'may_terminate' => false,
+                                'child_routes' => [
+                                    'contains-bad-words' => [
+                                        'type' => Literal::class,
+                                        'options' => [
+                                            'route'    => '/contains-bad-words',
+                                            'defaults' => [
+                                                'controller' => ContentModerationController\Api\V0\ContainsBadWords::class,
+                                                'action'     => 'index',
+                                            ],
+                                        ],
+                                        'may_terminate' => true,
+                                    ],
+                                ],
                             ],
                         ],
                     ],
