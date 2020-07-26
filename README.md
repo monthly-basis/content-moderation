@@ -8,7 +8,7 @@ Determine whether text contains bad words.
 
 ## Examples
 
-### Standalone php
+### Standalone PHP
 
     <?php
     require_once('vendor/autoload.php');
