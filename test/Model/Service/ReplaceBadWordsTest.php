@@ -9,8 +9,8 @@ use PHPUnit\Framework\TestCase;
  *
  * The following code contains extremely explicit language.
  *
- * We have written code this code to prevent users from publicly posting
- * foul, vulgar, and offesnive language.
+ * We have written code to prevent users from publicly posting foul, vulgar,
+ * and offensive language.
  *
  * In order to ensure that this code is functioning properly,
  * we must use explicit language in our own code.
