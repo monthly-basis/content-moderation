@@ -6,8 +6,6 @@ namespace MonthlyBasis\ContentModeration\Model\Service;
  *
  * The following code contains extremely explicit language.
  *
- * We have written code to replace bad words posted by users with !@#$%^&.
- *
  * In order to ensure that this code is functioning properly,
  * we must use explicit language in our own code.
  *
