@@ -42,13 +42,13 @@ class ToHtmlTest extends TestCase
 
     public function test_toHtml_stringWithUrls_correctHtml()
     {
-        $string = 'https://www.jiskha.com https://www.google.com';
+        $string = 'https://www.jiskha.com https://www.yahoo.com';
         $this->escapeServiceMock
              ->method('escape')
              ->willReturn($string);
 
         $this->assertSame(
-            '<a href="https://www.jiskha.com">https://www.jiskha.com</a> <a href="https://www.google.com" target="_blank" rel="nofollow external noopener">https://www.google.com</a>',
+            '<a href="https://www.jiskha.com">https://www.jiskha.com</a> <a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>',
             $this->toHtmlService->toHtml($string)
         );
     }
