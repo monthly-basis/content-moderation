@@ -1268,16 +1268,16 @@
         },
         {
             "name": "leo-galleguillos/string",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "8dc32fd2bde6d22e4b277b77b872258ff91c39d1"
+                "reference": "57028c88ecad3566e6c1fe5cc284ae6b2c0b495b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/8dc32fd2bde6d22e4b277b77b872258ff91c39d1",
-                "reference": "8dc32fd2bde6d22e4b277b77b872258ff91c39d1",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/57028c88ecad3566e6c1fe5cc284ae6b2c0b495b",
+                "reference": "57028c88ecad3566e6c1fe5cc284ae6b2c0b495b",
                 "shasum": ""
             },
             "require": {
@@ -1294,7 +1294,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-08-01T01:23:13+00:00"
+            "time": "2020-08-09T03:33:27+00:00"
         },
         {
             "name": "monthly-basis/laminas-test",
