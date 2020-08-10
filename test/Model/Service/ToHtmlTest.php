@@ -15,10 +15,14 @@ class ToHtmlTest extends TestCase
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
         );
+        $this->toHtmlServiceMock = $this->createMock(
+            StringService\Url\ToHtml::class
+        );
 
         $this->toHtmlService = new ContentModerationService\ToHtml(
             $this->replaceBadWordsServiceMock,
-            $this->escapeServiceMock
+            $this->escapeServiceMock,
+            $this->toHtmlServiceMock
         );
     }
 
@@ -44,8 +48,20 @@ class ToHtmlTest extends TestCase
     {
         $string = 'https://www.jiskha.com https://www.yahoo.com';
         $this->escapeServiceMock
-             ->method('escape')
-             ->willReturn($string);
+            ->expects($this->once())
+            ->method('escape')
+            ->willReturn($string);
+        $this->toHtmlServiceMock
+            ->expects($this->exactly(2))
+            ->method('toHtml')
+            ->withConsecutive(
+                ['https://www.jiskha.com'],
+                ['https://www.yahoo.com']
+            )
+            ->willReturnOnConsecutiveCalls(
+                '<a href="https://www.jiskha.com">https://www.jiskha.com</a>',
+                '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>'
+            );
 
         $this->assertSame(
             '<a href="https://www.jiskha.com">https://www.jiskha.com</a> <a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>',

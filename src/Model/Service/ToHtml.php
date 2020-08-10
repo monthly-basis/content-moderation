@@ -8,10 +8,12 @@ class ToHtml
 {
     public function __construct(
         ContentModerationService\ReplaceBadWords $replaceBadWordsService,
-        StringService\Escape $escapeService
+        StringService\Escape $escapeService,
+        StringService\Url\ToHtml $toHtmlService
     ) {
         $this->replaceBadWordsService = $replaceBadWordsService;
         $this->escapeService          = $escapeService;
+        $this->toHtmlService          = $toHtmlService;
     }
 
     public function toHtml(string $message): string
@@ -21,13 +23,12 @@ class ToHtml
 
         $messageEscaped = $this->escapeService->escape($message);
 
-        $pattern = '|(https?://(?!(www\.)?jiskha\.com)[^\s]+)|i';
-        $replacement = '<a href="$1" target="_blank" rel="nofollow external noopener">$1</a>';
-        $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
-
-        $pattern = '|(https?://(?=(www\.)?jiskha\.com)[^\s]+)|i';
-        $replacement = '<a href="$1">$1</a>';
-        $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
+        $pattern = '|https?://\S+|i';
+        $messageEscaped = preg_replace_callback(
+            $pattern,
+            [$this, 'pregReplaceCallback'],
+            $messageEscaped
+        );
 
         $pattern        = '#&lt;(/?)(b|i|u|sub|sup)&gt;#i';
         $replacement    = '<$1$2>';
@@ -39,5 +40,11 @@ class ToHtml
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
         return nl2br($messageEscaped);
+    }
+
+    protected function pregReplaceCallback(array $matches)
+    {
+        $url = $matches[0];
+        return $this->toHtmlService->toHtml($url);
     }
 }
