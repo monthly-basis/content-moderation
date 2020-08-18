@@ -57,7 +57,7 @@ class RegularExpressionsOfBadWords
             '/cock\s*suck/i',
             '/\bcum\b/i',
 
-            '/\bc(\W|\_| )*(u|\W) ?n ?t/i',
+            '/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
 
             '/dammit/i',
             '/damnit/i',
