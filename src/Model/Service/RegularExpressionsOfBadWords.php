@@ -70,7 +70,7 @@ class RegularExpressionsOfBadWords
             '/dumbass/i',
             '/dumba\W\W/i',
             '/f(a|4)g/i',
-            '/fap/i',
+            '/fap/',
             '/fleshlight/i',
             '/foreskin/i',
 
