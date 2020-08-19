@@ -19,7 +19,7 @@ class ToHtml
     public function toHtml(string $message): string
     {
         $message = trim($message);
-        $message = $this->replaceBadWordsService->replaceBadWords($message);
+        $message = $this->replaceBadWordsService->replaceBadWords($message, '');
 
         $messageEscaped = $this->escapeService->escape($message);
 
