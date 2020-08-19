@@ -325,4 +325,19 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
     }
+
+    public function testReplaceBadWords_alternateReplacement_appropriateString()
+    {
+        $string = '\t\tthis sentence has line breaks and no bad words\r\n\n';
+        $this->assertSame(
+            $string,
+            $this->replaceBadWordsService->replaceBadWords($string, 'foobar')
+        );
+
+        $string = 'foo bar ozeybhv baz';
+        $this->assertSame(
+            'foo bar  baz',
+            $this->replaceBadWordsService->replaceBadWords($string, '')
+        );
+    }
 }

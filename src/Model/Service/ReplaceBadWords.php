@@ -12,11 +12,11 @@ class ReplaceBadWords
     }
 
     public function replaceBadWords(
-        string $string
+        string $string,
+        string $replacement = '!@#$%^&'
     ): string {
-        $patterns    = $this->regularExpressionsOfBadWords
-                            ->getRegularExpressionsOfBadWords();
-        $replacement = '!@#$%^&';
+        $patterns = $this->regularExpressionsOfBadWords
+            ->getRegularExpressionsOfBadWords();
         $string = preg_replace($patterns, $replacement, $string);
         return is_null($string) ? '' : $string;
     }
