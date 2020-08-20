@@ -12,6 +12,7 @@ class RegularExpressionsOfImmatureWords
             '/lmf?ao/i',
             '/p\W*o\W*o\W*p/i',
             '/retard/i',
+            '/stupid/i',
         ];
     }
 }

@@ -57,5 +57,11 @@ class ReplaceImmatureWordsTest extends TestCase
             ' ed answer',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
+
+        $string = 'stupid questions';
+        $this->assertSame(
+            ' questions',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
     }
 }
