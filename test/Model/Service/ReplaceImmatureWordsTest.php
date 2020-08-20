@@ -22,9 +22,15 @@ class ReplaceImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
-        $string = 'butt kiss my';
+        $string = 'asf really';
         $this->assertSame(
-            ' kiss my',
+            ' really',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
+
+        $string = 'butt butter';
+        $this->assertSame(
+            ' butter',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
