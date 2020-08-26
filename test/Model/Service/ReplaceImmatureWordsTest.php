@@ -34,6 +34,12 @@ class ReplaceImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
+        $string = 'damn';
+        $this->assertSame(
+            '',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
+
         $string = 'dumb people dumbbell';
         $this->assertSame(
             ' people dumbbell',

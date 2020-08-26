@@ -8,6 +8,7 @@ class RegularExpressionsOfImmatureWords
         return [
             '/asf/i',
             '/b\W*u\W*t\W*t\b/i',
+            '/damn/i',
             '/dumb\b/i',
             '/f\W*a\W*r\W*t/i',
             '/idiot/i',
