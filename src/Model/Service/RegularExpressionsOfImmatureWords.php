@@ -6,6 +6,7 @@ class RegularExpressionsOfImmatureWords
     public function getRegularExpressionsOfImmatureWords(
     ): array {
         return [
+            '/\barses?\b/i',
             '/asf/i',
             '/b\W*u\W*t\W*t\b/i',
             '/damn/i',
