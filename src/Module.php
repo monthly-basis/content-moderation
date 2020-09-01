@@ -66,6 +66,9 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressionsOfImmatureWords::class)
                     );
                 },
+                ContentModerationService\RegularExpressions\SocialMedia::class => function ($sm) {
+                    return new ContentModerationService\RegularExpressions\SocialMedia();
+                },
                 ContentModerationService\RegularExpressionsOfBadWords::class => function ($sm) {
                     return new ContentModerationService\RegularExpressionsOfBadWords(
                     );
