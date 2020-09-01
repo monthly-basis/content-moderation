@@ -70,12 +70,10 @@ class Module
                     return new ContentModerationService\RegularExpressions\SocialMedia();
                 },
                 ContentModerationService\RegularExpressionsOfBadWords::class => function ($sm) {
-                    return new ContentModerationService\RegularExpressionsOfBadWords(
-                    );
+                    return new ContentModerationService\RegularExpressionsOfBadWords();
                 },
                 ContentModerationService\RegularExpressionsOfImmatureWords::class => function ($sm) {
-                    return new ContentModerationService\RegularExpressionsOfImmatureWords(
-                    );
+                    return new ContentModerationService\RegularExpressionsOfImmatureWords();
                 },
                 ContentModerationService\ReplaceBadWords::class => function ($sm) {
                     return new ContentModerationService\ReplaceBadWords(
