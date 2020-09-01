@@ -18,6 +18,7 @@ class RegularExpressionsOfImmatureWords
             '/p\W*o\W*o\W*p/i',
             '/retard/i',
             '/stupid/i',
+            '/wtf/i',
         ];
     }
 }
