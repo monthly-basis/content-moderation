@@ -1,5 +1,5 @@
 <?php
-namespace MonthlyBasis\ContentModerationTest\Model\Service;
+namespace MonthlyBasis\ContentModerationTest\Model\Service\Contains;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
@@ -9,7 +9,7 @@ class ContainsImmatureWordsTest extends TestCase
     protected function setUp(): void
     {
         $this->regularExpressionsOfImmatureWordsService = new ContentModerationService\RegularExpressions\ImmatureWords();
-        $this->containsImmatureWordsService = new ContentModerationService\ContainsImmatureWords(
+        $this->containsImmatureWordsService = new ContentModerationService\Contains\ImmatureWords(
             $this->regularExpressionsOfImmatureWordsService
         );
     }
