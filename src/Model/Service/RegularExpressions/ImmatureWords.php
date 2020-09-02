@@ -1,7 +1,7 @@
 <?php
-namespace MonthlyBasis\ContentModeration\Model\Service;
+namespace MonthlyBasis\ContentModeration\Model\Service\RegularExpressions;
 
-class RegularExpressionsOfImmatureWords
+class ImmatureWords
 {
     public function getRegularExpressionsOfImmatureWords(
     ): array {

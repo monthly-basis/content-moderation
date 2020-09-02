@@ -1,5 +1,5 @@
 <?php
-namespace MonthlyBasis\ContentModeration\Model\Service;
+namespace MonthlyBasis\ContentModeration\Model\Service\RegularExpressions;
 
 /**
  * WARNING
@@ -11,7 +11,7 @@ namespace MonthlyBasis\ContentModeration\Model\Service;
  *
  * Sorry.
  */
-class RegularExpressionsOfBadWords
+class BadWords
 {
     public function getRegularExpressionsOfBadWords(): array
     {

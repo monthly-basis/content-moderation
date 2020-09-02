@@ -6,7 +6,7 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class ContainsBadWords
 {
     public function __construct(
-        ContentModerationService\RegularExpressionsOfBadWords $regularExpressionsOfBadWords
+        ContentModerationService\RegularExpressions\BadWords $regularExpressionsOfBadWords
     ) {
         $this->regularExpressionsOfBadWords = $regularExpressionsOfBadWords;
     }
