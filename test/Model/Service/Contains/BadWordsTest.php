@@ -1,5 +1,5 @@
 <?php
-namespace MonthlyBasis\ContentModerationTest\Model\Service;
+namespace MonthlyBasis\ContentModerationTest\Model\Service\Contains;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
@@ -16,12 +16,12 @@ use PHPUnit\Framework\TestCase;
  *
  * Sorry.
  */
-class ContainsBadWordsTest extends TestCase
+class BadWordsTest extends TestCase
 {
     protected function setUp(): void
     {
         $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressions\BadWords();
-        $this->containsBadWordsService = new ContentModerationService\ContainsBadWords(
+        $this->containsBadWordsService = new ContentModerationService\Contains\BadWords(
             $this->regularExpressionsOfBadWordsService
         );
     }
