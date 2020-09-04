@@ -106,6 +106,7 @@ class BadWords
             '/jigaboo/i',
             '/jackass/i',
             '/kike/i',
+            '/\bkys\b/i',
             '/lesbian/i',
             '/masturbat/i',
             '/\bmilf\b/i',
