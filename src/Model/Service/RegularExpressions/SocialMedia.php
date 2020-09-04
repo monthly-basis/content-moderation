@@ -6,6 +6,7 @@ class SocialMedia
     public function getRegularExpressions(): array
     {
         return [
+            '/discord/i',
             '/facebook/i',
             '/instagram/i',
             '/snapchat/i',
