@@ -27,7 +27,7 @@ class ContainsImmatureWordsTest extends TestCase
             $this->containsImmatureWordsService->containsImmatureWords('b.u.t.t head')
         );
         $this->assertTrue(
-            $this->containsImmatureWordsService->containsImmatureWords('FARTMASTER')
+            $this->containsImmatureWordsService->containsImmatureWords('fart master')
         );
         $this->assertTrue(
             $this->containsImmatureWordsService->containsImmatureWords('Lick My Poop')
