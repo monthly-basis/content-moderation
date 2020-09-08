@@ -16,6 +16,7 @@ class ImmatureWords
             '/Hugh Jass/i',
             '/idfk/i',
             '/idiot/i',
+            '/jerk/i',
             '/lmf?ao/i',
             '/p\W*o\W*o\W*p/i',
             '/retard/i',
