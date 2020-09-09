@@ -1,15 +1,15 @@
 <?php
-namespace MonthlyBasis\ContentModerationTest\Model\Service;
+namespace MonthlyBasis\ContentModerationTest\Model\Service\Replace;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
 
-class ReplaceImmatureWordsTest extends TestCase
+class ImmatureWordsTest extends TestCase
 {
     protected function setUp(): void
     {
         $this->regularExpressionsOfImmatureWordsService = new ContentModerationService\RegularExpressions\ImmatureWords();
-        $this->replaceImmatureWordsService = new ContentModerationService\ReplaceImmatureWords(
+        $this->replaceImmatureWordsService = new ContentModerationService\Replace\ImmatureWords(
             $this->regularExpressionsOfImmatureWordsService
         );
     }
