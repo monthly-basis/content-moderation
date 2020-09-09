@@ -7,19 +7,22 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class ToHtml
 {
     public function __construct(
+        ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
         ContentModerationService\ReplaceBadWords $replaceBadWordsService,
         StringService\Escape $escapeService,
         StringService\Url\ToHtml $toHtmlService
     ) {
-        $this->replaceBadWordsService = $replaceBadWordsService;
-        $this->escapeService          = $escapeService;
-        $this->toHtmlService          = $toHtmlService;
+        $this->replaceImmatureWordsService = $replaceImmatureWordsService;
+        $this->replaceBadWordsService      = $replaceBadWordsService;
+        $this->escapeService               = $escapeService;
+        $this->toHtmlService               = $toHtmlService;
     }
 
     public function toHtml(string $message): string
     {
         $message = trim($message);
         $message = $this->replaceBadWordsService->replaceBadWords($message, '');
+        $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
 
         $messageEscaped = $this->escapeService->escape($message);
 
