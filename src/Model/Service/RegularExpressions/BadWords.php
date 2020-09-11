@@ -111,7 +111,7 @@ class BadWords
             '/masturbat/i',
             '/\bmilf\b/i',
 
-            '/(n|ɴ)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
+            '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/ngga/i',
             '/n(i|!)99/i',
             '/\bnicker\b/i',
