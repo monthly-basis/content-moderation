@@ -6,6 +6,6 @@ class Spaces
     public function replaceSpaces($string): string
     {
         $string = preg_replace('/\s+/', ' ', $string);
-        return trim($string);
+        return is_null($string) ? '' : trim($string);
     }
 }

@@ -4,6 +4,10 @@ namespace MonthlyBasis\ContentModerationTest\Model\Service\Replace;
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @todo Find and test instance where preg_replace returns null
+ *       and therefore service returns ''.
+ */
 class SpacesTest extends TestCase
 {
     protected function setUp(): void
