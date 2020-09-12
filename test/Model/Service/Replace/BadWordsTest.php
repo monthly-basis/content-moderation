@@ -1,5 +1,5 @@
 <?php
-namespace MonthlyBasis\ContentModerationTest\Model\Service;
+namespace MonthlyBasis\ContentModerationTest\Model\Service\Replace;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
@@ -23,7 +23,7 @@ class ReplaceBadWordsTest extends TestCase
     protected function setUp(): void
     {
         $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressions\BadWords();
-        $this->replaceBadWordsService = new ContentModerationService\ReplaceBadWords(
+        $this->replaceBadWordsService = new ContentModerationService\Replace\BadWords(
             $this->regularExpressionsOfBadWordsService
         );
     }

@@ -1,12 +1,9 @@
 <?php
-namespace MonthlyBasis\ContentModeration\Model\Service;
+namespace MonthlyBasis\ContentModeration\Model\Service\Replace;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 
-/**
- * @deprecated Use ContentModerationService\Replace\BadWords() instead.
- */
-class ReplaceBadWords
+class BadWords
 {
     public function __construct(
         ContentModerationService\RegularExpressions\BadWords $regularExpressionsOfBadWords
