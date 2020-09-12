@@ -294,9 +294,9 @@ class ReplaceBadWordsTest extends TestCase
             " $r $r night $r {$r}s $r {$r}s {$r}3R",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = 'ΝIGGΕR';
+        $string = 'ΝIGGΕR nick gur';
         $this->assertSame(
-            "{$r}ΕR",
+            "{$r}ΕR $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
