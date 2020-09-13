@@ -375,4 +375,46 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string, '')
         );
     }
+
+    public function test_replaceBadWords_longString_longString()
+    {
+$string = <<<STRING
+Can someone please help me? Here's my quick check questions :)
+
+1. Native Americans who live in on lake Titicaca use totora reeds for all except
+A. Making boats and houses
+B. Wagons
+C. Clothing
+D. Food and medicine
+
+2. The Argentinian plains are home to Argentinian cowboys,also known as
+A. Pampas
+B. Maquiladoras
+C. Immigrants
+D. Gauchos
+
+3. South Americas largest country,brazil, dose not speak Spanish , instead they speak
+A. French
+B. Italian
+C. English
+D. Portuguese
+
+4. On the pampas of Argentina , many people make their living as
+A. Coffee farmers
+B. Cattle ranchers
+C. Factory workers
+D. Street vendors
+
+My answers: 1. A
+2. D
+3. C
+4. B
+( NOTE ) DON'T SUBMIT THESE! I NEED THEM TO BE CHECKED AND PLEASE NO HATE IF I GET THEM WRONG I'M STRUGGLING ON THESE UNIT!!! :(
+STRING;
+
+        $this->assertSame(
+            $string,
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+    }
 }
