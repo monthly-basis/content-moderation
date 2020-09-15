@@ -230,9 +230,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'f_ck ƒμςκ f(kx)';
+        $string = 'f_ck ƒμςκ f(kx) fU¢K';
         $this->assertSame(
-            "$r $r f(kx)",
+            "$r $r f(kx) $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
