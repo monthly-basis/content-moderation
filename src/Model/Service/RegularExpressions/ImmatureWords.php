@@ -10,7 +10,7 @@ class ImmatureWords
             '/asf/i',
             '/b\W*u\W*t\W*t\b/i',
             '/damn/i',
-            '/dee(s|z)\s?nut(s|z)/i',
+            '/de(e|z)(s|z)\s?nut(s|z)/i',
             '/dumb\b/i',
             '/\bf\W*a\W*r\W*t(\W*s)?\b/i',
             '/Hugh Jass/i',

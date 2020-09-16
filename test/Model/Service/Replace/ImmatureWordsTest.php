@@ -46,9 +46,9 @@ class ImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
-        $string = 'deeznutz deez nuts';
+        $string = 'deeznutz deez nuts dezz nuts';
         $this->assertSame(
-            ' ',
+            '  ',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
