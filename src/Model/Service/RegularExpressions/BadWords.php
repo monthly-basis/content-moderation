@@ -107,10 +107,12 @@ class BadWords
             '/\bf off\b/i',
             '/\bfuc/i',
 
+            '/gay/i',
+            '/god ?damn/i',
+
             '/\bhoe/i',
             '/\bhorne?y/i',
 
-            '/god ?damn/i',
             '/jigaboo/i',
             '/jackass/i',
             '/kike/i',
