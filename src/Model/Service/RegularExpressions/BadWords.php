@@ -108,7 +108,7 @@ class BadWords
             '/\bfuc/i',
 
             '/\bhoe/i',
-            '/\bhorny/i',
+            '/\bhorne?y/i',
 
             '/god ?damn/i',
             '/jigaboo/i',
