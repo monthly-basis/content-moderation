@@ -112,6 +112,8 @@ class BadWords
             '/\bfuc/i',
 
             '/gay/i',
+            '/\bg ay\b/i',
+
             '/god ?damn/i',
 
             '/\bhoe/i',
