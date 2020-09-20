@@ -141,6 +141,8 @@ class BadWords
 
             '/penn?[iu][5s]/i',
 
+            '/perv(ert|s|\b)/i',
+
             '/phuck/i',
 
             '/\bp\s*o\s*(r|ɾ)\s*n/i',

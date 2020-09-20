@@ -318,6 +318,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'pervert perv friendlyperv hyperventilate';
+        $this->assertSame(
+            "$r $r friendly{$r} hyperventilate",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'porn P O R N pron p*rn help or not';
         $this->assertSame(
             "$r $r pron $r help or not",
