@@ -128,6 +128,7 @@ class BadWords
             '/\bmilf\b/i',
 
             '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
+            '/\/VIGGA/i',
             '/ngga/i',
             '/n(i|!)99/i',
             '/\bnicker\b/i',

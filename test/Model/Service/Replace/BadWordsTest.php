@@ -306,9 +306,9 @@ class ReplaceBadWordsTest extends TestCase
             " $r $r night $r {$r}s $r {$r}s {$r}3R",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = 'ΝIGGΕR nick gur n word';
+        $string = 'ΝIGGΕR nick gur n word /VIGGA';
         $this->assertSame(
-            "{$r}ΕR $r $r",
+            "{$r}ΕR $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
