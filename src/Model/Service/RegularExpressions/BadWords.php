@@ -103,6 +103,8 @@ class BadWords
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
 
+            '/WHAT THE FK/i',
+
             // Foreign alphabets and symbols
             '/(f|ƒ)(u|μ)(c|¢|ς)(k|κ)/i',
             '/\bf_u?ck/i',
