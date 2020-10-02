@@ -138,6 +138,10 @@ class BadWords
             '/mast(e|u)rbat(ion)?/i',
             '/\bmilf\b/i',
 
+            /*
+             * nigger
+             */
+            '/knee garr?/i',
             '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
