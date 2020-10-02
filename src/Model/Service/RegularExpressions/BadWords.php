@@ -85,9 +85,13 @@ class BadWords
 
             '/douche/i',
 
+            /*
+             * dick
+             */
             '/d\W?(!|1|i)(c|k)k\b/i',
             '/d[\!\#\*]{2}k/i',
             '/dickhead/i',
+            '/dicks/i',
 
             '/f(a|4)g/i',
             '/fap/',
