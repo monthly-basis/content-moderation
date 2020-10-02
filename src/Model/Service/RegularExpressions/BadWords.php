@@ -160,8 +160,12 @@ class BadWords
             '/\bp\s*o\s*(r|ɾ)\s*n/i',
             '/\bp(o|\W)rn/i',
 
+            /*
+             * pussy
+             */
+
             '/p\s*u\s*s\s*s\s*y/i',
-            '/p\W*u\W*s\W*s\W*y/i',
+            '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
             '/pussi(es)?/i',
 
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
