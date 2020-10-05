@@ -179,6 +179,7 @@ class BadWords
              * rape
              */
             '/\brape[ds]?/i',
+            '/\brapist/i',
 
             /*
              * shit
