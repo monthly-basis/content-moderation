@@ -176,6 +176,11 @@ class BadWords
             '/pussi(es)?/i',
 
             /*
+             * rape
+             */
+            '/\brape/i',
+
+            /*
              * shit
              */
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
