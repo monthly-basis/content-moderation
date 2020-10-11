@@ -133,7 +133,14 @@ class BadWords
              */
 
             '/gay/i',
+
+            // Spaces
             '/\bg ay\b/i',
+
+            // Symbols
+            '/g[\.\_]a[\.\_]y/i',
+
+            // Variations
             '/\bgae\b/i',
 
             '/god ?damn/i',
