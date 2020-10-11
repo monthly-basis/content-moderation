@@ -156,7 +156,7 @@ class BadWords
             '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
-            '/n(i|!)99/i',
+            '/n[\!i][9q][9q](a|er)?/i',
             '/\bnicker\b/i',
             '/nick gurr?/i',
             '/niglet/i',
