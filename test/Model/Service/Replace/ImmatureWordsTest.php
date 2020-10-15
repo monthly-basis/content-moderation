@@ -117,6 +117,12 @@ class ImmatureWordsTest extends TestCase
             ' questions',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
+        
+        $string = 'crap crapy crapping craps crapped scrape';
+        $this->assertSame(
+            '     scrape',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
     }
 
     public function test_replaceImmatureWords_replacementSymbols_expectedString()
