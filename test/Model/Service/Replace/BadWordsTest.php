@@ -134,6 +134,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'boner';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'bitch bi*ch bich bicth biitch Bi9ch a b***h a b**** biyach';
         $this->assertSame(
             "$r $r $r $r $r $r {$r}h $r $r",
