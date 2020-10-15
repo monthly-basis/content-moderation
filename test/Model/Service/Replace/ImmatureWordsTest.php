@@ -117,6 +117,12 @@ class ImmatureWordsTest extends TestCase
             ' questions',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
+
+        $string = 'suck sucks';
+        $this->assertSame(
+            ' ',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
     }
 
     public function test_replaceImmatureWords_replacementSymbols_expectedString()
