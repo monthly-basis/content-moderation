@@ -181,6 +181,9 @@ class BadWords
             '/nogger/i',
             '/\bn ?word\b/i',
 
+            // Spellings
+            '/ni?gge?r/i',
+
             '/orgasm/i',
 
             '/penn?[iu][5s]/i',
