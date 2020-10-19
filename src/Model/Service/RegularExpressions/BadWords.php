@@ -188,6 +188,11 @@ class BadWords
             '/niglet/i',
             '/\bn ?word\b/i',
 
+            /*
+             * nude
+             */
+            '/nudes?/i',
+
             '/orgasm/i',
 
             '/penn?[iu][5s]/i',
