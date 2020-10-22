@@ -37,6 +37,9 @@ class BadWords
             '/\ba\s*ss(es)?\b/i',
             '/\bazz\b/i',
 
+            // Spaces
+            '/\ba ?s ?s\b/', // Should remain case-sensitive
+
             // Symbols
             '/\ba\*\*/i',
             '/a(s|\$)\$/i',
