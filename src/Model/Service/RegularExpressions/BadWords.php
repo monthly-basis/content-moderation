@@ -36,14 +36,18 @@ class BadWords
              */
             '/\ba\s*ss(es)?\b/i',
             '/\bazz\b/i',
+
+            // Symbols
+            '/\ba\*\*/i',
             '/a(s|\$)\$/i',
             '/a\$(s|\$)/i',
-            '/\ba\*\*/i',
             '/@ss/i',
             '/@\$\$/i',
+            '/a§š/i',
+
+            // Variants
             '/\bas(s|\W)hole/i',
             '/\ba holes\b/i',
-            '/a§š/i',
             '/dumb?ass/i',
             '/dumba\W\W/i',
 
