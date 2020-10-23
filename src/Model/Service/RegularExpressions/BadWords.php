@@ -140,16 +140,17 @@ class BadWords
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
 
-            '/WHAT THE FK/i',
-
-            // Foreign alphabets and symbols
+            // Symbols
             '/(f|ƒ)(u|μ)(c|¢|ς)(k|κ)/i',
             '/\bf_u?ck/i',
 
             '/f(\W)*(u|v)e?\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
-            '/\bf off\b/i',
             '/\bfuc/i',
+
+            // Variations
+            '/\bf off\b/i',
+            '/what the fk/i',
 
             /*
              * gay
