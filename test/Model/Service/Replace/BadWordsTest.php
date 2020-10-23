@@ -236,9 +236,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'f_ck ƒμςκ f(kx) fU¢K WHAT THE FK';
+        $string = 'f_ck ƒμςκ f(kx) fU¢K WHAT THE FK f u if unicorns';
         $this->assertSame(
-            "$r $r f(kx) $r $r",
+            "$r $r f(kx) $r $r $r if unicorns",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
