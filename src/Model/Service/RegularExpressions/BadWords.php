@@ -13,6 +13,8 @@ namespace MonthlyBasis\ContentModeration\Model\Service\RegularExpressions;
  * divided into more-specific categories. For example, a word dealing
  * with sex should be in a category called "sex" and should not always be
  * categorized as "bad".
+ *
+ * Remember: Word boundary (\b) cannot be used around non-word characters (\W).
  */
 class BadWords
 {
@@ -60,7 +62,7 @@ class BadWords
             '/bastard/i',
 
             /*
-             * Cannot use word boundary (\b) around non-word characters (\W).
+             * bitch
              */
             '/biach/i',
             '/b\W*(i\W*)?t\W*c\W*h(es)?\b/i',
@@ -71,7 +73,7 @@ class BadWords
             '/biyach/i',
 
             // Symbols
-            '/[bʙ][1lï]t?[cʨ]h/iu',
+            '/[bʙ][1lïì]t?[cʨç]h/iu',
 
             '/blow\W*j\W*o\W*b/i',
 
