@@ -199,7 +199,7 @@ class BadWords
 
             // Variations
             '/knee garr?/i',
-            '/nick gurr?/i',
+            '/nick g[eu]rr?/i',
             '/niglet/i',
             '/\bn ?word\b/i',
 
