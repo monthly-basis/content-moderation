@@ -14,7 +14,11 @@ namespace MonthlyBasis\ContentModeration\Model\Service\RegularExpressions;
  * with sex should be in a category called "sex" and should not always be
  * categorized as "bad".
  *
- * Remember: Word boundary (\b) cannot be used around non-word characters (\W).
+ * Notes:
+ *
+ * Word boundary (\b) cannot be used around non-word characters (\W).
+ *
+ * Phrases generally come first since we want to replace those completely.
  */
 class BadWords
 {
@@ -86,7 +90,15 @@ class BadWords
             '/bullshi?t/i',
             '/\bclit\b/i',
 
+            /*
+             * cock
+             */
+
+            // Phrases
             '/cock\s*suck/i',
+            '/suck a coc?k/i',
+
+            // Symbols
             '/c0ck/i',
 
             /*
