@@ -120,6 +120,12 @@ class BadWords
             '/douche/i',
 
             /*
+             * daddy
+             */
+
+            '/harder daddy/i',
+
+            /*
              * dick
              */
 
