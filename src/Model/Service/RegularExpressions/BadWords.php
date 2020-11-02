@@ -117,7 +117,6 @@ class BadWords
             '/d[\!\#\*]{2}k/i',
 
             // Variations
-            '/big dick/i',
             '/dickhead/i',
             '/dicks/i',
 
