@@ -104,6 +104,9 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
+                ContentModerationService\Replace\Email::class => function ($sm) {
+                    return new ContentModerationService\Replace\Email();
+                },
                 ContentModerationService\Replace\ImmatureWords::class => function ($sm) {
                     return new ContentModerationService\Replace\ImmatureWords(
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
