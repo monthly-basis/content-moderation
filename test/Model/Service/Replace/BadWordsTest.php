@@ -116,9 +116,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'A HOLES a hole has holes dumba** a** dumass';
+        $string = 'A HOLES a hole has holes dumba** a** dumass AZZH0LES azzhole';
         $this->assertSame(
-            "$r a hole has holes $r $r $r",
+            "$r a hole has holes $r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
