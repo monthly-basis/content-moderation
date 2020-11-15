@@ -129,6 +129,9 @@ class BadWords
              * dick
              */
 
+            // Phrases
+            '/dig bick/i',
+
             // Letters
             '/d+i+c+k+s?\b/i',
 
