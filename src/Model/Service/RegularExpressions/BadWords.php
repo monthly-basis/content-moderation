@@ -106,6 +106,11 @@ class BadWords
              */
             '/\bcooch(ie)?/i',
 
+            /*
+             * coon
+             */
+            '/\b[ck]oon\b/i',
+
             '/\bcum\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
