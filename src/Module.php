@@ -18,6 +18,7 @@ class Module
                     'containsBadWords'                   => ContentModerationHelper\ContainsBadWords::class,
                     'escapeAndReplaceBadWords'           => ContentModerationHelper\EscapeAndReplaceBadWords::class,
                     'replaceAndEscape'                   => ContentModerationHelper\ReplaceAndEscape::class,
+                    'replaceSpaces'                      => ContentModerationHelper\Replace\Spaces::class,
                     'stripTagsReplaceBadWordsAndShorten' => ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class,
                     'toHtml'                             => ContentModerationHelper\ToHtml::class,
                 ],
@@ -31,6 +32,11 @@ class Module
                         return new ContentModerationHelper\EscapeAndReplaceBadWords(
                             $sm->get(StringService\Escape::class),
                             $sm->get(ContentModerationService\ReplaceBadWords::class)
+                        );
+                    },
+                    ContentModerationHelper\Replace\Spaces::class => function ($sm) {
+                        return new ContentModerationHelper\Replace\Spaces(
+                            $sm->get(ContentModerationService\Replace\Spaces::class)
                         );
                     },
                     ContentModerationHelper\ReplaceAndEscape::class => function ($sm) {
