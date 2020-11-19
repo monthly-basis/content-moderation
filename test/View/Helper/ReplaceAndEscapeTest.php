@@ -1,5 +1,5 @@
 <?php
-namespace MonthlyBasis\ContentModerationTest\Model\Service;
+namespace MonthlyBasis\ContentModerationTest\View\Helper;
 
 use LeoGalleguillos\String\Model\Service as StringService;
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
