@@ -1,7 +1,7 @@
 <?php
 namespace MonthlyBasis\ContentModerationTest\Model\Service;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use PHPUnit\Framework\TestCase;
 

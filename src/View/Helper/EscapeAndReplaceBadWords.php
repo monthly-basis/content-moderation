@@ -2,7 +2,7 @@
 namespace MonthlyBasis\ContentModeration\View\Helper;
 
 use Laminas\View\Helper\AbstractHelper;
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 
 class EscapeAndReplaceBadWords extends AbstractHelper
