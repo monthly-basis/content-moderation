@@ -273,10 +273,13 @@ class BadWords
             /*
              * shit
              */
-            '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
+
+            // Spaces
+            '/\bs\s*h\s*i\s*t/i',
 
             // Symbols
-            '/[\$\§]h![t\ł]/iu',
+            '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
+            '/(\bs|[\$\§])h[i1\!\*][t\ł]/iu',
 
             '/\bstfu/i',
 
