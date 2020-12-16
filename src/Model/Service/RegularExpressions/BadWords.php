@@ -107,7 +107,7 @@ class BadWords
             '/suck a coc?k/i',
 
             // Symbols
-            '/c0ck/i',
+            '/c[0\#]ck/i',
 
             /*
              * cooch

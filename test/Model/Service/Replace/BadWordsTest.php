@@ -171,9 +171,9 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * cock
          */
-        $string = 'cockadoodledoo cock sucker c0ck suck a cock';
+        $string = 'cockadoodledoo cock sucker c0ck suck a cock c#ck';
         $this->assertSame(
-            "cockadoodledoo !@#$%^&er $r $r",
+            "cockadoodledoo !@#$%^&er $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
         $string = 'suck a cok';
