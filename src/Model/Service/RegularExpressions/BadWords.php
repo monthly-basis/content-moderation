@@ -156,6 +156,11 @@ class BadWords
             // Variations
             '/dickhead/i',
 
+            /*
+             * eat
+             */
+            '/eat me out/i',
+
             '/f(a|4)g/i',
             '/fap/',
             '/fleshlight/i',
