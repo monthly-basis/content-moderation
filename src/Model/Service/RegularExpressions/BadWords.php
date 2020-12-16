@@ -225,6 +225,12 @@ class BadWords
             '/\bkys\b/i',
             '/lesbian/i',
             '/mast(e|u)rbat(ion)?/i',
+
+            /*
+             * Mike Hunt
+             */
+            '/Mike Hunt/i',
+
             '/\bmilf\b/i',
 
             /*
