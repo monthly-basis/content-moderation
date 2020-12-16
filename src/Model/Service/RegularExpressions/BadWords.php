@@ -167,6 +167,11 @@ class BadWords
             '/foreskin/i',
 
             /*
+             * freak
+             */
+            '/certified ?freak/i',
+
+            /*
              * fuck
              */
 
