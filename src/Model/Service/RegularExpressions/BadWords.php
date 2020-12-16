@@ -83,6 +83,10 @@ class BadWords
             // Variants
             '/\bbish\b/i',
 
+            /*
+             * blow
+             */
+            '/blow me/i',
             '/blow\W*j\W*o\W*b/i',
 
             /*
