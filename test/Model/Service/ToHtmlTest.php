@@ -9,8 +9,8 @@ class ToHtmlTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->replaceEmailServiceMock = $this->createMock(
-            ContentModerationService\Replace\Email::class
+        $this->replaceEmailAddressesServiceMock = $this->createMock(
+            ContentModerationService\Replace\EmailAddresses::class
         );
         $this->replaceImmatureWordsServiceMock = $this->createMock(
             ContentModerationService\Replace\ImmatureWords::class
@@ -26,7 +26,7 @@ class ToHtmlTest extends TestCase
         );
 
         $this->toHtmlService = new ContentModerationService\ToHtml(
-            $this->replaceEmailServiceMock,
+            $this->replaceEmailAddressesServiceMock,
             $this->replaceImmatureWordsServiceMock,
             $this->replaceBadWordsServiceMock,
             $this->escapeServiceMock,

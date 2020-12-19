@@ -7,17 +7,17 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class ToHtml
 {
     public function __construct(
-        ContentModerationService\Replace\Email $replaceEmailService,
+        ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
         ContentModerationService\ReplaceBadWords $replaceBadWordsService,
         StringService\Escape $escapeService,
         StringService\Url\ToHtml $toHtmlService
     ) {
-        $this->replaceEmailService         = $replaceEmailService;
-        $this->replaceImmatureWordsService = $replaceImmatureWordsService;
-        $this->replaceBadWordsService      = $replaceBadWordsService;
-        $this->escapeService               = $escapeService;
-        $this->toHtmlService               = $toHtmlService;
+        $this->replaceEmailAddressesService = $replaceEmailAddressesService;
+        $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
+        $this->replaceBadWordsService       = $replaceBadWordsService;
+        $this->escapeService                = $escapeService;
+        $this->toHtmlService                = $toHtmlService;
     }
 
     public function toHtml(string $message): string
@@ -25,7 +25,7 @@ class ToHtml
         $message = trim($message);
         $message = $this->replaceBadWordsService->replaceBadWords($message, '');
         $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
-        $message = $this->replaceEmailService->replaceEmailAddresses($message);
+        $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
 
         $messageEscaped = $this->escapeService->escape($message);
 
