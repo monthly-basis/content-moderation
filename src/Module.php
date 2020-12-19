@@ -42,6 +42,7 @@ class Module
                     ContentModerationHelper\ReplaceAndEscape::class => function ($sm) {
                         return new ContentModerationHelper\ReplaceAndEscape(
                             $sm->get(ContentModerationService\Replace\BadWords::class),
+                            $sm->get(ContentModerationService\Replace\EmailAddresses::class),
                             $sm->get(ContentModerationService\Replace\ImmatureWords::class),
                             $sm->get(ContentModerationService\Replace\Spaces::class),
                             $sm->get(StringService\Escape::class)

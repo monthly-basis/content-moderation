@@ -9,14 +9,16 @@ class ReplaceAndEscape extends AbstractHelper
 {
     public function __construct(
         ContentModerationService\Replace\BadWords $replaceBadWordsService,
+        ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
         ContentModerationService\Replace\Spaces $replaceSpacesService,
         StringService\Escape $escapeService
     ) {
-        $this->replaceBadWordsService      = $replaceBadWordsService;
-        $this->replaceImmatureWordsService = $replaceImmatureWordsService;
-        $this->replaceSpacesService        = $replaceSpacesService;
-        $this->escapeService               = $escapeService;
+        $this->replaceBadWordsService       = $replaceBadWordsService;
+        $this->replaceEmailAddressesService = $replaceEmailAddressesService;
+        $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
+        $this->replaceSpacesService         = $replaceSpacesService;
+        $this->escapeService                = $escapeService;
     }
 
     public function __invoke(
@@ -25,6 +27,7 @@ class ReplaceAndEscape extends AbstractHelper
     ): string {
         $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
         $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
+        $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
         $string = $this->replaceSpacesService->replaceSpaces($string);
 
         return $this->escapeService->escape($string);
