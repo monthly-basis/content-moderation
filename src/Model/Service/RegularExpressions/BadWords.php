@@ -222,6 +222,11 @@ class BadWords
             '/jigaboo/i',
             '/jackass/i',
             '/kike/i',
+
+            /*
+             * kill
+             */
+            '/kill ?yourself/i',
             '/\bkys\b/i',
             '/lesbian/i',
             '/mast(e|u)rbat(ion)?/i',
