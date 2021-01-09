@@ -290,6 +290,9 @@ class BadWords
             '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
             '/pussi(es)?/i',
 
+            // Spellings
+            '/pusay/i',
+
             /*
              * rape
              */
