@@ -1036,16 +1036,16 @@
         },
         {
             "name": "laminas/laminas-validator",
-            "version": "2.13.4",
+            "version": "2.13.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-validator.git",
-                "reference": "93593684e70b8ed1e870cacd34ca32b0c0ace185"
+                "reference": "d334dddda43af263d6a7e5024fd2b013cb6981f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/93593684e70b8ed1e870cacd34ca32b0c0ace185",
-                "reference": "93593684e70b8ed1e870cacd34ca32b0c0ace185",
+                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/d334dddda43af263d6a7e5024fd2b013cb6981f7",
+                "reference": "d334dddda43af263d6a7e5024fd2b013cb6981f7",
                 "shasum": ""
             },
             "require": {
@@ -1087,10 +1087,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.13.x-dev",
-                    "dev-develop": "2.14.x-dev"
-                },
                 "laminas": {
                     "component": "Laminas\\Validator",
                     "config-provider": "Laminas\\Validator\\ConfigProvider"
@@ -1111,7 +1107,7 @@
                 "laminas",
                 "validator"
             ],
-            "time": "2020-03-31T18:57:01+00:00"
+            "time": "2021-01-06T15:05:04+00:00"
         },
         {
             "name": "laminas/laminas-view",
@@ -2669,16 +2665,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.20.0",
+            "version": "v1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
+                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
                 "shasum": ""
             },
             "require": {
@@ -2690,7 +2686,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.22-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2727,7 +2723,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-01-07T16:49:33+00:00"
         },
         {
             "name": "theseer/tokenizer",
