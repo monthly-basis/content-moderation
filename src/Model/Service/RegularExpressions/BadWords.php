@@ -340,7 +340,7 @@ class BadWords
              * tit
              */
             '/\btits?\b/i',
-            '/ti(d|tt)ies/i',
+            '/t[i1](d|tt)[i1]es/i',
 
             '/vagina/i',
             '/wh(o|0)re/i',
