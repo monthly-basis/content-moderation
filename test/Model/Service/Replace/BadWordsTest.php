@@ -284,6 +284,10 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * fuck
+         */
+
         $string = 'fuck fukin f = 123 fuc F=kx F/k fuking fvck f### f*** f---';
         $this->assertSame(
             "$r $r f = 123 $r F=kx F/k $r $r $r $r $r",
@@ -296,9 +300,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'f_ck ƒμςκ f(kx) fU¢K WHAT THE FK f u if unicorns';
+        $string = 'f_ck ƒμςκ f(kx) fU¢K WHAT THE FK f u if unicorns f0ck';
         $this->assertSame(
-            "$r $r f(kx) $r $r $r if unicorns",
+            "$r $r f(kx) $r $r $r if unicorns $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
