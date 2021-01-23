@@ -336,8 +336,11 @@ class BadWords
             '/s(l|1)(u|ü)t/i',
             '/suck my/i',
 
+            /*
+             * tit
+             */
             '/\btits?\b/i',
-            '/titties/i',
+            '/ti(d|tt)ies/i',
 
             '/vagina/i',
             '/wh(o|0)re/i',
