@@ -287,7 +287,10 @@ class BadWords
 
             '/orgasm/i',
 
-            '/penn?[iu][5s]/i',
+            /*
+             * penis
+             */
+            '/penn?[iu][s\$5]/i',
 
             '/perv(ert|s|\b)/i',
 
