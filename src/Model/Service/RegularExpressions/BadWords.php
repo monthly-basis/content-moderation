@@ -198,6 +198,9 @@ class BadWords
             '/\bf\W*c\W*k\b/i',
             '/\bfuc/i',
 
+            // Spellings
+            '/fcuk/i',
+
             // Variations
             '/\bf off\b/i',
             '/\bf u\b/i',
