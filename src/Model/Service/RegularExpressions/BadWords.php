@@ -187,7 +187,7 @@ class BadWords
             '/\bf\W+ck/i',
             '/\bf\W*a\W*g\b/i',
 
-            '/\bfu\W?k\b/i',
+            '/\bfu\W?k(ers?)?\b/i',
             '/fu\W?king?/i',
 
             // Symbols
