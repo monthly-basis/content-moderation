@@ -17,10 +17,14 @@ class StripTagsReplaceBadWordsAndShorten extends AbstractHelper
 
     public function __invoke(
         string $string,
-        int $maxLength
+        int $maxLength,
+        string $replacement = '!@#$%^&'
     ): string {
         $string = strip_tags($string);
-        $string = $this->replaceBadWordsService->replacebadWords($string);
+        $string = $this->replaceBadWordsService->replacebadWords(
+            $string,
+            $replacement
+        );
         return $this->shortenService->shorten(
             $string,
             $maxLength
