@@ -50,7 +50,8 @@ class Module
                     },
                     ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                         return new ContentModerationHelper\StripTagsReplaceBadWordsAndShorten(
-                            $sm->get(ContentModerationService\StripTagsReplaceBadWordsAndShorten::class)
+                            $sm->get(ContentModerationService\Replace\BadWords::class),
+                            $sm->get(StringService\Shorten::class)
                         );
                     },
                     ContentModerationHelper\ToHtml::class => function ($sm) {
