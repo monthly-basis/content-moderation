@@ -470,9 +470,10 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * porn
          */
-        $string = 'porn P O R N pron p*rn help or not P _. O / R -__n';
+
+        $string = 'porn P O R N pron prone p*rn help or not P _. O / R -__n';
         $this->assertSame(
-            "$r $r pron $r help or not $r",
+            "$r $r $r prone $r help or not $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

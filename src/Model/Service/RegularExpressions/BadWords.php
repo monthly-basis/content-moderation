@@ -310,6 +310,9 @@ class BadWords
             // Spaces and Symbols
             '/\bp[\W_]*o\W*r[\W_]*n\b/i',
 
+            // Spellings
+            '/\bpron\b/i',
+
             /*
              * pussy
              */
