@@ -216,7 +216,7 @@ class BadWords
             '/\bg ?a ?y\b/i',
 
             // Symbols
-            '/g[\.\_]?[\@a][\.\_]?y/i',
+            '/g[\.\_]?[\@a][\.\_]?y(?!le)/i',
 
             // Variations
             '/\bgae\b/i',
