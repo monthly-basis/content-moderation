@@ -348,9 +348,9 @@ class ReplaceBadWordsTest extends TestCase
          * homo
          */
 
-        $string = 'homo sophomore homosexual';
+        $string = 'homo sophomore homosexual homo sapien';
         $this->assertSame(
-            "$r sophomore homosexual",
+            "$r sophomore homosexual homo sapien",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

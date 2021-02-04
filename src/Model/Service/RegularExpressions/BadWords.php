@@ -233,7 +233,7 @@ class BadWords
             /*
              * homo
              */
-            '/\bhomo\b/i',
+            '/\bhomo\b(?! sapien)/i',
 
             '/\bhorne?y/i',
 
