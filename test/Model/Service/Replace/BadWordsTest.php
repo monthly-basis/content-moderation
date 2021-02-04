@@ -129,9 +129,19 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'ball suck balls ballsack ballsacks smelly balls';
+        /*
+         * ball
+         */
+
+        $string = 'ball suck balls ballsack ballsacks smelly balls my balls';
         $this->assertSame(
-            "ball $r $r $r $r",
+            "ball $r $r $r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'baseball your balls';
+        $this->assertSame(
+            "baseball $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
