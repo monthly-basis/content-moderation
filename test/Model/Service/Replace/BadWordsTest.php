@@ -306,9 +306,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fcuk F-ING ****ING fu** FUkER FUkERS';
+        $string = 'fcuk F-ING ****ING fu** FUkER FUkERS fuction';
         $this->assertSame(
-            "$r $r $r $r $r $r",
+            "$r $r $r $r $r $r fuction",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
