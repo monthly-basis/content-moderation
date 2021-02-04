@@ -326,9 +326,9 @@ class ReplaceBadWordsTest extends TestCase
          * gay
          */
 
-        $string = 'gay g ay gae algae g_a.y reading a youtube ga y Gayle';
+        $string = 'gay g ay gae algae g_a.y reading a youtube ga y Gayle g4y';
         $this->assertSame(
-            "$r $r $r algae $r reading a youtube $r Gayle",
+            "$r $r $r algae $r reading a youtube $r Gayle $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
