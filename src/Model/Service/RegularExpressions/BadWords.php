@@ -362,6 +362,11 @@ class BadWords
             '/suck my/i',
 
             /*
+             * threesome
+             */
+            '/threesome/i',
+
+            /*
              * tit
              */
             '/\bt[i1]ts?\b/i',
