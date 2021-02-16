@@ -301,7 +301,10 @@ class BadWords
             /*
              * penis
              */
-            '/penn?[iu][s\$5]/i',
+            '/penn?[iu1][s\$5]/i',
+
+            // Spellings
+            '/peen/i',
 
             '/perv(ert|s|\b)/i',
 
