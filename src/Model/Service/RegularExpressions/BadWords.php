@@ -214,6 +214,7 @@ class BadWords
 
             // Spellings
             '/fcuk/i',
+            '/fawk/i',
 
             // Variations
             '/\bf off\b/i',

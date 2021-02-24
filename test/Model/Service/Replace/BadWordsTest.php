@@ -56,9 +56,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'hello fucker HOLY SHIT shithead nogg';
+        $string = 'hello HOLY SHIT shithead nogg';
         $this->assertSame(
-            'hello !@#$%^&er HOLY !@#$%^& !@#$%^&head nogg',
+            'hello HOLY !@#$%^& !@#$%^&head nogg',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -349,6 +349,12 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'fcuk F-ING ****ING fu** FUkER FUkERS fuction fuuuck fffuckk';
         $this->assertSame(
             "$r $r $r $r $r $r fuction $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'fucker fawk';
+        $this->assertSame(
+            "{$r}er $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
