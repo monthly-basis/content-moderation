@@ -22,6 +22,12 @@ class ImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
+        $string = "👉👌";
+        $this->assertSame(
+            '',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
+
         $string = 'arse arses arsenal parse';
         $this->assertSame(
             '  arsenal parse',
