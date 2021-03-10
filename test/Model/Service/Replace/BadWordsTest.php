@@ -510,6 +510,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'pedo pedometer';
+        $this->assertSame(
+            "$r pedometer",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'penis Peni5 pennies pennis penus peni$ pen1s peen';
         $this->assertSame(
             "$r $r pennies $r $r $r $r $r",

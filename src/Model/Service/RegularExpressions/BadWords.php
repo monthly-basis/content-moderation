@@ -306,6 +306,11 @@ class BadWords
             '/orgasm/i',
 
             /*
+             * pedo
+             */
+            '/\bpedo\b/i',
+
+            /*
              * penis
              */
             '/penn?[iu1][s\$5]/i',
