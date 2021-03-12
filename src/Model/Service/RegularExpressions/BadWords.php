@@ -238,7 +238,7 @@ class BadWords
             // Variations
             '/\bgae\b/i',
 
-            '/god ?damn/i',
+            '/god ?damn?/i',
 
             /*
              * hentai
