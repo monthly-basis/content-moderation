@@ -111,6 +111,9 @@ class BadWords
 
             '/\bcock\b/i',
 
+            // Spellings
+            '/co{2,}ck/i',
+
             // Phrases
             '/cockandballs/i',
             '/massive co[ck]/i',
