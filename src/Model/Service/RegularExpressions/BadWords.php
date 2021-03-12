@@ -363,6 +363,7 @@ class BadWords
              * sex
              */
             '/have s[e\*]x/i',
+            '/s[e\*]xy/i',
 
             /*
              * shit
