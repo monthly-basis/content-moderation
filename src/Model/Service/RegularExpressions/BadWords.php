@@ -109,7 +109,7 @@ class BadWords
              * cock
              */
 
-            '/\bcock\b/i',
+            '/\bcocks?\b/i',
 
             // Spellings
             '/co{2,}ck/i',
