@@ -36,7 +36,7 @@ class BadWords
             /*
              * anal
              */
-            '/anal beads/i',
+            '/\banal\b/i',
 
             /*
              * ass

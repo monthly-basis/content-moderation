@@ -102,9 +102,9 @@ class ReplaceBadWordsTest extends TestCase
          * anal
          */
 
-        $string = 'anal sex anal beads';
+        $string = 'anal sex analysis';
         $this->assertSame(
-            "anal sex $r",
+            "$r sex analysis",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
