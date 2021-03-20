@@ -367,7 +367,7 @@ class BadWords
              */
 
             // Spaces
-            '/\bs\s*h\s*i\s*t\b/i',
+            '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
