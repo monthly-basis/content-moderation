@@ -204,12 +204,17 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = 'cockadoodledoo cock sucker c0ck suck a cock c#ck cocks';
         $this->assertSame(
-            "cockadoodledoo $r sucker $r suck a $r $r $r",
+            "cockadoodledoo $r sucker $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
         $string = 'suck a cok massive coc Cockandballs sucks coock peacocks';
         $this->assertSame(
             "$r $r $r sucks $r peacocks",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+        $string = 'C O C K';
+        $this->assertSame(
+            "$r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
