@@ -370,6 +370,9 @@ class BadWords
              * shit
              */
 
+            // Phrases
+            '/piece of \*\*\*\*/i',
+
             // Spaces
             '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
