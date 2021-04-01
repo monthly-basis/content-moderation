@@ -207,6 +207,9 @@ class BadWords
             // Letters
             '/f+u+c+k+/i',
 
+            // Phrases
+            '/\bf you\b/i',
+
             // Symbols
             '/[fƒ][uμ0][c¢ς\*][kκ\*]/iu',
             '/\bf_u?ck/i',
