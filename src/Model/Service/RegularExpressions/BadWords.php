@@ -253,7 +253,11 @@ class BadWords
              */
             '/\bhomo\b(?! sapien)/i',
 
-            '/\bhorne?y/i',
+            /*
+             * horny
+             */
+
+            '/\bh\s*o\s*r\s*n(\s*e)?\s*y/i',
 
             '/jigaboo/i',
             '/jackass/i',
