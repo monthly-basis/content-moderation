@@ -166,6 +166,9 @@ class BadWords
             // Letters
             '/d+i+c+k+s?\b/i',
 
+            // Spaces
+            '/d\s+i\s+c\s+k\b/i',
+
             // Symbols
             '/d\W?[\!1i][ck]k\b/i',
             '/d[\!\#\*]{2}k/i',
