@@ -238,9 +238,9 @@ class ReplaceBadWordsTest extends TestCase
          * cum
          */
 
-        $string = 'cum cucumber boobs CUMMMMMM';
+        $string = 'cum cucumber boobs CUMMMMMM summa cum laude magna cum laude';
         $this->assertSame(
-            "$r cucumber $r $r",
+            "$r cucumber $r $r summa cum laude magna cum laude",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
