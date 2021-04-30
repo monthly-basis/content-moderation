@@ -304,7 +304,7 @@ class BadWords
             '/ni?gge?r/i',
 
             // Symbols
-            '/[n𝖓][\!1i𝖎][69bg𝖌q][69bg𝖌q](a|[3e𝖊][r𝖗])?/iu',
+            '/[n𝔫𝖓][\!1i𝔦𝖎][69bg𝔤𝖌q][69bg𝔤𝖌q](a|[3e𝔢𝖊][r𝔯𝖗])?/iu',
             '/negg@/i',
 
             // Variations
