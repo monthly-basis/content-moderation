@@ -173,7 +173,7 @@ class BadWords
             '/d\s+i\s+c\s+k\b/i',
 
             // Symbols
-            '/d\W?[\!1i][ck]k\b/i',
+            '/d\W?[i\!\*1][ck]k\b/i',
             '/d[\!\#\*]{2}k/i',
 
             // Variations
