@@ -446,6 +446,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * ligma
+         */
+
+        $string = 'ligma';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * Lolita
          */
 
