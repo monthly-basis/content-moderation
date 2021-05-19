@@ -599,6 +599,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * rim job
+         */
+
+        $string = 'rim job';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * schlong
          */
 
