@@ -435,7 +435,7 @@ class BadWords
             /*
              * whore
              */
-            '/wh[o\*0]re/i',
+            '/(wh|\bh)[o\*0]re/i',
 
             '/w\s+h\s+o\s+r\s+e/i',
             '/xhamster/i',

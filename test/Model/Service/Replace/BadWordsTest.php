@@ -672,9 +672,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'whore WH0RE w h o r e who respects wh*re';
+        $string = 'whore WH0RE w h o r e who respects wh*re hore chore';
         $this->assertSame(
-            "$r $r $r who respects $r",
+            "$r $r $r who respects $r $r chore",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
