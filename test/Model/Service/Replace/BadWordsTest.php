@@ -386,6 +386,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * handjob
+         */
+
+        $string = 'handjob hand job hand--job';
+        $this->assertSame(
+            "$r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * hentai
          */
 

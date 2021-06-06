@@ -253,6 +253,11 @@ class BadWords
             '/god ?damn?/i',
 
             /*
+             * handjob
+             */
+            '/hand(\s|\W)*job/i',
+
+            /*
              * hentai
              */
             '/hentai/i',
