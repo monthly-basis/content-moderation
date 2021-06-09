@@ -592,6 +592,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'watchpornwithme';
+        $this->assertSame(
+            "watch{$r}withme",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         /*
          * pussy
          */
