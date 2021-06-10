@@ -366,7 +366,7 @@ class BadWords
             '/\bp\s*o\s*r\s*n/i',
 
             // Symbols
-            '/p[o\W][rɾ]n/i',
+            '/p[o\*0][rɾ]n/i',
 
             // Spaces and Symbols
             '/\bp[\W_]*o\W*r[\W_]*n\b/i',
