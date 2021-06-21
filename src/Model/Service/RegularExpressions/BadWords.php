@@ -299,8 +299,9 @@ class BadWords
             '/lolita/i',
 
             /*
-             * Mike Hunt
+             * Mike
              */
+            '/Mike Hawk/i',
             '/Mike Hunt/i',
 
             '/\bmilf\b/i',
