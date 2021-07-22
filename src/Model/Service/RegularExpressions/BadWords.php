@@ -117,6 +117,7 @@ class BadWords
 
             // Phrases
             '/cockandballs/i',
+            '/cocksucker/i',
             '/massive co[ck]/i',
             '/suck a co(ck?|k)/i',
 
