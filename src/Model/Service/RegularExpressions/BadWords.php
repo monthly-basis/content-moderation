@@ -106,6 +106,11 @@ class BadWords
 
             '/\bboobs\b/i',
             '/bullshi?t/i',
+
+            /*
+             * clit
+             */
+
             '/\bclit\b/i',
 
             /*
