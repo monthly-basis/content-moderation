@@ -409,6 +409,11 @@ class BadWords
             '/pusay/i',
 
             /*
+             * queef
+             */
+            '/[qᑫ][uᑌ][eᗴ][eᗴ][fᖴ]/iu',
+
+            /*
              * rape
              */
             '/\brape[ds]?/i',
