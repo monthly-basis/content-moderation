@@ -648,6 +648,10 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * rape
+         */
+
         $string = 'rape raped RAPES grape therapeutic rapist therapist';
         $this->assertSame(
             "$r {$r} {$r} grape therapeutic $r therapist",
