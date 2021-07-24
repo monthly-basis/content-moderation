@@ -201,6 +201,11 @@ class BadWords
             '/eat me out/i',
 
             /*
+             * erection
+             */
+            '/Hue G\.? Rection/i',
+
+            /*
              * fag
              */
             '/\bf(a|4)g/i',
