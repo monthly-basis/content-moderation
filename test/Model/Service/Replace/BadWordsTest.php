@@ -629,6 +629,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * pp
+         */
+
+        $string = 'BIG PP my pp small pp';
+        $this->assertSame(
+            "$r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * pussy
          */
 

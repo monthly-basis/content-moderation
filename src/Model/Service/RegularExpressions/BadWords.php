@@ -393,6 +393,12 @@ class BadWords
             '/\bpron\b/i',
 
             /*
+             * pp
+             */
+
+            '/(big|my|small) pp/i',
+
+            /*
              * pussy
              */
             '/p\s*u\s*s\s*s\s*y/i',
