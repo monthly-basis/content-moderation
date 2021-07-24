@@ -108,6 +108,12 @@ class BadWords
             '/bullshi?t/i',
 
             /*
+             * ching chong
+             */
+
+            '/ching chong/i',
+
+            /*
              * clit
              */
 
