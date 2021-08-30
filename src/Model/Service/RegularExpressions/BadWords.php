@@ -233,7 +233,7 @@ class BadWords
             '/fu\W?king?/i',
 
             // Letters
-            '/f+u+c+k+/i',
+            '/f+u+(c+k+|q)/i',
 
             // Phrases
             '/\bf you\b/i',
