@@ -387,9 +387,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fucker fawk fukk Fukkkkkkk f you go f yourself';
+        $string = 'fucker fawk fukk Fukkkkkkk f you go f yourself fuxk';
         $this->assertSame(
-            "{$r}er $r $r $r $r $r",
+            "{$r}er $r $r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
