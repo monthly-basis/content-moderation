@@ -313,7 +313,8 @@ class BadWords
             /*
              * ligma
              */
-            '/ligma/i',
+
+            '/l[i\!]gma/i',
 
             /*
              * lolita
