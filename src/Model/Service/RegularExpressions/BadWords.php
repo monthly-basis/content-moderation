@@ -451,7 +451,7 @@ class BadWords
              * sex
              */
             '/have s[e\*]x/i',
-            '/love sex/i',
+            '/(hard|love) sex/i',
             '/s[e\*]xy/i',
 
             /*
