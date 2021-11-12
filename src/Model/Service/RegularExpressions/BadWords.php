@@ -415,7 +415,7 @@ class BadWords
              * pp
              */
 
-            '/(big|\bmy|small) p(ee)? ?p(ee)?/i',
+            '/(big|\bmy|small) (pp|pee ?pee)/i',
 
             /*
              * pussy
