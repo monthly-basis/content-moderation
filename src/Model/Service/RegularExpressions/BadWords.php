@@ -307,7 +307,12 @@ class BadWords
              */
             '/kill ?yourself/i',
             '/\bkys\b/i',
-            '/lesbian/i',
+
+            /*
+             *
+             */
+            '/lesb(ian|o)/i',
+
             '/mast(e|u)rbat(ion)?/i',
 
             /*
