@@ -399,9 +399,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'shut the f up F/(k';
+        $string = 'shut the f up F/(k ΔTf/*Kf*i';
         $this->assertSame(
-            "$r $r",
+            "$r $r ΔTf/*Kf*i",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
