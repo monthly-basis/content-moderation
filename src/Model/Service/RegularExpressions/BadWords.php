@@ -52,7 +52,10 @@ class BadWords
             '/\ba\s+s\s+s\b/i',
 
             // Symbols
-            '/(\ba|[@])[s§\$\*]([š\$\*]|s\b)/iu',
+            // An 'a' followed by one asterisk is used in many equations.
+            // So, we will only match an 'a' followed by two asterisks.
+            '/\ba\*\*/i',
+            '/(\ba|[@])[s§\$]([š\$]|s\b)/iu',
 
             // Variants
             '/\ba[s5z][s5z\W]h[0o][l1]es?/i',
