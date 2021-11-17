@@ -405,9 +405,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'stfu restful S.T.F.U';
+        $string = 'stfu restful S.T.F.U What\'s the function rule';
         $this->assertSame(
-            "$r restful $r",
+            "$r restful $r What's the function rule",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
