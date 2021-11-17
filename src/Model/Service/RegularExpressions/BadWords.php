@@ -231,6 +231,7 @@ class BadWords
             '/f+u+(c+k+|q)/i',
 
             // Phrases
+            '/dumb af/i',
             '/\bf you\b/i',
             '/go f yourself/i',
             '/shut t(he )?f up/i',
