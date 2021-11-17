@@ -178,11 +178,8 @@ class BadWords
             '/dig bick/i',
             '/big dik/i',
 
-            // Letters
-            '/(?<!moby[\-\s])d+i+c+k+s?\b/i',
-
-            // Spaces
-            '/d\s+i\s+c\s+k\b/i',
+            // Letters and Spaces
+            '/(?<!moby[\-\s])d+\s*i+\s*c+\s*k+s?\b/i',
 
             // Symbols
             '/(?<!moby[\-\s])d\W?[i\!\*1][ck]k\b/i',
