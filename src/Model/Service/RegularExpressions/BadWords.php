@@ -234,6 +234,7 @@ class BadWords
             '/dumb af/i',
             '/\bf you\b/i',
             '/go f yourself/i',
+            '/gtfo/i',
             '/shut t(he )?f up/i',
 
             // Symbols
