@@ -235,7 +235,7 @@ class BadWords
             '/\bf you\b/i',
             '/go f yourself/i',
             '/gtfo/i',
-            '/shut t(he )?f up/i',
+            '/\bs(hut )?t(he )?f ?up?/i',
 
             // Symbols
             '/(\bf|[ƒḟ])[uμ0#\*\-\/][cx#\*\(\-¢ς\*][kκ#\*\-]/iu',
@@ -464,8 +464,6 @@ class BadWords
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
             '/(\b[s5]|[\$\§])h[i1l\!\*][t\ł]/iu',
-
-            '/\bstfu/i',
 
             '/s(l|1)(u|ü)t/i',
             '/suck my/i',

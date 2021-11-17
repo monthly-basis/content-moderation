@@ -405,6 +405,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'stfu restful';
+        $this->assertSame(
+            "$r restful",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         /*
          * gay
          */
@@ -739,12 +745,6 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'm/s hits 200m/s hit piece of **** dipshit dip shit 5hit';
         $this->assertSame(
             "m/s hits 200m/s hit $r $r dip $r $r",
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
-        $string = 'stfu restful';
-        $this->assertSame(
-            "$r restful",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
