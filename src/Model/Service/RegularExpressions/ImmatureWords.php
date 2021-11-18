@@ -32,7 +32,6 @@ class ImmatureWords
             '/jerk/i',
             '/lmf?ao/i',
             '/p\W*o\W*o\W*p/i',
-            '/retar(d|t)(ed)?/i',
             '/stupid/i',
             '/sucks?/i',
             '/wtf/i',
