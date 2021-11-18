@@ -468,7 +468,7 @@ class BadWords
 
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
-            '/(\b[s5]|[\$\§])h[i1l\!\*][t\ł]/iu',
+            '/(\b[s5]|[\$\§])[h\*][i1l\!\*][t\ł]/iu',
 
             '/s(l|1)(u|ü)t/i',
             '/suck my/i',
