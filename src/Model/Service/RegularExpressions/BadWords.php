@@ -444,7 +444,7 @@ class BadWords
             /*
              * retard
              */
-            '/r[e€]t[a@]rd(?!ant)/iu',
+            '/r[e€]t[a@]r[dt](?!ant)/iu',
 
             /*
              * rim job
