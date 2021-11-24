@@ -71,7 +71,7 @@ class BadWords
             /*
              * ball
              */
-            '/ballsacks?/i',
+            '/ball ?sacks?/i',
             '/my balls/i',
             '/smelly balls/i',
             '/suck balls?/i',

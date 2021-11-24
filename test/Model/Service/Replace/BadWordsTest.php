@@ -150,9 +150,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'baseball your balls';
+        $string = 'baseball your balls ball sacks';
         $this->assertSame(
-            "baseball $r",
+            "baseball $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
