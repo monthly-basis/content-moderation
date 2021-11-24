@@ -235,9 +235,6 @@ class BadWords
             '/\bfu+\W?k+(ers?)?\b/i',
             '/\bfu?[c\W]?king?\b/i',
 
-            // Letters
-            '/f+u+(c+k+|q)/i',
-
             // Phrases
             '/dumb af/i',
             '/\bf you\b/i',
@@ -260,6 +257,7 @@ class BadWords
             '/\bfuc(?!tion)/i',
 
             // Spellings
+            '/f+(u+|x)(c+k+|q)/i',
             '/fcuk/i',
             '/fawk/i',
             '/fuxk/i',
