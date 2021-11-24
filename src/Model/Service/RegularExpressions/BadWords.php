@@ -248,6 +248,9 @@ class BadWords
 
             // Symbols
             '/(\bf|[ƒḟ])[uμ0#\*\-\/][c#\*\(\-¢ς\*][kκ#\*\-]/iu',
+            // We don't want to match four consecutive asterisks,
+            // so we match just two astericks followed by 'ck' instead.
+            '/\*\*ck/iu',
             '/\bf_u?ck/i',
             '/F-ING/i',
             '/\*\*\*\*ING/i',
