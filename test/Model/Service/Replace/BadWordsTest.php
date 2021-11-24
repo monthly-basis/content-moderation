@@ -639,9 +639,19 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * penis
+         */
+
         $string = 'penis Peni5 pennies pennis penus peni$ pen1s peen p3n1s';
         $this->assertSame(
             "$r $r pennies $r $r $r $r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'P E N I S';
+        $this->assertSame(
+            "$r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

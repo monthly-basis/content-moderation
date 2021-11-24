@@ -391,6 +391,9 @@ class BadWords
              */
             '/p[e3]nn?[iu1][s\$5]/i',
 
+            // Spacing
+            '/p\s*e\s*n\s*i\s*s/i',
+
             // Spellings
             '/peen/i',
 
