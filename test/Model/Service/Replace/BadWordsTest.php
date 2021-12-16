@@ -731,9 +731,9 @@ class ReplaceBadWordsTest extends TestCase
          * retard
          */
 
-        $string = 'retard retardant r€t@rd retarts retarding force';
+        $string = 'retard retardant r€t@rd retarts retarding force rеtаrɗs';
         $this->assertSame(
-            "$r retardant $r {$r}s retarding force",
+            "$r retardant $r {$r}s retarding force {$r}s",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
