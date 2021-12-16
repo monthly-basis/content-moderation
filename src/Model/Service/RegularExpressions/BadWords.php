@@ -291,7 +291,10 @@ class BadWords
              */
             '/hentai/i',
 
-            '/\bhoe/i',
+            /*
+             * hoe
+             */
+            '/\bh[o0]e/i',
 
             /*
              * homo
