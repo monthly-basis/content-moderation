@@ -214,7 +214,7 @@ class BadWords
              */
 
             '/\bf\W*a\W*g\b/i',
-            '/\bf(a|4)g/i',
+            '/\bf[a4@]g/i',
 
             '/fap/',
             '/fleshlight/i',

@@ -342,9 +342,9 @@ class ReplaceBadWordsTest extends TestCase
          * fag
          */
 
-        $string = 'fag f4ggot wharfage Antofagasta';
+        $string = 'fag f4ggot wharfage Antofagasta f@g';
         $this->assertSame(
-            "$r {$r}got wharfage Antofagasta",
+            "$r {$r}got wharfage Antofagasta $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
