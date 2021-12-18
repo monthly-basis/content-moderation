@@ -195,7 +195,7 @@ class BadWords
             '/(?<!moby[\-\s])[dđ][iį\!\#\*][cč\#\*][kķ]\b/iu',
 
             // Variations
-            '/\bdicc/i',
+            '/\bdicc\b/i',
             '/dickhead/i',
 
             /*
