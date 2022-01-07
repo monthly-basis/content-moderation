@@ -10,9 +10,7 @@ class SocialMedia
             '/facebook/i',
             '/instagram/i',
             '/snapchat/i',
-            '/twitch/i',
-            '/twitter/i',
-            '/youtube/i',
+            '/tiktok/i',
         ];
     }
 }
