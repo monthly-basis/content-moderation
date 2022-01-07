@@ -9,7 +9,7 @@ class SocialMedia
             '/discord/i',
             '/facebook/i',
 
-            '/\bon ig\b/i',
+            '/\b(on|my) (ig\b|insta)/i',
             '/instagram/i',
 
             '/(my|on) snap/i',

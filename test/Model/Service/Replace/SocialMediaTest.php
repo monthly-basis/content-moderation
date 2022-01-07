@@ -30,9 +30,9 @@ class SocialMediaTest extends TestCase
             $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
         );
 
-        $string = 'instagram tension ignoring on ig';
+        $string = 'instagram tension ignoring on ig on insta my ig my insta';
         $this->assertSame(
-            "$replacement tension ignoring $replacement",
+            "$replacement tension ignoring $replacement $replacement $replacement $replacement",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
         );
 
