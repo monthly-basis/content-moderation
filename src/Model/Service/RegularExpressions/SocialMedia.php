@@ -8,6 +8,8 @@ class SocialMedia
         return [
             '/discord/i',
             '/facebook/i',
+
+            '/\bon ig\b/i',
             '/instagram/i',
 
             '/on snap/i',
