@@ -9,7 +9,10 @@ class SocialMedia
             '/discord/i',
             '/facebook/i',
             '/instagram/i',
+
+            '/on snap/i',
             '/snapchat/i',
+
             '/tik ?tok/i',
         ];
     }
