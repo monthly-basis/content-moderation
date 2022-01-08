@@ -152,6 +152,7 @@ class Module
                         $sm->get(ContentModerationService\Replace\BadWords::class),
                         $sm->get(ContentModerationService\Replace\EmailAddresses::class),
                         $sm->get(ContentModerationService\Replace\ImmatureWords::class),
+                        $sm->get(ContentModerationService\Replace\SocialMedia::class),
                         $sm->get(StringService\Escape::class),
                         $sm->get(StringService\Url\ToHtml::class)
                     );

@@ -18,6 +18,9 @@ class ToHtmlTest extends TestCase
         $this->replaceImmatureWordsServiceMock = $this->createMock(
             ContentModerationService\Replace\ImmatureWords::class
         );
+        $this->replaceSocialMediaServiceMock = $this->createMock(
+            ContentModerationService\Replace\SocialMedia::class
+        );
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
         );
@@ -29,6 +32,7 @@ class ToHtmlTest extends TestCase
             $this->replaceBadWordsServiceMock,
             $this->replaceEmailAddressesServiceMock,
             $this->replaceImmatureWordsServiceMock,
+            $this->replaceSocialMediaServiceMock,
             $this->escapeServiceMock,
             $this->toHtmlServiceMock
         );
