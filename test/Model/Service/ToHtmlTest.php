@@ -24,7 +24,7 @@ class ToHtmlTest extends TestCase
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
         );
-        $this->toHtmlServiceMock = $this->createMock(
+        $this->urlToHtmlServiceMock = $this->createMock(
             StringService\Url\ToHtml::class
         );
 
@@ -34,7 +34,7 @@ class ToHtmlTest extends TestCase
             $this->replaceImmatureWordsServiceMock,
             $this->replaceSocialMediaServiceMock,
             $this->escapeServiceMock,
-            $this->toHtmlServiceMock
+            $this->urlToHtmlServiceMock
         );
     }
 
@@ -63,7 +63,7 @@ class ToHtmlTest extends TestCase
             ->expects($this->once())
             ->method('escape')
             ->willReturn($string);
-        $this->toHtmlServiceMock
+        $this->urlToHtmlServiceMock
             ->expects($this->exactly(2))
             ->method('toHtml')
             ->withConsecutive(
