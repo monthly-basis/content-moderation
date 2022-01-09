@@ -9,8 +9,12 @@ class SocialMedia
             '/discord/i',
             '/facebook/i',
 
-            '/\b(on|my) (ig\b|insta)/i',
+            /*
+             * Instagram
+             */
+            // Prioritize full name of social network
             '/instagram/i',
+            '/\b(on|my) (ig\b|insta)/i',
 
             '/(my|on) snap/i',
             '/snapchat/i',
