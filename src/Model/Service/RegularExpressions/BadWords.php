@@ -502,7 +502,7 @@ class BadWords
             '/\bt[i1]ts?\b/i',
             '/t[i1](dd?|tt)[i1]es/i',
 
-            '/vagina/i',
+            '/vag\s?ina/i',
 
             /*
              * whore
