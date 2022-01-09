@@ -38,12 +38,12 @@ class ToHtmlTest extends TestCase
         );
     }
 
-    public function test_toHtml_simpleString_simpleString()
+    public function test_toHtml_stringWithSurroundingSpacesUrlsHtmlAndLineBreaks_expectedString()
     {
         $this->replaceBadWordsServiceMock
             ->expects($this->once())
             ->method('replaceBadWords')
-            ->with('simple string')
+            ->with("https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com")
             ->willReturn('replace bad words return value')
             ;
         $this->replaceImmatureWordsServiceMock
@@ -68,21 +68,8 @@ class ToHtmlTest extends TestCase
             ->expects($this->once())
             ->method('escape')
             ->with('replace social media return value')
-            ->willReturn('escape service return value')
+            ->willReturn("https://www.jiskha.com &lt;b&gt;bold&lt;/b&gt;\r\n\r\n\r\n\r\n\r\n&lt;sup&gt;sup&lt;/sup&gt; https://www.yahoo.com")
             ;
-        $this->assertSame(
-            'escape service return value',
-            $this->toHtmlService->toHtml('simple string')
-        );
-    }
-
-    public function test_toHtml_stringWithUrls_correctHtml()
-    {
-        $string = 'https://www.jiskha.com https://www.yahoo.com';
-        $this->escapeServiceMock
-            ->expects($this->once())
-            ->method('escape')
-            ->willReturn($string);
         $this->urlToHtmlServiceMock
             ->expects($this->exactly(2))
             ->method('toHtml')
@@ -95,9 +82,10 @@ class ToHtmlTest extends TestCase
                 '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>'
             );
 
+        $stringWithSurroundingSpacesUrlsHtmlAndLineBreaks = " https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com ";
         $this->assertSame(
-            '<a href="https://www.jiskha.com">https://www.jiskha.com</a> <a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>',
-            $this->toHtmlService->toHtml($string)
+            "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br />\r\n<br />\r\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
+            $this->toHtmlService->toHtml($stringWithSurroundingSpacesUrlsHtmlAndLineBreaks)
         );
     }
 }
