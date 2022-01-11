@@ -42,13 +42,17 @@ class SocialMediaTest extends TestCase
 
         $string = 'follow me on instagram';
         $this->assertSame(
-            "follow me on $replacement",
+            "follow me $replacement",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
         );
 
-        $string = 'snapchat on snapchat my snap';
+        /*
+         * Snapchat
+         */
+
+        $string = 'snapchat on snap on snapchat my snap';
         $this->assertSame(
-            "$replacement on $replacement $replacement",
+            "$replacement $replacement $replacement $replacement",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
         );
 

@@ -12,16 +12,16 @@ class SocialMedia
             /*
              * Instagram
              */
-            // Prioritize full name of social network
+            // Prioritize longer phrase
+            '/\b(on|my) (ig\b|insta(gram)?)/i',
             '/instagram/i',
-            '/\b(on|my) (ig\b|insta)/i',
 
             /*
              * Snapchat
              */
-            // Prioritize full name of social network
+            // Prioritize longer phrase
+            '/(my|on) snap(chat)?/i',
             '/snapchat/i',
-            '/(my|on) snap/i',
 
             '/tik ?tok/i',
         ];
