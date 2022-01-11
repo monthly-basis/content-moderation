@@ -111,6 +111,15 @@ class Module
                 ContentModerationService\RegularExpressions\SocialMedia::class => function ($sm) {
                     return new ContentModerationService\RegularExpressions\SocialMedia();
                 },
+                ContentModerationService\Replace::class => function ($sm) {
+                    return new ContentModerationService\Replace(
+                        $sm->get(ContentModerationService\Replace\BadWords::class),
+                        $sm->get(ContentModerationService\Replace\EmailAddresses::class),
+                        $sm->get(ContentModerationService\Replace\ImmatureWords::class),
+                        $sm->get(ContentModerationService\Replace\SocialMedia::class),
+                        $sm->get(ContentModerationService\Replace\Spaces::class),
+                    );
+                },
                 ContentModerationService\Replace\BadWords::class => function ($sm) {
                     return new ContentModerationService\Replace\BadWords(
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
