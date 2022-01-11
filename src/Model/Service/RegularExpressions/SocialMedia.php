@@ -16,8 +16,12 @@ class SocialMedia
             '/instagram/i',
             '/\b(on|my) (ig\b|insta)/i',
 
-            '/(my|on) snap/i',
+            /*
+             * Snapchat
+             */
+            // Prioritize full name of social network
             '/snapchat/i',
+            '/(my|on) snap/i',
 
             '/tik ?tok/i',
         ];
