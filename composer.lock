@@ -1268,16 +1268,16 @@
         },
         {
             "name": "laminas/laminas-view",
-            "version": "2.18.0",
+            "version": "2.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-view.git",
-                "reference": "196589217721163f950f8c5d6ae5a25337e78216"
+                "reference": "5f2ed1af896543e986090afb6433e32409c99d4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-view/zipball/196589217721163f950f8c5d6ae5a25337e78216",
-                "reference": "196589217721163f950f8c5d6ae5a25337e78216",
+                "url": "https://api.github.com/repos/laminas/laminas-view/zipball/5f2ed1af896543e986090afb6433e32409c99d4d",
+                "reference": "5f2ed1af896543e986090afb6433e32409c99d4d",
                 "shasum": ""
             },
             "require": {
@@ -1305,7 +1305,7 @@
                 "laminas/laminas-http": "^2.15",
                 "laminas/laminas-i18n": "^2.6",
                 "laminas/laminas-modulemanager": "^2.7.1",
-                "laminas/laminas-mvc": "^2.7.14 || ^3.0",
+                "laminas/laminas-mvc": "^3.0",
                 "laminas/laminas-mvc-i18n": "^1.1",
                 "laminas/laminas-mvc-plugin-flashmessenger": "^1.5.0",
                 "laminas/laminas-navigation": "^2.13.1",
@@ -1368,7 +1368,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-01-09T21:12:26+00:00"
+            "time": "2022-01-12T16:20:05+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
@@ -1469,16 +1469,16 @@
         },
         {
             "name": "monthly-basis/string",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monthly-basis/string.git",
-                "reference": "08f86dbb2d25c2ca4af230718ada65b85709dc2d"
+                "reference": "5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monthly-basis/string/zipball/08f86dbb2d25c2ca4af230718ada65b85709dc2d",
-                "reference": "08f86dbb2d25c2ca4af230718ada65b85709dc2d",
+                "url": "https://api.github.com/repos/monthly-basis/string/zipball/5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780",
+                "reference": "5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780",
                 "shasum": ""
             },
             "require": {
@@ -1497,9 +1497,9 @@
             ],
             "support": {
                 "issues": "https://github.com/monthly-basis/string/issues",
-                "source": "https://github.com/monthly-basis/string/tree/v3.3.0"
+                "source": "https://github.com/monthly-basis/string/tree/v3.3.1"
             },
-            "time": "2021-07-24T21:23:19+00:00"
+            "time": "2022-01-11T21:44:42+00:00"
         },
         {
             "name": "myclabs/deep-copy",
