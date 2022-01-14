@@ -6,7 +6,11 @@ class SocialMedia
     public function getRegularExpressions(): array
     {
         return [
-            '/discord/i',
+            /*
+             * Discord
+             */
+            '/dis\s?[ck]ord/i',
+
             '/facebook/i',
 
             /*
