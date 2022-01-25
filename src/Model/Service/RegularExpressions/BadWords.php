@@ -109,7 +109,6 @@ class BadWords
             '/boner/i',
 
             '/\bboobs\b/i',
-            '/bullshi?t/i',
 
             /*
              * ching chong
@@ -486,11 +485,11 @@ class BadWords
             '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
             // Spellings
-            '/bull[^\w\s]{4}/i',
+            '/bull(sht|[^\w\s]{4})/i',
             '/dip ?shit/i',
 
             // Symbols
-            '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
+            '/(?<!Ku)s[\*\.]?h[\*]?i[\.]?t/iu',
             '/(\b[s5]|[\$\§])[h\*][i1l\!\*\-¡][t\ł]/iu',
 
             '/s(l|1)(u|ü)t/i',
