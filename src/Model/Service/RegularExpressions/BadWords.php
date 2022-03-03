@@ -109,7 +109,7 @@ class BadWords
              */
             '/boner/i',
 
-            '/\bboobs\b/i',
+            '/\bbo{2,}bs?/i',
 
             /*
              * ching chong

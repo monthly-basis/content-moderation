@@ -187,6 +187,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * boob
+         */
+
+        $string = 'boob boobs BOOOOOOOBSSSS';
+        $this->assertSame(
+            "$r $r {$r}SSS",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * bitch
          */
 
@@ -286,9 +296,9 @@ class ReplaceBadWordsTest extends TestCase
          * cum
          */
 
-        $string = 'cum cucumber boobs CUMMMMMM summa cum laude magna cum laude';
+        $string = 'cum cucumber CUMMMMMM summa cum laude magna cum laude';
         $this->assertSame(
-            "$r cucumber $r $r summa cum laude magna cum laude",
+            "$r cucumber $r summa cum laude magna cum laude",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
