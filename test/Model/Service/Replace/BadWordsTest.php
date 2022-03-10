@@ -487,9 +487,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'motherf*ckers **ck FXCKING fk you';
+        $string = 'motherf*ckers **ck FXCKING fk you AFK UNTIL fk u';
         $this->assertSame(
-            "$r $r {$r}ING $r",
+            "$r $r {$r}ING $r AFK UNTIL $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
