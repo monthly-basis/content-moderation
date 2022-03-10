@@ -269,6 +269,7 @@ class BadWords
             // Variations
             '/\bf off\b/i',
             '/\bf u\b/i',
+            '/fk you/i',
             '/what the fk/i',
 
             /*
