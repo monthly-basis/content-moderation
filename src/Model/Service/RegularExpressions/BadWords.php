@@ -112,6 +112,11 @@ class BadWords
             '/\bbo{2,}bs?/i',
 
             /*
+             * brazzers
+             */
+            '/brazzers?/i',
+
+            /*
              * ching chong
              */
 
