@@ -477,6 +477,9 @@ class BadWords
             '/(hard|love|rough|want) sex/i',
             '/[s\$][e\*]xy/i',
 
+            // Spellings
+            '/secks/i',
+
             /*
              * shit
              */
