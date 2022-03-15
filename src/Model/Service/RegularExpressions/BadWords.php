@@ -503,6 +503,12 @@ class BadWords
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
             '/(\b[s5]|[\$\§])[h\*][i1l\!\*\-¡][t\ł]/iu',
 
+            /*
+             * slot
+             */
+            '/pg slot/i',
+            '/slot pg/i',
+
             '/s(l|1)(u|ü)t/i',
 
             /*
