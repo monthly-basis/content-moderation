@@ -323,7 +323,7 @@ class BadWords
             /*
              * kill
              */
-            '/k[i1]ll ?y[o0]urs[e3]lf/i',
+            '/k[i1]ll ?y[o0]ur ?s[e3]lf/i',
             '/\bkys\b/i',
 
             /*
