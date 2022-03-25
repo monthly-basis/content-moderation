@@ -286,7 +286,7 @@ class BadWords
             '/\bgey\b/i',
 
             // Symbols
-            '/\bg[\s\.\_]?[a\@4][\s\.\_]?y(?!le)(?!-Lussac)/i',
+            '/\bg[\s\.\_]?[a\@4]+[\s\.\_]?y(?!le)(?!-Lussac)/i',
 
             '/god ?damn?/i',
 
