@@ -669,9 +669,9 @@ class ReplaceBadWordsTest extends TestCase
          * MILF
          */
 
-        $string = 'Milford MILF';
+        $string = 'Milford MILF milfs';
         $this->assertSame(
-            "Milford $r",
+            "Milford $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
