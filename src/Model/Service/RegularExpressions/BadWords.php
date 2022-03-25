@@ -501,7 +501,7 @@ class BadWords
             '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
             // Spellings
-            '/bull(shit|[^\w\s]{4})/i',
+            '/bull ?([s\$] ?hit|[^\w\s]{4})/i',
             '/dip ?shit/i',
 
             // Symbols
