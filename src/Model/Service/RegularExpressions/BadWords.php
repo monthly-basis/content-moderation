@@ -135,7 +135,7 @@ class BadWords
             '/co{2,}ck/i',
 
             // Phrases
-            '/cockandballs/i',
+            '/cock?andballs?/i',
             '/cock ?sucker/i',
             '/massive co[ck]/i',
             '/suck a co(ck?|k)/i',
