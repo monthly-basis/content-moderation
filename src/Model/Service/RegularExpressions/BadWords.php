@@ -393,6 +393,7 @@ class BadWords
              * nut
              */
             '/no nut november/i',
+            '/nut ?sa(cks?|x)/i',
 
             /*
              * oral
