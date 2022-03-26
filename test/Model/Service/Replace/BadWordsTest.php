@@ -865,6 +865,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'r*pe hr*person';
+        $this->assertSame(
+            "$r hr*person",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         /*
          * retard
          */

@@ -464,7 +464,7 @@ class BadWords
             /*
              * rape
              */
-            '/\brape[ds]?/i',
+            '/\br[a\*]pe[ds]?/i',
             '/\brapist/i',
 
             /*
