@@ -709,7 +709,7 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = 'niqqa niqqer ngger niggr nggr Nick Ger Nick Gers negg@';
         $this->assertSame(
-            "$r $r $r {$r}r $r $r {$r}s $r",
+            "$r $r $r {$r}r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
