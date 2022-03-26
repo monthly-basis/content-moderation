@@ -365,7 +365,6 @@ class BadWords
             '/[nɴΝ]\W*[1il\!\¡]\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
-            '/\bnicker\b/i',
             '/\bnig\b/i',
             '/nogger/i',
 
@@ -380,7 +379,7 @@ class BadWords
             '/Nea grr/i',
             '/\bneg[ae]r/i',
             '/nigro/i',
-            '/nick ?[gk][eu]rr?/i',
+            '/nick ?[gk]?[eu]rr?/i',
             '/niglet/i',
             '/\bn ?word\b/i',
 
