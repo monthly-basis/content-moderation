@@ -66,7 +66,7 @@ class BadWords
             '/\ba[s5z][s5z\W]h[0o][l1]es?/i',
             '/\ba holes\b/i',
             '/badass/i',
-            '/dum(ass|b(ass?|a\W\W))/i',
+            '/d[u\*]m(ass|b([a\*]ss?|a\W\W))/i',
 
             /*
              * ball
