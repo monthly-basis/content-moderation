@@ -360,6 +360,11 @@ class BadWords
             '/milfs?\b/i',
 
             /*
+             * mommy
+             */
+            '/mommy milk/i',
+
+            /*
              * nigger
              */
             '/[nɴΝ]\W*[1il\!\¡]\W*g\W*g/i',

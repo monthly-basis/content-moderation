@@ -692,6 +692,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * mommy
+         */
+
+        $string = 'mommy milk';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * nigger
          */
 
