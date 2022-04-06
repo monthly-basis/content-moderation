@@ -158,7 +158,7 @@ class BadWords
             '/\bc\s*o\s*c\s*k(\s*s)?\b/i',
 
             // Symbols
-            '/c[0\#]ck/i',
+            '/c[0\#\*]ck/i',
 
             /*
              * cooch
