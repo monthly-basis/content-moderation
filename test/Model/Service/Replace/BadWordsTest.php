@@ -655,9 +655,9 @@ class ReplaceBadWordsTest extends TestCase
          * Lolita
          */
 
-        $string = 'lolita Lolita';
+        $string = 'lolita Lolita loli*ta';
         $this->assertSame(
-            "$r $r",
+            "$r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
