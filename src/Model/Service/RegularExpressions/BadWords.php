@@ -217,7 +217,7 @@ class BadWords
 
             // Variations
             '/\bdicc\b/i',
-            '/dickhead/i',
+            '/dick(head|licker)/i',
 
             /*
              * eat
