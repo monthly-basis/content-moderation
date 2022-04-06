@@ -988,6 +988,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * suck
+         */
+
+        $string = 'suck my suck these suck you off suck your';
+        $this->assertSame(
+            "$r $r $r off $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * threesome
          */
 

@@ -574,7 +574,7 @@ class BadWords
             /*
              * suck
              */
-            '/suck my/i',
+            '/suck (my|these|your?)/i',
 
             /*
              * threesome
