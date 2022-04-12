@@ -31,7 +31,12 @@ class BadWords
              */
             '/ozeybhv/',
 
+            /*
+             * symbols
+             */
+
             '/8={2,}D/i',
+            '/\W{3,4}ing/i',
 
             /*
              * anal
