@@ -203,7 +203,7 @@ class BadWords
              * daddy
              */
 
-            '/(harder|yes) daddy/i',
+            '/(harder|me|yes) daddy/i',
 
             /*
              * dick
