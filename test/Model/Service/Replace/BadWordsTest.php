@@ -903,9 +903,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'calculate retardation';
+        $string = 'calculate retardation uniformly retarded';
         $this->assertSame(
-            "calculate retardation",
+            "calculate retardation uniformly retarded",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
