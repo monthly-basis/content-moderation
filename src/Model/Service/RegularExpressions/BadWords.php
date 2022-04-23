@@ -590,7 +590,7 @@ class BadWords
              * tit
              */
             '/\bt[i1]t(s+)?\b/i',
-            '/t[i1](dd?|tt)(y|[i1]es)/i',
+            '/t[i1](dd|tt)(y|[i1]es)/i',
 
             '/vag\s?ina/i',
 
