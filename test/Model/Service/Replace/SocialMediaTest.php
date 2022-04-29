@@ -16,7 +16,7 @@ class SocialMediaTest extends TestCase
 
     public function test_replaceSocialMedia()
     {
-        $replacement = 'social-media';
+        $r = 'social-media';
 
         /*
          * Discord
@@ -24,14 +24,14 @@ class SocialMediaTest extends TestCase
 
         $string = 'join discord dis cord dis kord d i s c o r d';
         $this->assertSame(
-            "join $replacement $replacement $replacement $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "join $r $r $r $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
         $string = 'friends on facebook';
         $this->assertSame(
-            "friends on $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "friends on $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
         /*
@@ -40,14 +40,14 @@ class SocialMediaTest extends TestCase
 
         $string = 'instagram tension ignoring on ig on insta my ig my insta';
         $this->assertSame(
-            "$replacement tension ignoring $replacement $replacement $replacement $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "$r tension ignoring $r $r $r $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
         $string = 'follow me on instagram';
         $this->assertSame(
-            "follow me $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "follow me $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
         /*
@@ -56,14 +56,14 @@ class SocialMediaTest extends TestCase
 
         $string = 'snapchat on snap on snapchat my snap';
         $this->assertSame(
-            "$replacement $replacement $replacement $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "$r $r $r $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
         $string = 'add me on tiktok tik tok';
         $this->assertSame(
-            "add me on $replacement $replacement",
-            $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
+            "add me on $r $r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
     }
 }
