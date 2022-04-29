@@ -9,7 +9,7 @@ class SocialMedia
             /*
              * Discord
              */
-            '/dis\s?[ck]ord/i',
+            '/d\s?i\s?s\s?[ck]\s?o\s?r\s?d/i',
 
             '/facebook/i',
 
