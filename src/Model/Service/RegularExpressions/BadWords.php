@@ -205,6 +205,7 @@ class BadWords
              * daddy
              */
 
+            '/^daddy$/i',
             '/(harder|me|yes) daddy/i',
 
             /*
