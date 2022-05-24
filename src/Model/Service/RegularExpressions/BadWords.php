@@ -81,6 +81,7 @@ class BadWords
             '/^balls$/i',
             '/ball ?sacks?/i',
             '/balls ?in ?yo/i',
+            '/big ?balls/i',
             '/my balls/i',
             '/smelly balls/i',
             '/suck balls?/i',
