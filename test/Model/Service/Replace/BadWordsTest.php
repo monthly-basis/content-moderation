@@ -709,9 +709,9 @@ class ReplaceBadWordsTest extends TestCase
          * Mike
          */
 
-        $string = 'Mike Hawk Mike Hunt';
+        $string = 'Mike Hawk MikeHawk Mike Hunt';
         $this->assertSame(
-            "$r $r",
+            "$r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
