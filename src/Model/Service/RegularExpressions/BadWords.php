@@ -510,7 +510,7 @@ class BadWords
             '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
 
             // Spellings
-            '/pus+y+/i',
+            '/p[uv]s+y+/i',
             '/pusay/i',
             '/pussi(es)?/i',
 
