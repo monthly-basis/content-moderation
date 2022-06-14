@@ -20,6 +20,7 @@ class Module
                     'replaceAndEscape'                   => ContentModerationHelper\ReplaceAndEscape::class,
                     'replaceSpaces'                      => ContentModerationHelper\Replace\Spaces::class,
                     'stripTagsReplaceBadWordsAndShorten' => ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class,
+                    'stripTagsReplaceBadWordsShortenAndEscape' => ContentModerationHelper\StripTagsReplaceBadWordsShortenAndEscape::class,
                     'toHtml'                             => ContentModerationHelper\ToHtml::class,
                 ],
                 'factories' => [
@@ -53,6 +54,13 @@ class Module
                         return new ContentModerationHelper\StripTagsReplaceBadWordsAndShorten(
                             $sm->get(ContentModerationService\Replace\BadWords::class),
                             $sm->get(StringService\Shorten::class)
+                        );
+                    },
+                    ContentModerationHelper\StripTagsReplaceBadWordsShortenAndEscape::class => function ($sm) {
+                        return new ContentModerationHelper\StripTagsReplaceBadWordsShortenAndEscape(
+                            $sm->get(ContentModerationService\Replace\BadWords::class),
+                            $sm->get(StringService\Escape::class),
+                            $sm->get(StringService\Shorten::class),
                         );
                     },
                     ContentModerationHelper\ToHtml::class => function ($sm) {
