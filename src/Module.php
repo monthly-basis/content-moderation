@@ -119,6 +119,9 @@ class Module
                 ContentModerationService\RegularExpressions\SocialMedia::class => function ($sm) {
                     return new ContentModerationService\RegularExpressions\SocialMedia();
                 },
+                ContentModerationService\RegularExpressions\Url\Fragments::class => function ($sm) {
+                    return new ContentModerationService\RegularExpressions\Url\Fragments();
+                },
                 ContentModerationService\Replace::class => function ($sm) {
                     return new ContentModerationService\Replace(
                         $sm->get(ContentModerationService\Replace\BadWords::class),
