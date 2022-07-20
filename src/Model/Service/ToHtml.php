@@ -10,6 +10,7 @@ class ToHtml
         ContentModerationService\Replace\BadWords $replaceBadWordsService,
         ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
+        ContentModerationService\Replace\LineBreaks $replaceLineBreaksService,
         ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
         StringService\Escape $escapeService,
         StringService\Url\ToHtml $urlToHtmlService
@@ -17,6 +18,7 @@ class ToHtml
         $this->replaceBadWordsService       = $replaceBadWordsService;
         $this->replaceEmailAddressesService = $replaceEmailAddressesService;
         $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
+        $this->replaceLineBreaksService     = $replaceLineBreaksService;
         $this->replaceSocialMediaService    = $replaceSocialMediaService;
         $this->escapeService                = $escapeService;
         $this->urlToHtmlService             = $urlToHtmlService;
@@ -29,6 +31,7 @@ class ToHtml
         $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
         $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
         $message = $this->replaceSocialMediaService->replaceSocialMedia($message, '');
+        $message = $this->replaceLineBreaksService->replaceLineBreaks($message);
 
         $messageEscaped = $this->escapeService->escape($message);
 
@@ -43,9 +46,9 @@ class ToHtml
         $replacement    = '<$1$2>';
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
-        // Replace 3 or more line breaks with just 2 line breaks.
-        $pattern = '/(\r\n){3,}/s';
-        $replacement = "\r\n\r\n";
+        // Replace 3 or more \n's with just 2 \n's.
+        $pattern = '/\n{3,}/s';
+        $replacement = "\n\n";
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
         return nl2br($messageEscaped);

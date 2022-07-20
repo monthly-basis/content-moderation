@@ -18,6 +18,9 @@ class ToHtmlTest extends TestCase
         $this->replaceImmatureWordsServiceMock = $this->createMock(
             ContentModerationService\Replace\ImmatureWords::class
         );
+        $this->replaceLineBreaksServiceMock = $this->createMock(
+            ContentModerationService\Replace\LineBreaks::class
+        );
         $this->replaceSocialMediaServiceMock = $this->createMock(
             ContentModerationService\Replace\SocialMedia::class
         );
@@ -32,6 +35,7 @@ class ToHtmlTest extends TestCase
             $this->replaceBadWordsServiceMock,
             $this->replaceEmailAddressesServiceMock,
             $this->replaceImmatureWordsServiceMock,
+            $this->replaceLineBreaksServiceMock,
             $this->replaceSocialMediaServiceMock,
             $this->escapeServiceMock,
             $this->urlToHtmlServiceMock
@@ -64,11 +68,17 @@ class ToHtmlTest extends TestCase
             ->with('replace email addresses return value')
             ->willReturn('replace social media return value')
             ;
+        $this->replaceLineBreaksServiceMock
+            ->expects($this->once())
+            ->method('replaceLineBreaks')
+            ->with('replace social media return value')
+            ->willReturn('replace line breaks return value')
+            ;
         $this->escapeServiceMock
             ->expects($this->once())
             ->method('escape')
-            ->with('replace social media return value')
-            ->willReturn("https://www.jiskha.com &lt;b&gt;bold&lt;/b&gt;\r\n\r\n\r\n\r\n\r\n&lt;sup&gt;sup&lt;/sup&gt; https://www.yahoo.com")
+            ->with('replace line breaks return value')
+            ->willReturn("https://www.jiskha.com &lt;b&gt;bold&lt;/b&gt;\n\n\n\n\n&lt;sup&gt;sup&lt;/sup&gt; https://www.yahoo.com")
             ;
         $this->urlToHtmlServiceMock
             ->expects($this->exactly(2))
@@ -84,7 +94,7 @@ class ToHtmlTest extends TestCase
 
         $stringWithSurroundingSpacesUrlsHtmlAndLineBreaks = " https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com ";
         $this->assertSame(
-            "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br />\r\n<br />\r\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
+            "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br />\n<br />\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
             $this->toHtmlService->toHtml($stringWithSurroundingSpacesUrlsHtmlAndLineBreaks)
         );
     }
