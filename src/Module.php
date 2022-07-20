@@ -149,6 +149,9 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
                 },
+                ContentModerationService\Replace\LineBreaks::class => function ($sm) {
+                    return new ContentModerationService\Replace\LineBreaks();
+                },
                 ContentModerationService\Replace\SocialMedia::class => function ($sm) {
                     return new ContentModerationService\Replace\SocialMedia(
                         $sm->get(ContentModerationService\RegularExpressions\SocialMedia::class)
