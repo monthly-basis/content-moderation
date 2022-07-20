@@ -26,7 +26,6 @@ class ToHtml
 
     public function toHtml(string $message): string
     {
-        $message = trim($message);
         $message = $this->replaceBadWordsService->replaceBadWords($message, '');
         $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
         $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
@@ -34,6 +33,12 @@ class ToHtml
         $message = $this->replaceLineBreaksService->replaceLineBreaks($message);
 
         $messageEscaped = $this->escapeService->escape($message);
+
+        /*
+         * Trim here in case any of the above replacements left whitespace at
+         * edges of string.
+         */
+        $message = trim($message);
 
         $pattern = '|https?://\S+|i';
         $messageEscaped = preg_replace_callback(

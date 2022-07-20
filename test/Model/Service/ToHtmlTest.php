@@ -44,10 +44,12 @@ class ToHtmlTest extends TestCase
 
     public function test_toHtml_stringWithSurroundingSpacesUrlsHtmlAndLineBreaks_expectedString()
     {
+        $stringWithSurroundingSpacesUrlsHtmlAndLineBreaks = " https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com ";
+
         $this->replaceBadWordsServiceMock
             ->expects($this->once())
             ->method('replaceBadWords')
-            ->with("https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com")
+            ->with($stringWithSurroundingSpacesUrlsHtmlAndLineBreaks)
             ->willReturn('replace bad words return value')
             ;
         $this->replaceImmatureWordsServiceMock
@@ -92,7 +94,6 @@ class ToHtmlTest extends TestCase
                 '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>'
             );
 
-        $stringWithSurroundingSpacesUrlsHtmlAndLineBreaks = " https://www.jiskha.com <b>bold</b>\r\n\r\n\r\n\r\n\r\n<sup>sup</sup> https://www.yahoo.com ";
         $this->assertSame(
             "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
             $this->toHtmlService->toHtml($stringWithSurroundingSpacesUrlsHtmlAndLineBreaks)
