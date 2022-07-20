@@ -51,7 +51,7 @@ class ToHtml
         $replacement = "\n\n";
         $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
 
-        return nl2br($messageEscaped);
+        return nl2br($messageEscaped, false);
     }
 
     protected function pregReplaceCallback(array $matches)
