@@ -79,7 +79,7 @@ class BadWords
              */
 
             '/^balls$/i',
-            '/ball ?sacks?/i',
+            '/ball ?[sz]acks?/i',
             '/balls ?in ?yo/i',
             '/big ?balls/i',
             '/my balls/i',
