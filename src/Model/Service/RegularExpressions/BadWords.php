@@ -301,6 +301,7 @@ class BadWords
             '/\bfk u/i',
             '/fk you/i',
             '/what the fk/i',
+            '/idgaf/i',
 
             /*
              * gay
