@@ -582,6 +582,12 @@ class BadWords
             '/s(l|1)(u|ü)t/i',
 
             /*
+             * strapon
+             */
+
+            '/strapon/i',
+
+            /*
              * suck
              */
             '/suck (my|these|your?)/i',
