@@ -1090,6 +1090,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * virginity
+         */
+
+        $string = 'virginity';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * whore
          */
 

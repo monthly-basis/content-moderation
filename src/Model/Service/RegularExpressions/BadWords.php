@@ -612,6 +612,12 @@ class BadWords
             '/vag\s?ina/i',
 
             /*
+             * virginity
+             */
+
+            '/virginity/i',
+
+            /*
              * whore
              */
             '/(wh|\bh)[o\*0]re/i',
