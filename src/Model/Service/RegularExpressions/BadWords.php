@@ -594,6 +594,12 @@ class BadWords
             '/strapon/i',
 
             /*
+             * stripper
+             */
+
+            '/stripper/i',
+
+            /*
              * suck
              */
             '/suck (my|these|your?)/i',
