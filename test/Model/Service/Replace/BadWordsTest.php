@@ -547,9 +547,9 @@ class ReplaceBadWordsTest extends TestCase
          * goddamn
          */
 
-        $string = 'goddamn god damn GOD DAM';
+        $string = 'goddamn god damn GOD DAM goddayum';
         $this->assertSame(
-            "$r $r $r",
+            "$r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

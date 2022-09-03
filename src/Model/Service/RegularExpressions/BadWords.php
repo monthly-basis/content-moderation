@@ -314,7 +314,11 @@ class BadWords
             // Symbols
             '/\bg[\s\.\_]?[a\@4]+[\s\.\_]?y(?!le)(?!-Lussac)/i',
 
-            '/god ?damn?/i',
+            /*
+             * god damn
+             */
+
+            '/god ?da(mn?|yum)/i',
 
             /*
              * handjob
