@@ -1025,9 +1025,9 @@ class ReplaceBadWordsTest extends TestCase
          * slot
          */
 
-        $string = 'pg slot slot pg';
+        $string = 'SLOTPG pg slot slot pg';
         $this->assertSame(
-            "$r $r",
+            "$r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
