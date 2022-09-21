@@ -25,45 +25,45 @@ class ToHtml
     }
 
     public function toHtml(
-        string $message,
+        string $string,
         bool $replaceSocialMedia = false,
     ): string {
-        $message = $this->replaceBadWordsService->replaceBadWords($message, '');
-        $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
-        $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
+        $string = $this->replaceBadWordsService->replaceBadWords($string, '');
+        $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, '');
+        $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
         if ($replaceSocialMedia) {
-            $message = $this->replaceSocialMediaService->replaceSocialMedia(
-                $message,
+            $string = $this->replaceSocialMediaService->replaceSocialMedia(
+                $string,
                 ''
             );
         }
-        $message = $this->replaceLineBreaksService->replaceLineBreaks($message);
+        $string = $this->replaceLineBreaksService->replaceLineBreaks($string);
 
-        $messageEscaped = $this->escapeService->escape($message);
+        $stringEscaped = $this->escapeService->escape($string);
 
         /*
-         * Trim escaped message here in case any of the above replacements left
+         * Trim escaped string here in case any of the above replacements left
          * whitespace at edges of string.
          */
-        $messageEscaped = trim($messageEscaped);
+        $stringEscaped = trim($stringEscaped);
 
         $pattern = '|https?://\S+|i';
-        $messageEscaped = preg_replace_callback(
+        $stringEscaped = preg_replace_callback(
             $pattern,
             [$this, 'pregReplaceCallback'],
-            $messageEscaped
+            $stringEscaped
         );
 
         $pattern        = '#&lt;(/?)(b|i|u|sub|sup)&gt;#i';
         $replacement    = '<$1$2>';
-        $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
+        $stringEscaped = preg_replace($pattern, $replacement, $stringEscaped);
 
         // Replace 3 or more \n's with just 2 \n's.
         $pattern = '/\n{3,}/s';
         $replacement = "\n\n";
-        $messageEscaped = preg_replace($pattern, $replacement, $messageEscaped);
+        $stringEscaped = preg_replace($pattern, $replacement, $stringEscaped);
 
-        return nl2br($messageEscaped, false);
+        return nl2br($stringEscaped, false);
     }
 
     protected function pregReplaceCallback(array $matches)

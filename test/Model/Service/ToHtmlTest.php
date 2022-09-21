@@ -97,7 +97,7 @@ class ToHtmlTest extends TestCase
         $this->assertSame(
             "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
             $this->toHtmlService->toHtml(
-                message: $string,
+                string: $string,
                 replaceSocialMedia: true,
             )
         );
@@ -156,7 +156,7 @@ class ToHtmlTest extends TestCase
         $this->assertSame(
             "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
             $this->toHtmlService->toHtml(
-                message: $string,
+                $string
             )
         );
     }
