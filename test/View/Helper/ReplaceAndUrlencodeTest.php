@@ -20,12 +20,12 @@ class ReplaceAndUrlencodeTest extends TestCase
 
     public function test___invoke_allBoolsOmitted_expectedString()
     {
-        $string = 'cool beans';
+        $string = 'hello world';
 
         $this->replaceServiceMock
             ->expects($this->once())
             ->method('replace')
-            ->with($string, '', false)
+            ->with($string, '', false, false)
             ->willReturn('replace string result')
             ;
 
@@ -37,14 +37,36 @@ class ReplaceAndUrlencodeTest extends TestCase
         );
     }
 
-    public function test___invoke_allBoolsTrue_expectedString()
+    public function test___invoke_allBoolsFalse_expectedString()
     {
-        $string = 'warm beans';
+        $string = 'hello world';
 
         $this->replaceServiceMock
             ->expects($this->once())
             ->method('replace')
-            ->with($string, '', true)
+            ->with($string, '', false, false)
+            ->willReturn('replace string result')
+            ;
+
+        $this->assertSame(
+            'replace+string+result',
+            $this->replaceAndUrlencodeHelper->__invoke(
+                string: $string,
+                replacement: '',
+                replaceSocialMedia: false,
+                replaceSpaces: false,
+            )
+        );
+    }
+
+    public function test___invoke_allBoolsTrue_expectedString()
+    {
+        $string = 'hello world';
+
+        $this->replaceServiceMock
+            ->expects($this->once())
+            ->method('replace')
+            ->with($string, '', true, true)
             ->willReturn('replace string result')
             ;
 
@@ -54,6 +76,7 @@ class ReplaceAndUrlencodeTest extends TestCase
                 string: $string,
                 replacement: '',
                 replaceSocialMedia: true,
+                replaceSpaces: true,
             )
         );
     }

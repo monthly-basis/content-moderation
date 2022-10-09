@@ -14,11 +14,13 @@ class ReplaceAndUrlEncode extends AbstractHelper
         string $string,
         string $replacement = '',
         bool $replaceSocialMedia = false,
+        bool $replaceSpaces = false,
     ): string {
         $string = $this->replaceService->replace(
             string: $string,
             replacement: $replacement,
             replaceSocialMedia: $replaceSocialMedia,
+            replaceSpaces: $replaceSpaces,
         );
 
         return urlencode($string);
