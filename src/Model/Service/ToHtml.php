@@ -26,10 +26,13 @@ class ToHtml
 
     public function toHtml(
         string $string,
+        bool $replaceImmatureWords = false,
         bool $replaceSocialMedia = false,
     ): string {
         $string = $this->replaceBadWordsService->replaceBadWords($string, '');
-        $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, '');
+        if ($replaceImmatureWords) {
+            $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, '');
+        }
         $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
         if ($replaceSocialMedia) {
             $string = $this->replaceSocialMediaService->replaceSocialMedia(
