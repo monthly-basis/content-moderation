@@ -44,15 +44,13 @@ class ReplaceTest extends TestCase
             ->willReturn('replace bad words result')
             ;
         $this->replaceImmatureWordsServiceMock
-            ->expects($this->once())
+            ->expects($this->exactly(0))
             ->method('replaceImmatureWords')
-            ->with('replace bad words result')
-            ->willReturn('replace immature words result')
             ;
         $this->replaceEmailAddressesServiceMock
             ->expects($this->once())
             ->method('replaceEmailAddresses')
-            ->with('replace immature words result')
+            ->with('replace bad words result')
             ->willReturn('replace email addresses result')
             ;
         $this->replaceSocialMediaServiceMock
@@ -86,15 +84,13 @@ class ReplaceTest extends TestCase
             ->willReturn('replace bad words result')
             ;
         $this->replaceImmatureWordsServiceMock
-            ->expects($this->once())
+            ->expects($this->exactly(0))
             ->method('replaceImmatureWords')
-            ->with('replace bad words result')
-            ->willReturn('replace immature words result')
             ;
         $this->replaceEmailAddressesServiceMock
             ->expects($this->once())
             ->method('replaceEmailAddresses')
-            ->with('replace immature words result')
+            ->with('replace bad words result')
             ->willReturn('replace email addresses result')
             ;
         $this->replaceSocialMediaServiceMock
@@ -111,6 +107,7 @@ class ReplaceTest extends TestCase
             $this->replaceService->replace(
                 string: $string,
                 replacement: '',
+                replaceImmatureWords: false,
                 replaceSocialMedia: false,
                 replaceSpaces: false,
             )
@@ -157,6 +154,7 @@ class ReplaceTest extends TestCase
             $this->replaceService->replace(
                 string: $string,
                 replacement: '',
+                replaceImmatureWords: true,
                 replaceSocialMedia: true,
                 replaceSpaces: true,
             )
