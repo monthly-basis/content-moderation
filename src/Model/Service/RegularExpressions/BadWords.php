@@ -220,7 +220,7 @@ class BadWords
             '/(?<!moby[\-\s])d+\s*i+\s*c+\s*k+s?\b/i',
 
             // Symbols
-            '/(?<!moby[\-\s])d\W?[i\!\*1][ck]k\b/i',
+            '/(?<!moby[\-\s])d\W?[i\!\*1][ck]ks?\b/i',
             '/(?<!moby[\-\s])[dđ][iį\!\#\*][cč\#\*][kķ]\b/iu',
 
             // Variations
