@@ -13,7 +13,6 @@ class ToHtml
         ContentModerationService\Replace\LineBreaks $replaceLineBreaksService,
         ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
         StringService\Escape $escapeService,
-        StringService\Url\ToHtml $urlToHtmlService
     ) {
         $this->replaceBadWordsService       = $replaceBadWordsService;
         $this->replaceEmailAddressesService = $replaceEmailAddressesService;
@@ -21,7 +20,6 @@ class ToHtml
         $this->replaceLineBreaksService     = $replaceLineBreaksService;
         $this->replaceSocialMediaService    = $replaceSocialMediaService;
         $this->escapeService                = $escapeService;
-        $this->urlToHtmlService             = $urlToHtmlService;
     }
 
     public function toHtml(
@@ -50,13 +48,6 @@ class ToHtml
          */
         $stringEscaped = trim($stringEscaped);
 
-        $pattern = '|https?://\S+|i';
-        $stringEscaped = preg_replace_callback(
-            $pattern,
-            [$this, 'pregReplaceCallback'],
-            $stringEscaped
-        );
-
         $pattern        = '#&lt;(/?)(b|i|u|sub|sup)&gt;#i';
         $replacement    = '<$1$2>';
         $stringEscaped = preg_replace($pattern, $replacement, $stringEscaped);
@@ -67,11 +58,5 @@ class ToHtml
         $stringEscaped = preg_replace($pattern, $replacement, $stringEscaped);
 
         return nl2br($stringEscaped, false);
-    }
-
-    protected function pregReplaceCallback(array $matches)
-    {
-        $url = $matches[0];
-        return $this->urlToHtmlService->toHtml($url);
     }
 }
