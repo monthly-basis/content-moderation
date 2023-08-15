@@ -1022,6 +1022,15 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * sleep with me
+         */
+        $string = 'sleep with me';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * slot
          */
 

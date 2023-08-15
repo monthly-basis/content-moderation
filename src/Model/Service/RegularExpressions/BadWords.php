@@ -582,6 +582,11 @@ class BadWords
             '/(\b[s5]|[\$\§])[h\*][i1l\!\*\-¡][t\ł]/iu',
 
             /*
+             * sleep with me
+             */
+            '/sleep with me/i',
+
+            /*
              * slot
              */
             '/pg slot/i',
