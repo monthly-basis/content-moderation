@@ -922,6 +922,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * puta
+         */
+
+        $string = 'puta amputate putative';
+        $this->assertSame(
+            "$r amputate putative",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * queef
          */
 
