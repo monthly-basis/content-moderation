@@ -81,7 +81,8 @@ class Module
             'factories' => [
                 ContentModerationService\Contains\BadWords::class => function ($sm) {
                     return new ContentModerationService\Contains\BadWords(
-                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
+                        $sm->get(ContentModerationService\OpenAi\InputResultsInFlags::class),
+                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class),
                     );
                 },
                 ContentModerationService\Contains\Email::class => function ($sm) {
