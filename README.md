@@ -2,6 +2,16 @@
 
 Determine whether text contains bad words.
 
+## WARNING
+
+The source code for this repository contains extremely explicit language.
+
+We have written code to determine whether a string contains bad words.
+
+Unfortunately, in order to ensure that this code is functioning properly, we must use explicit language in our own code.
+
+Sorry.
+
 ## Installation
 
     composer require monthly-basis/content-moderation
