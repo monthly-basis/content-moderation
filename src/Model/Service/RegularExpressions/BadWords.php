@@ -39,6 +39,8 @@ class BadWords
             '/8={2,}D/i',
             '/(\#{3,4}|\*{3,4})ing/i',
 
+            '/【.+?\.com】/', // used by Chinese bots
+
             /*
              * anal
              */

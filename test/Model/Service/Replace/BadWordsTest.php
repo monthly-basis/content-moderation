@@ -102,6 +102,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = '【访问nckk666.com】 【kpdz2.com】';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         /*
          * anal
          */
