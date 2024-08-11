@@ -193,6 +193,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * ching chong
+         */
+
+        $string = 'Ching Chong';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * clit
          */
 
