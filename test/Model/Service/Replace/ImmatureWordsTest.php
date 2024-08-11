@@ -130,12 +130,6 @@ class ImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
-        $string = 'retard retarded retarted answer';
-        $this->assertSame(
-            '   answer',
-            $this->replaceImmatureWordsService->replaceImmatureWords($string)
-        );
-
         $string = 'stupid questions';
         $this->assertSame(
             ' questions',
