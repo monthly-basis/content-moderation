@@ -12,8 +12,8 @@ Determine whether text contains bad words.
 
     <?php
     require_once('vendor/autoload.php');
-    
-    $containsBadWords = MonthlyBasis\ContentModeration\Factory\ContainsBadWords::build();
+
+    $containsBadWords = MonthlyBasis\ContentModeration\Model\Factory\ContainsBadWords::build();
 
     $string = 'hello world';
 
