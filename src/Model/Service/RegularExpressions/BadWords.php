@@ -261,7 +261,7 @@ class BadWords
             // Phrases
             '/dumb af/i',
             '/\bf you\b/i',
-            '/go f yourself/i',
+            '/go f your ?self/i',
             '/gtfo/i',
             '/mother ?f[u\*]ckers/i',
             '/\bs(hut )?\W?t(he )?\W?f ?\W?up?\b/i',
