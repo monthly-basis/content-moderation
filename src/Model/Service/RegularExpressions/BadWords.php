@@ -427,6 +427,7 @@ class BadWords
             '/Nea grr/i',
             '/\bneg[ae]r/i',
             '/nigro/i',
+            '/nigward/i',
             '/\bnick[\s\/]?[gk]?(a|[eu]r+)s?\b/i',
             '/niglet/i',
             '/\bn ?word\b/i',
