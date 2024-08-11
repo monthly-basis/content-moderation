@@ -116,9 +116,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'blowjob BLOW JOB blow.j.o.b';
+        $string = 'blowjob BLOW JOB blow.j.o.b blow me';
         $this->assertSame(
-            "$r $r $r",
+            "$r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
