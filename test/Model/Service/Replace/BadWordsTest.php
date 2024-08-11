@@ -619,6 +619,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * oral
+         */
+
+        $string = 'I love oral';
+        $this->assertSame(
+            "I $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * porn
          */
 

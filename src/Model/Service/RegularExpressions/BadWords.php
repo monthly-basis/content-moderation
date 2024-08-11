@@ -364,6 +364,12 @@ class BadWords
              */
             '/no nut november/i',
 
+            /*
+             * oral
+             */
+
+            '/love oral/i',
+
             '/orgasm/i',
 
             /*
