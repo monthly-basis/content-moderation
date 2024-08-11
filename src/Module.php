@@ -58,31 +58,31 @@ class Module
                 },
                 ContentModerationService\ContainsBadWords::class => function ($sm) {
                     return new ContentModerationService\ContainsBadWords(
-                        $sm->get(ContentModerationService\RegularExpressionsOfBadWords::class)
+                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
                 ContentModerationService\ContainsImmatureWords::class => function ($sm) {
                     return new ContentModerationService\ContainsImmatureWords(
-                        $sm->get(ContentModerationService\RegularExpressionsOfImmatureWords::class)
+                        $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
+                },
+                ContentModerationService\RegularExpressions\BadWords::class => function ($sm) {
+                    return new ContentModerationService\RegularExpressions\BadWords();
+                },
+                ContentModerationService\RegularExpressions\ImmatureWords::class => function ($sm) {
+                    return new ContentModerationService\RegularExpressions\ImmatureWords();
                 },
                 ContentModerationService\RegularExpressions\SocialMedia::class => function ($sm) {
                     return new ContentModerationService\RegularExpressions\SocialMedia();
                 },
-                ContentModerationService\RegularExpressionsOfBadWords::class => function ($sm) {
-                    return new ContentModerationService\RegularExpressionsOfBadWords();
-                },
-                ContentModerationService\RegularExpressionsOfImmatureWords::class => function ($sm) {
-                    return new ContentModerationService\RegularExpressionsOfImmatureWords();
-                },
                 ContentModerationService\ReplaceBadWords::class => function ($sm) {
                     return new ContentModerationService\ReplaceBadWords(
-                        $sm->get(ContentModerationService\RegularExpressionsOfBadWords::class)
+                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
                 ContentModerationService\ReplaceImmatureWords::class => function ($sm) {
                     return new ContentModerationService\ReplaceImmatureWords(
-                        $sm->get(ContentModerationService\RegularExpressionsOfImmatureWords::class)
+                        $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
                 },
                 ContentModerationService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {

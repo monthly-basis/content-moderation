@@ -20,7 +20,7 @@ class ContainsBadWordsTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressionsOfBadWords();
+        $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressions\BadWords();
         $this->containsBadWordsService = new ContentModerationService\ContainsBadWords(
             $this->regularExpressionsOfBadWordsService
         );

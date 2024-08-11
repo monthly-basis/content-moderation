@@ -22,7 +22,7 @@ class ReplaceBadWordsTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressionsOfBadWords();
+        $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressions\BadWords();
         $this->replaceBadWordsService = new ContentModerationService\ReplaceBadWords(
             $this->regularExpressionsOfBadWordsService
         );

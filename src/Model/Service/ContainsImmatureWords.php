@@ -6,7 +6,7 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class ContainsImmatureWords
 {
     public function __construct(
-        ContentModerationService\RegularExpressionsOfImmatureWords $regularExpressionsOfImmatureWords
+        ContentModerationService\RegularExpressions\ImmatureWords $regularExpressionsOfImmatureWords
     ) {
         $this->regularExpressionsOfImmatureWords = $regularExpressionsOfImmatureWords;
     }

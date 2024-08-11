@@ -8,7 +8,7 @@ class ReplaceImmatureWordsTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->regularExpressionsOfImmatureWordsService = new ContentModerationService\RegularExpressionsOfImmatureWords();
+        $this->regularExpressionsOfImmatureWordsService = new ContentModerationService\RegularExpressions\ImmatureWords();
         $this->replaceImmatureWordsService = new ContentModerationService\ReplaceImmatureWords(
             $this->regularExpressionsOfImmatureWordsService
         );
