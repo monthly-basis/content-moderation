@@ -112,6 +112,11 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
+                ContentModerationService\OpenAi\InputResultsInFlags::class => function ($sm) {
+                    return new ContentModerationService\OpenAi\InputResultsInFlags(
+                        $sm->get(ContentModerationService\OpenAi\ResponseContainsFlags::class)
+                    );
+                },
                 ContentModerationService\OpenAi\ResponseContainsFlags::class => function ($sm) {
                     return new ContentModerationService\OpenAi\ResponseContainsFlags();
                 },
