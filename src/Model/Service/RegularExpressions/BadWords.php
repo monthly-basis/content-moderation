@@ -329,7 +329,7 @@ class BadWords
 
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
-            '/(\bs|[\$\§])h[i1\!\*][t\ł]/iu',
+            '/(\bs|[\$\§])h[i1l\!\*][t\ł]/iu',
 
             '/\bstfu/i',
 
