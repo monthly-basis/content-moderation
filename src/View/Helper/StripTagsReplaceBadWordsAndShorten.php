@@ -15,7 +15,7 @@ class StripTagsReplaceBadWordsAndShorten extends AbstractHelper
     public function __invoke(
         string $string,
         int $maxLength
-    ) : string {
+    ): string {
         return $this->stripTagsReplaceBadWordsAndShortenService->stripTagsReplaceBadWordsAndShorten(
             $string,
             $maxLength
