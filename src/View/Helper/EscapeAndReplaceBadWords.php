@@ -15,9 +15,15 @@ class EscapeAndReplaceBadWords extends AbstractHelper
         $this->replaceBadWordsService = $replaceBadWordsService;
     }
 
-    public function __invoke(string $string): string
-    {
+    public function __invoke(
+        string $string,
+        string $replacement = '!@#$%^&'
+    ): string {
         $stringEscaped = $this->escapeService->escape($string);
-        return $this->replaceBadWordsService->replaceBadWords($stringEscaped);
+
+        return $this->replaceBadWordsService->replaceBadWords(
+            $stringEscaped,
+            $replacement
+        );
     }
 }
