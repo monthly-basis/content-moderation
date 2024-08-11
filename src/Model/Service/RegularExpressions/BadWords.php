@@ -442,6 +442,11 @@ class BadWords
             '/\brapist/i',
 
             /*
+             * retard
+             */
+            '/r[e€]t[a@]rd(?!ant)/iu',
+
+            /*
              * rim job
              */
             '/rim job/i',

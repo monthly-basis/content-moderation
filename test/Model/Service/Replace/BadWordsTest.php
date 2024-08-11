@@ -713,6 +713,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * retard
+         */
+
+        $string = 'retard retardant r€t@rd';
+        $this->assertSame(
+            "$r retardant $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * rim job
          */
 
