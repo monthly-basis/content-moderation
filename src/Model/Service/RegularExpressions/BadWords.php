@@ -241,7 +241,7 @@ class BadWords
             '/\bs(hut )?\W?t(he )?\W?f ?\W?up?\b/i',
 
             // Symbols
-            '/(\bf|[ƒḟ])[uμ0#\*\-\/][cx#\*\(\-¢ς\*][kκ#\*\-]/iu',
+            '/(\bf|[ƒḟ])[uμ0#\*\-\/][c#\*\(\-¢ς\*][kκ#\*\-]/iu',
             '/\bf_u?ck/i',
             '/F-ING/i',
             '/\*\*\*\*ING/i',
@@ -253,6 +253,7 @@ class BadWords
             // Spellings
             '/fcuk/i',
             '/fawk/i',
+            '/fuxk/i',
 
             // Variations
             '/\bf off\b/i',
