@@ -66,7 +66,7 @@ class ReplaceAndUrlencodeTest extends TestCase
         $this->replaceServiceMock
             ->expects($this->once())
             ->method('replace')
-            ->with($string, '', true, true)
+            ->with($string, '', false, true, true)
             ->willReturn('replace string result')
             ;
 

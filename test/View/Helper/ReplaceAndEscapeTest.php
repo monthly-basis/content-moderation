@@ -30,7 +30,7 @@ class ReplaceAndEscapeTest extends TestCase
         $this->replaceServiceMock
             ->expects($this->once())
             ->method('replace')
-            ->with($string, '', false)
+            ->with($string, '', false, false, true)
             ->willReturn('replace string result')
             ;
         $this->escapeServiceMock
@@ -56,7 +56,7 @@ class ReplaceAndEscapeTest extends TestCase
         $this->replaceServiceMock
             ->expects($this->once())
             ->method('replace')
-            ->with($string, '', true)
+            ->with($string, '', false, true, true)
             ->willReturn('replace string result')
             ;
         $this->escapeServiceMock

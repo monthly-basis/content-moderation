@@ -22,6 +22,7 @@ class Replace
     public function replace(
         string $string,
         string $replacement = '',
+        bool $replaceImmatureWords = false,
         bool $replaceSocialMedia = false,
         bool $replaceSpaces = true,
     ): string {
@@ -29,7 +30,10 @@ class Replace
         $string = preg_replace('/(\x{1F464}|\x{1F52A})/u', '', $string);
 
         $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
-        $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
+
+        if ($replaceImmatureWords) {
+            $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
+        }
         $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
 
         if ($replaceSocialMedia) {
