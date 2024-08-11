@@ -495,9 +495,9 @@ class ReplaceBadWordsTest extends TestCase
          * ligma
          */
 
-        $string = 'ligma';
+        $string = 'ligma l!gma';
         $this->assertSame(
-            "$r",
+            "$r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
