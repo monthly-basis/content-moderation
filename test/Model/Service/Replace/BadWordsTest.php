@@ -722,6 +722,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'calculate retardation';
+        $this->assertSame(
+            "calculate retardation",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         /*
          * rim job
          */
