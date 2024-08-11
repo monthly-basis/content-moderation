@@ -245,7 +245,7 @@ class BadWords
             '/shut t(he )?f up/i',
 
             // Symbols
-            '/[fƒ][uμ0][cx¢ς\*][kκ\*]/iu',
+            '/[fƒ][uμ0\/][cx\(¢ς\*][kκ\*]/iu',
             '/\bf_u?ck/i',
             '/F-ING/i',
             '/\*\*\*\*ING/i',
