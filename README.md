@@ -22,3 +22,14 @@ Determine whether text contains bad words.
     } else {
         echo 'Phew, your string does not contain bad words.';
     }
+
+### GET Request
+
+    https://content-moderation.monthly-basis.com/api/v0/contains-bad-words?string=hello+world
+
+JSON response
+
+    {
+        "contains-bad-words": false,
+        "success": true
+    }
