@@ -90,11 +90,19 @@ class Module
                 ContentModerationService\RegularExpressions\SocialMedia::class => function ($sm) {
                     return new ContentModerationService\RegularExpressions\SocialMedia();
                 },
+                ContentModerationService\Replace\BadWords::class => function ($sm) {
+                    return new ContentModerationService\Replace\BadWords(
+                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
+                    );
+                },
                 ContentModerationService\Replace\ImmatureWords::class => function ($sm) {
                     return new ContentModerationService\Replace\ImmatureWords(
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
                 },
+                /**
+                 * @deprecated Use ContentModerationService\Replace\BadWords() instead.
+                 */
                 ContentModerationService\ReplaceBadWords::class => function ($sm) {
                     return new ContentModerationService\ReplaceBadWords(
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
