@@ -26,7 +26,10 @@ class BadWords
             '/ozeybhv/',
 
             '/8={2,}D/i',
+
             /*
+             * ass
+             *
              * Cannot use word boundary (\b) around dollar sign because
              * dollar sign is not a word character.
              * So, just hard-code some variations for now.
@@ -41,6 +44,8 @@ class BadWords
             '/\bas(s|\W)hole/i',
             '/\ba holes\b/i',
             '/a§š/i',
+            '/dumb?ass/i',
+            '/dumba\W\W/i',
 
             '/suck balls?/i',
 
@@ -84,8 +89,6 @@ class BadWords
             '/d[\!\#\*]{2}k/i',
             '/dickhead/i',
 
-            '/dumbass/i',
-            '/dumba\W\W/i',
             '/f(a|4)g/i',
             '/fap/',
             '/fleshlight/i',
