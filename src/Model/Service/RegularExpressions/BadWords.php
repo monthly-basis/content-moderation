@@ -72,6 +72,11 @@ class BadWords
             '/cock\s*suck/i',
             '/c0ck/i',
 
+            /*
+             * cooch
+             */
+            '/\bcooch(ie)?/i',
+
             '/\bcum\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
