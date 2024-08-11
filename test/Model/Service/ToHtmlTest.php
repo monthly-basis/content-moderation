@@ -38,21 +38,41 @@ class ToHtmlTest extends TestCase
         );
     }
 
-    public function testToHtml()
+    public function test_toHtml_simpleString_simpleString()
     {
+        $this->replaceBadWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceBadWords')
+            ->with('simple string')
+            ->willReturn('replace bad words return value')
+            ;
+        $this->replaceImmatureWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceImmatureWords')
+            ->with('replace bad words return value')
+            ->willReturn('replace immature words return value')
+            ;
+        $this->replaceEmailAddressesServiceMock
+            ->expects($this->once())
+            ->method('replaceEmailAddresses')
+            ->with('replace immature words return value')
+            ->willReturn('replace email addresses return value')
+            ;
+        $this->replaceSocialMediaServiceMock
+            ->expects($this->once())
+            ->method('replaceSocialMedia')
+            ->with('replace email addresses return value')
+            ->willReturn('replace social media return value')
+            ;
         $this->escapeServiceMock
-             ->method('escape')
-             ->willReturn('hello world');
-        $string = 'hello world';
+            ->expects($this->once())
+            ->method('escape')
+            ->with('replace social media return value')
+            ->willReturn('escape service return value')
+            ;
         $this->assertSame(
-            'hello world',
-            $this->toHtmlService->toHtml($string)
-        );
-
-        $string = "\n\n   hello world\t\t   \t\n\n";
-        $this->assertSame(
-            'hello world',
-            $this->toHtmlService->toHtml($string)
+            'escape service return value',
+            $this->toHtmlService->toHtml('simple string')
         );
     }
 
