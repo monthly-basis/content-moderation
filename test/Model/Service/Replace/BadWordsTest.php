@@ -751,9 +751,9 @@ class ReplaceBadWordsTest extends TestCase
          * nut
          */
 
-        $string = 'no nut november';
+        $string = 'no nut november nutsack Nut sacks nutsax';
         $this->assertSame(
-            "$r",
+            "$r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
