@@ -37,12 +37,12 @@ class ReplaceAndEscapeTest extends TestCase
 
     public function test___invoke()
     {
-        $string = '👤 hello world';
+        $string = '👤 🔪 hello world';
 
         $this->replaceBadWordsServiceMock
             ->expects($this->once())
             ->method('replaceBadWords')
-            ->with(' hello world')
+            ->with('  hello world')
             ->willReturn('replace bad words result');
         $this->replaceImmatureWordsServiceMock
             ->expects($this->once())

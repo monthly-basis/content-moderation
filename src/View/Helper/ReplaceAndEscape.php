@@ -25,8 +25,8 @@ class ReplaceAndEscape extends AbstractHelper
         string $string,
         string $replacement = ''
     ): string {
-        // Remove "Bust in Silhouette" emoji from string.
-        $string = preg_replace('/\x{1F464}/u', '', $string);
+        // Remove "Bust in Silhouette" and "Kitchen Knife" emoji from string.
+        $string = preg_replace('/(\x{1F464}|\x{1F52A})/u', '', $string);
 
         $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
         $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
