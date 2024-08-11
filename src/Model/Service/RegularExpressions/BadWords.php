@@ -160,7 +160,7 @@ class BadWords
             /*
              * cum
              */
-            '/\bcum+s?(?! laude)\b/i',
+            '/\bcu+m+s?(?! laude)\b/i',
             '/cumming\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
