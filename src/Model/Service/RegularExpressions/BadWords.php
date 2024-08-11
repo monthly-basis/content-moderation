@@ -432,6 +432,12 @@ class BadWords
             '/\bn ?word\b/i',
 
             /*
+             * nsfw
+             */
+
+            '/nsfw/i',
+
+            /*
              * nude
              */
 

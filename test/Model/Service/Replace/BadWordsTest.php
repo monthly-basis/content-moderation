@@ -790,6 +790,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * nsfw
+         */
+
+        $string = 'nsfw';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * nude
          */
 
