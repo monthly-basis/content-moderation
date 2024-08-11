@@ -585,7 +585,7 @@ class BadWords
              * slot
              */
             '/pg slot/i',
-            '/slot pg/i',
+            '/slot ?pg/i',
 
             /*
              * slut
