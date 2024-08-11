@@ -3,10 +3,9 @@
     "license": "MIT",
     "require": {
         "laminas/laminas-mvc": "^3.0.1",
-        "laminas/laminas-test": "^3.1",
+        "laminas/laminas-test": "^4.0",
         "monthly-basis/laminas-test": "^2.0",
-        "monthly-basis/string": "^3.0",
-        "php": "^7.4"
+        "monthly-basis/string": "^3.0"
     },
     "autoload": {
         "psr-4": {
