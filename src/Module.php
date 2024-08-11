@@ -123,6 +123,11 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
                 },
+                ContentModerationService\Replace\SocialMedia::class => function ($sm) {
+                    return new ContentModerationService\Replace\SocialMedia(
+                        $sm->get(ContentModerationService\RegularExpressions\SocialMedia::class)
+                    );
+                },
                 ContentModerationService\Replace\Spaces::class => function ($sm) {
                     return new ContentModerationService\Replace\Spaces();
                 },
