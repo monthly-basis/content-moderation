@@ -6,7 +6,8 @@ class RegularExpressionsOfImmatureWords
     public function getRegularExpressionsOfImmatureWords(
     ): array {
         return [
-            '/b\W*u\W*t\W*t/i',
+            '/asf/i',
+            '/b\W*u\W*t\W*t\b/i',
             '/dumb\b/i',
             '/f\W*a\W*r\W*t/i',
             '/idiot/i',
