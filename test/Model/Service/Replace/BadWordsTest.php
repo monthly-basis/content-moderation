@@ -1017,15 +1017,15 @@ class ReplaceBadWordsTest extends TestCase
          * tit
          */
 
-        $string = 'tit competition TITS titties petit tidies t1tt1es t1t$ tiddies';
+        $string = 'tit competition TITS titties petit t1tt1es t1t$ tiddies';
         $this->assertSame(
-            "$r competition $r $r petit $r $r {$r}\$ $r",
+            "$r competition $r $r petit $r {$r}\$ $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'titsss titty';
+        $string = 'titsss titty tidy';
         $this->assertSame(
-            "$r $r",
+            "$r $r tidy",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
