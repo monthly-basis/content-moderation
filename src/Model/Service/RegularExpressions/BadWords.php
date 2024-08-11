@@ -129,7 +129,10 @@ class BadWords
              */
             '/\b[ck]oon\b/i',
 
-            '/\bcum\b/i',
+            /*
+             * cum
+             */
+            '/\bcum+\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
             //'/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
