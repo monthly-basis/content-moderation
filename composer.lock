@@ -1118,61 +1118,54 @@
         },
         {
             "name": "laminas/laminas-test",
-            "version": "3.4.2",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-test.git",
-                "reference": "da508dd32bdedd8f2757887ad7dfed3cf5faea2d"
+                "reference": "621eced0d747ead65c39ab0fc507f66e9bdca276"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-test/zipball/da508dd32bdedd8f2757887ad7dfed3cf5faea2d",
-                "reference": "da508dd32bdedd8f2757887ad7dfed3cf5faea2d",
+                "url": "https://api.github.com/repos/laminas/laminas-test/zipball/621eced0d747ead65c39ab0fc507f66e9bdca276",
+                "reference": "621eced0d747ead65c39ab0fc507f66e9bdca276",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-console": "^2.6",
-                "laminas/laminas-dom": "^2.6",
-                "laminas/laminas-eventmanager": "^2.6.2 || ^3.0",
-                "laminas/laminas-http": "^2.8.3",
+                "laminas/laminas-dom": "^2.8",
+                "laminas/laminas-eventmanager": "^3.0",
+                "laminas/laminas-http": "^2.13",
                 "laminas/laminas-mvc": "^3.0",
-                "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3",
-                "laminas/laminas-stdlib": "^2.7 || ^3.0",
+                "laminas/laminas-servicemanager": "^3.0.3",
+                "laminas/laminas-stdlib": "^3.3",
                 "laminas/laminas-uri": "^2.5",
                 "laminas/laminas-view": "^2.6.3",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^5.6 || ^7.0",
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+                "laminas/laminas-zendframework-bridge": "^1.1",
+                "php": "^7.3 || ~8.0.0",
+                "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "replace": {
                 "zendframework/zend-test": "^3.3.0"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-coding-standard": "~2.2.1",
                 "laminas/laminas-i18n": "^2.6",
                 "laminas/laminas-log": "^2.7.1",
                 "laminas/laminas-modulemanager": "^2.7.1",
                 "laminas/laminas-mvc-console": "^1.1.8",
-                "laminas/laminas-mvc-plugin-flashmessenger": "^0.1.0",
+                "laminas/laminas-mvc-plugin-flashmessenger": "^1.0",
                 "laminas/laminas-serializer": "^2.6.1",
                 "laminas/laminas-session": "^2.8.5",
                 "laminas/laminas-validator": "^2.8",
-                "mikey179/vfsstream": "~1.2"
+                "mikey179/vfsstream": "^1.6.8",
+                "psalm/plugin-phpunit": "^0.16.0",
+                "vimeo/psalm": "^4.7"
             },
             "suggest": {
                 "laminas/laminas-mvc-console": "^1.1.8, to test MVC <-> console integration"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4.x-dev",
-                    "dev-develop": "3.5.x-dev"
-                }
-            },
             "autoload": {
-                "files": [
-                    "autoload/phpunit-class-aliases.php"
-                ],
                 "psr-4": {
                     "Laminas\\Test\\": "src/"
                 }
@@ -1201,7 +1194,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-05-20T14:56:04+00:00"
+            "time": "2021-06-14T13:48:54+00:00"
         },
         {
             "name": "laminas/laminas-uri",
@@ -1522,16 +1515,16 @@
         },
         {
             "name": "monthly-basis/laminas-test",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monthly-basis/laminas-test.git",
-                "reference": "42f4438a6df394f98c30b3a26df00780f5b97f5e"
+                "reference": "18e0b9282ecaaee132daff42248c598f12508274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monthly-basis/laminas-test/zipball/42f4438a6df394f98c30b3a26df00780f5b97f5e",
-                "reference": "42f4438a6df394f98c30b3a26df00780f5b97f5e",
+                "url": "https://api.github.com/repos/monthly-basis/laminas-test/zipball/18e0b9282ecaaee132daff42248c598f12508274",
+                "reference": "18e0b9282ecaaee132daff42248c598f12508274",
                 "shasum": ""
             },
             "require": {
@@ -1551,9 +1544,9 @@
             ],
             "support": {
                 "issues": "https://github.com/monthly-basis/laminas-test/issues",
-                "source": "https://github.com/monthly-basis/laminas-test/tree/v2.1.0"
+                "source": "https://github.com/monthly-basis/laminas-test/tree/v2.1.1"
             },
-            "time": "2021-05-05T01:23:56+00:00"
+            "time": "2021-06-19T00:31:02+00:00"
         },
         {
             "name": "monthly-basis/string",
@@ -3014,16 +3007,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "a90ccbddffa067b51f574dea6eb25d5680839455"
+                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/a90ccbddffa067b51f574dea6eb25d5680839455",
-                "reference": "a90ccbddffa067b51f574dea6eb25d5680839455",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23bd5951f7ff26f12d4e3242864df3e08dec4e49",
+                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49",
                 "shasum": ""
             },
             "require": {
@@ -3066,7 +3059,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/global-state/issues",
-                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.2"
+                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.3"
             },
             "funding": [
                 {
@@ -3074,7 +3067,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-26T15:55:19+00:00"
+            "time": "2021-06-11T13:31:12+00:00"
         },
         {
             "name": "sebastian/lines-of-code",
@@ -3361,20 +3354,21 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
             "name": "sebastian/type",
-            "version": "2.3.2",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1"
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/0d1c587401514d17e8f9258a27e23527cb1b06c1",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/b8cd8a1c753c90bc1a0f5372170e3e489136f914",
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914",
                 "shasum": ""
             },
             "require": {
@@ -3409,7 +3403,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/2.3.2"
+                "source": "https://github.com/sebastianbergmann/type/tree/2.3.4"
             },
             "funding": [
                 {
@@ -3417,7 +3411,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-04T13:02:07+00:00"
+            "time": "2021-06-15T12:49:02+00:00"
         },
         {
             "name": "sebastian/version",
