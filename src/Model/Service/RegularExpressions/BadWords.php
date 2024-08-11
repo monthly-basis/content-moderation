@@ -509,6 +509,9 @@ class BadWords
             '/pg slot/i',
             '/slot pg/i',
 
+            /*
+             * slut
+             */
             '/s(l|1)(u|ü)t/i',
 
             /*
