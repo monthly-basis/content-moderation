@@ -56,6 +56,11 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
+                ContentModerationService\Contains\ImmatureWords::class => function ($sm) {
+                    return new ContentModerationService\Contains\ImmatureWords(
+                        $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
+                    );
+                },
                 ContentModerationService\Contains\RepeatingCharacters::class => function ($sm) {
                     return new ContentModerationService\Contains\RepeatingCharacters(
                         $sm->get('config')['content-moderation']['contains-repeating-characters']
