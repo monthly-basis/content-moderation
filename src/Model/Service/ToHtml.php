@@ -24,12 +24,19 @@ class ToHtml
         $this->urlToHtmlService             = $urlToHtmlService;
     }
 
-    public function toHtml(string $message): string
-    {
+    public function toHtml(
+        string $message,
+        bool $replaceSocialMedia = false,
+    ): string {
         $message = $this->replaceBadWordsService->replaceBadWords($message, '');
         $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
         $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
-        $message = $this->replaceSocialMediaService->replaceSocialMedia($message, '');
+        if ($replaceSocialMedia) {
+            $message = $this->replaceSocialMediaService->replaceSocialMedia(
+                $message,
+                ''
+            );
+        }
         $message = $this->replaceLineBreaksService->replaceLineBreaks($message);
 
         $messageEscaped = $this->escapeService->escape($message);
