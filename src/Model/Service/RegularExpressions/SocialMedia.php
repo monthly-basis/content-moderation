@@ -32,6 +32,11 @@ class SocialMedia
             '/add (me on|my) sc/i',
 
             '/t[i!]k ?t[o0]k/i',
+
+            /*
+             * WhatsApp
+             */
+            '/WhatsApp/i',
         ];
     }
 }

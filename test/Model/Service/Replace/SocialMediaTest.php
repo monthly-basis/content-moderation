@@ -65,5 +65,15 @@ class SocialMediaTest extends TestCase
             "add me on $r $r $r $r",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
+
+        /*
+         * WhatsApp
+         */
+
+        $string = 'WhatsApp';
+        $this->assertSame(
+            "$r",
+            $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
+        );
     }
 }
