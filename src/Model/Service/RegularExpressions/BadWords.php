@@ -224,6 +224,12 @@ class BadWords
             '/hentai/i',
 
             '/\bhoe/i',
+
+            /*
+             * homo
+             */
+            '/\bhomo\b/i',
+
             '/\bhorne?y/i',
 
             '/jigaboo/i',
