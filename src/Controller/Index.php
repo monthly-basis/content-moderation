@@ -1,0 +1,2 @@
+<?php
+exit('index controller');
