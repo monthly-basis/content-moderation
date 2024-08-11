@@ -330,6 +330,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'rape raped grape therapeutic';
+        $this->assertSame(
+            "$r {$r}d grape therapeutic",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'shit sh!t sh1t $h!t';
         $this->assertSame(
             "$r $r $r $r",
