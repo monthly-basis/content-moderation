@@ -238,6 +238,7 @@ class BadWords
             '/\bf you\b/i',
             '/go f yourself/i',
             '/gtfo/i',
+            '/mother ?f[u\*]ckers/i',
             '/\bs(hut )?\W?t(he )?\W?f ?\W?up?\b/i',
 
             // Symbols
