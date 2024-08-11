@@ -114,7 +114,7 @@ class BadWords
             '/kike/i',
             '/\bkys\b/i',
             '/lesbian/i',
-            '/masturbat/i',
+            '/mast(e|u)rbat(ion)?/i',
             '/\bmilf\b/i',
 
             '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
