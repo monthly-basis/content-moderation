@@ -10,7 +10,7 @@ class ToHtmlTest extends TestCase
     protected function setUp(): void
     {
         $this->replaceBadWordsServiceMock = $this->createMock(
-            ContentModerationService\ReplaceBadwords::class
+            ContentModerationService\ReplaceBadWords::class
         );
 
         $this->toHtmlService = new ContentModerationService\ToHtml(
