@@ -198,16 +198,20 @@ class BadWords
             /*
              * eat
              */
+
             '/eat me out/i',
 
             /*
              * erection
              */
+
             '/Hue G\.? Rection/i',
 
             /*
              * fag
              */
+
+            '/\bf\W*a\W*g\b/i',
             '/\bf(a|4)g/i',
 
             '/fap/',
@@ -217,6 +221,7 @@ class BadWords
             /*
              * freak
              */
+
             '/certified ?freak/i',
 
             /*
@@ -226,7 +231,6 @@ class BadWords
             '/\bf(###|\*\*\*|\-\-\-)/i',
             '/\bf[^\w\=\/\( ]+k/i',
             '/\bf\W+ck/i',
-            '/\bf\W*a\W*g\b/i',
 
             '/\bfu+\W?k+(ers?)?\b/i',
             '/\bfu?[c\W]?king?\b/i',
