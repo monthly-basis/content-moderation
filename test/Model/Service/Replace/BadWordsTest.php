@@ -231,6 +231,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * brazzers
+         */
+
+        $string = 'brazzer BRAZZERS';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * ching chong
          */
 
