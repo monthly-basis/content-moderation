@@ -5,8 +5,8 @@
         "laminas/laminas-mvc": "^3.0.1",
         "laminas/laminas-test": "^4.0",
         "monthly-basis/laminas-test": "^2.0",
-        "monthly-basis/string": "^3.0",
-        "orhanerday/open-ai": "^4.9"
+        "monthly-basis/laminas-open-ai": "^0.0",
+        "monthly-basis/string": "^3.0"
     },
     "autoload": {
         "psr-4": {
