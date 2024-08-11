@@ -31,6 +31,10 @@ class SocialMedia
             // sc
             '/add (me on|my) sc/i',
 
+            /*
+             * TikTok
+             */
+
             '/t[i!]k ?t[o0]k/i',
 
             /*
