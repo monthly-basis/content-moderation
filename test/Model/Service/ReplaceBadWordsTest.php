@@ -140,9 +140,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'BITC*';
+        $string = 'BITC* cubic units';
         $this->assertSame(
-            "$r",
+            "$r cubic units",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
