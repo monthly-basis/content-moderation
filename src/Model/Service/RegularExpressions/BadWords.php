@@ -286,7 +286,7 @@ class BadWords
             /*
              * homo
              */
-            '/\bhomo\b(?! sapien)/i',
+            '/\bhomo\b(?! habilis)(?! sapien)/i',
 
             /*
              * horny
