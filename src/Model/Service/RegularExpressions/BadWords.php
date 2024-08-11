@@ -314,7 +314,7 @@ class BadWords
              * horny
              */
 
-            '/\bh\s*o\s*r\s*n(\s*e)?\s*y/i',
+            '/\bh\s*o\s*r+\s*n(\s*e)?\s*y/i',
 
             '/jigaboo/i',
             '/jackass/i',

@@ -573,9 +573,9 @@ class ReplaceBadWordsTest extends TestCase
          * horny
          */
 
-        $string = 'horny thorny horney H O R N Y H  O  R  N  E  Y';
+        $string = 'horny thorny horney H O R N Y H  O  R  N  E  Y HORRNY';
         $this->assertSame(
-            "$r thorny $r $r $r",
+            "$r thorny $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
