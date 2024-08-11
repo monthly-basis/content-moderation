@@ -57,7 +57,7 @@ class BadWords
             '/a§š/i',
 
             // Variants
-            '/\ba[sz][sz\W]h[0o]les?/i',
+            '/\ba[s5z][s5z\W]h[0o][l1]es?/i',
             '/\ba holes\b/i',
             '/dumb?ass/i',
             '/dumba\W\W/i',
