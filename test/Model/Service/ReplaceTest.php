@@ -75,6 +75,48 @@ class ReplaceTest extends TestCase
         );
     }
 
+    public function test_replace_allBooleansFalse_expectedString()
+    {
+        $string = '👤 🔪 hello world';
+
+        $this->replaceBadWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceBadWords')
+            ->with('  hello world')
+            ->willReturn('replace bad words result')
+            ;
+        $this->replaceImmatureWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceImmatureWords')
+            ->with('replace bad words result')
+            ->willReturn('replace immature words result')
+            ;
+        $this->replaceEmailAddressesServiceMock
+            ->expects($this->once())
+            ->method('replaceEmailAddresses')
+            ->with('replace immature words result')
+            ->willReturn('replace email addresses result')
+            ;
+        $this->replaceSocialMediaServiceMock
+            ->expects($this->exactly(0))
+            ->method('replaceSocialMedia')
+            ;
+        $this->replaceSpacesServiceMock
+            ->expects($this->exactly(0))
+            ->method('replaceSpaces')
+            ;
+
+        $this->assertSame(
+            'replace email addresses result',
+            $this->replaceService->replace(
+                string: $string,
+                replacement: '',
+                replaceSocialMedia: false,
+                replaceSpaces: false,
+            )
+        );
+    }
+
     public function test_replace_allBooleansTrue_expectedString()
     {
         $string = '👤 🔪 hello world';
@@ -116,6 +158,7 @@ class ReplaceTest extends TestCase
                 string: $string,
                 replacement: '',
                 replaceSocialMedia: true,
+                replaceSpaces: true,
             )
         );
     }

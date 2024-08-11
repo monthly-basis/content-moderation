@@ -23,6 +23,7 @@ class Replace
         string $string,
         string $replacement = '',
         bool $replaceSocialMedia = false,
+        bool $replaceSpaces = true,
     ): string {
         // Remove "Bust in Silhouette" and "Kitchen Knife" emoji from string.
         $string = preg_replace('/(\x{1F464}|\x{1F52A})/u', '', $string);
@@ -35,7 +36,9 @@ class Replace
             $string = $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement);
         }
 
-        $string = $this->replaceSpacesService->replaceSpaces($string);
+        if ($replaceSpaces) {
+            $string = $this->replaceSpacesService->replaceSpaces($string);
+        }
 
         return $string;
     }
