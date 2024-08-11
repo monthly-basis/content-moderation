@@ -833,6 +833,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'vagina vag ina';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'whore WH0RE w h o r e who respects wh*re hore chore';
         $this->assertSame(
             "$r $r $r who respects $r $r chore",
