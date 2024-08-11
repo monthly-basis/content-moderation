@@ -317,7 +317,7 @@ class BadWords
             /*
              * kill
              */
-            '/kill ?yourself/i',
+            '/k[i1]ll ?y[o0]urs[e3]lf/i',
             '/\bkys\b/i',
 
             /*
