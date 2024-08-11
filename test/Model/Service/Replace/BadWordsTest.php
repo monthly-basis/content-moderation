@@ -714,9 +714,9 @@ class ReplaceBadWordsTest extends TestCase
          * sex
          */
 
-        $string = 'have sex have s*x sexy s*xy I love sex';
+        $string = 'have sex have s*x sexy s*xy I love sex hard sex';
         $this->assertSame(
-            "$r $r $r $r I $r",
+            "$r $r $r $r I $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
