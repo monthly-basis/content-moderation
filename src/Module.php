@@ -142,12 +142,6 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
                 },
-                ContentModerationService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
-                    return new ContentModerationService\StripTagsReplaceBadWordsAndShorten(
-                        $sm->get(ContentModerationService\Replace\BadWords::class),
-                        $sm->get(StringService\Shorten::class)
-                    );
-                },
                 ContentModerationService\ToHtml::class => function ($sm) {
                     return new ContentModerationService\ToHtml(
                         $sm->get(ContentModerationService\Replace\EmailAddresses::class),
