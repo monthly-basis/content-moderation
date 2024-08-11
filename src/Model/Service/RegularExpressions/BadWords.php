@@ -65,6 +65,11 @@ class BadWords
 
             '/blow\W*j\W*o\W*b/i',
 
+            /*
+             * boner
+             */
+            '/boner/i',
+
             '/\bboobs\b/i',
             '/bullshi?t/i',
             '/\bclit\b/i',
