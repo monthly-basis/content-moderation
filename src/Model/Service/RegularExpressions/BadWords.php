@@ -135,7 +135,7 @@ class BadWords
 
             '/orgasm/i',
 
-            '/penn?i(s|5)/i',
+            '/penn?[iu][5s]/i',
 
             '/phuck/i',
 
