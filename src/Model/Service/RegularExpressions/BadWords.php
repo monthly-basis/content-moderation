@@ -82,6 +82,7 @@ class BadWords
 
             '/d\W?(!|1|i)(c|k)k\b/i',
             '/d[\!\#\*]{2}k/i',
+            '/dickhead/i',
 
             '/dumbass/i',
             '/dumba\W\W/i',
