@@ -52,6 +52,12 @@ class ImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
+        $string = 'butthole butt hole';
+        $this->assertSame(
+            ' ',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
+
         $string = 'crap crapy crapped crapping craps scrape';
         $this->assertSame(
             '     scrape',
