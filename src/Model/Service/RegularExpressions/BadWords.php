@@ -155,7 +155,7 @@ class BadWords
             /*
              * cum
              */
-            '/\bcum+(?! laude)\b/i',
+            '/\bcum+s?(?! laude)\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
             //'/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
