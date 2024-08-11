@@ -1016,6 +1016,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * xnxx
+         */
+
+        $string = 'xnxx.com';
+        $this->assertSame(
+            "$r.com",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * xvideos
          */
 

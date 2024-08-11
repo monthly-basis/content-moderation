@@ -544,6 +544,13 @@ class BadWords
 
             '/w\s+h\s+o\s+r\s+e/i',
             '/xhamster/i',
+
+            /*
+             * xnxx
+             */
+
+            '/xnxx/i',
+
             '/xvideos/i',
         ];
     }
