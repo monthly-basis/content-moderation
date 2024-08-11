@@ -1047,9 +1047,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'titsss titty tidy';
+        $string = 'titsss titty tidy tiddie';
         $this->assertSame(
-            "$r $r tidy",
+            "$r $r tidy $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
