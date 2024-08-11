@@ -92,18 +92,6 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bitch b*tch batch betcha bltch biach Bi!tches ʙïʨh bìtçh';
-        $this->assertSame(
-            "$r $r batch betcha $r $r $r $r $r",
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
-        $string = 'suck my b!tch b.itch b.i.t.c.h b i t c h sunuvabitch b itch';
-        $this->assertSame(
-            '!@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& sunuva!@#$%^& !@#$%^&',
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
         $string = '8=D 8==D 8=========D';
         $this->assertSame(
             "8=D $r $r",
@@ -140,15 +128,31 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'bitch bi*ch bich bicth biitch Bi9ch a b***h a b**** biyach';
+        /*
+         * bitch
+         */
+
+        $string = 'bitch b*tch batch betcha bltch biach Bi!tches ʙïʨh bìtçh';
         $this->assertSame(
-            "$r $r $r $r $r $r {$r}h $r $r",
+            "$r $r batch betcha $r $r $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'BITC* cubic units';
+        $string = 'suck my b!tch b.itch b.i.t.c.h b i t c h sunuvabitch b itch';
         $this->assertSame(
-            "$r cubic units",
+            '!@#$%^& !@#$%^& !@#$%^& !@#$%^& !@#$%^& sunuva!@#$%^& !@#$%^&',
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'bi*ch bich bicth biitch Bi9ch a b***h a b**** biyach';
+        $this->assertSame(
+            "$r $r $r $r $r {$r}h $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'BITC* cubic units bish bishop snobbish';
+        $this->assertSame(
+            "$r cubic units $r bishop snobbish",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

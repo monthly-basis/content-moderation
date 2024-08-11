@@ -80,6 +80,9 @@ class BadWords
             // Symbols
             '/[bʙ][1lïì]t?[cʨç]h/iu',
 
+            // Variants
+            '/\bbish\b/i',
+
             '/blow\W*j\W*o\W*b/i',
 
             /*
