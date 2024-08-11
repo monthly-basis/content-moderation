@@ -406,7 +406,7 @@ class BadWords
 
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
-            '/(\bs|[\$\§])h[i1l\!\*][t\ł]/iu',
+            '/(\b[s5]|[\$\§])h[i1l\!\*][t\ł]/iu',
 
             '/\bstfu/i',
 
