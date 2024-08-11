@@ -302,7 +302,7 @@ class BadWords
             /*
              * sex
              */
-            '/have sex/i',
+            '/have s[e\*]x/i',
 
             /*
              * shit
