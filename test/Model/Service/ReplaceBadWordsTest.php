@@ -92,9 +92,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'cockadoodledoo cock sucker bitch b*tch batch betcha bltch';
+        $string = 'bitch b*tch batch betcha bltch';
         $this->assertSame(
-            'cockadoodledoo !@#$%^&er !@#$%^& !@#$%^& batch betcha !@#$%^&',
+            '!@#$%^& !@#$%^& batch betcha !@#$%^&',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -155,6 +155,12 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'clit classiclit';
         $this->assertSame(
             "$r classiclit",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'cockadoodledoo cock sucker c0ck';
+        $this->assertSame(
+            "cockadoodledoo !@#$%^&er $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
