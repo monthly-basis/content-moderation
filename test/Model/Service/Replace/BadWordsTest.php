@@ -388,9 +388,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'diccionario dicklicker';
+        $string = 'diccionario dicklicker d1cks d!cks';
         $this->assertSame(
-            "diccionario $r",
+            "diccionario $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
