@@ -393,9 +393,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'fuq dafuq MUDERFUQER shut tf up fcking';
+        $string = 'fuq dafuq MUDERFUQER shut tf up fcking FUUUUUK';
         $this->assertSame(
-            "$r da{$r} MUDER{$r}ER $r $r",
+            "$r da{$r} MUDER{$r}ER $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
