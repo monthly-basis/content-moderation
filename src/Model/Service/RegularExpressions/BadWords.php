@@ -452,7 +452,7 @@ class BadWords
              */
             '/have s[e\*]x/i',
             '/(hard|love|want) sex/i',
-            '/s[e\*]xy/i',
+            '/[s\$][e\*]xy/i',
 
             /*
              * shit
