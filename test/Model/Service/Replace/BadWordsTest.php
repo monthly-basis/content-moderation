@@ -711,9 +711,9 @@ class ReplaceBadWordsTest extends TestCase
          * nigger
          */
 
-        $string = 'nigg n1gg nig g ni99 n!gga In 1999 ɴigg n¡gg';
+        $string = 'nigg n1gg nig g ni99 n!gga In 1999 ɴigg n¡gg N*GGA';
         $this->assertSame(
-            "$r $r $r $r $r In 1999 $r $r",
+            "$r $r $r $r $r In 1999 $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
