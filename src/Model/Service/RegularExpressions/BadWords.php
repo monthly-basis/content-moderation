@@ -170,7 +170,11 @@ class BadWords
              */
             '/eat me out/i',
 
-            '/f(a|4)g/i',
+            /*
+             * fag
+             */
+            '/\bf(a|4)g/i',
+
             '/fap/',
             '/fleshlight/i',
             '/foreskin/i',
