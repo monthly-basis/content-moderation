@@ -93,7 +93,7 @@ class BadWords
             '/biyach/i',
 
             // Symbols
-            '/[bʙ][i1lïì][t\*]?[cʨçč\$\*]h/iu',
+            '/[bʙ][i1lïì\*][t\*]?[cʨçč\$\*]h/iu',
 
             // Variants
             '/\bbish\b/i',
