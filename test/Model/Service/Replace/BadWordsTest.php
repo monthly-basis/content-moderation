@@ -184,6 +184,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * coon
+         */
+        $string = 'coon koon racoon';
+        $this->assertSame(
+            "$r $r racoon",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'cunt c__unt c*nt c u n t s etc until C++ until';
         $this->assertSame(
             "$r $r $r $r s etc until C++ until",
