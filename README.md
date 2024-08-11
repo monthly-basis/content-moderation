@@ -20,5 +20,5 @@ Determine whether text contains bad words.
     if ($containsBadWords->containsBadWords($string)) {
         echo 'Your string contains bad words!';
     } else {
-        echo 'Your string does not contain bad words.';
+        echo 'Phew, your string does not contain bad words.';
     }
