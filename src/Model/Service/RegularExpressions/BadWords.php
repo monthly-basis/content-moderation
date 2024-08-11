@@ -167,6 +167,11 @@ class BadWords
 
             '/god ?damn/i',
 
+            /*
+             * hentai
+             */
+            '/hentai/i',
+
             '/\bhoe/i',
             '/\bhorne?y/i',
 
