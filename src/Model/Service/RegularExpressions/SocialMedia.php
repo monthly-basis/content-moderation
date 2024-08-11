@@ -27,7 +27,7 @@ class SocialMedia
             '/(my|on) snap(chat)?/i',
             '/snapchat/i',
 
-            '/tik ?tok/i',
+            '/t[i!]k ?t[o0]k/i',
         ];
     }
 }
