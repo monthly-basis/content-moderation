@@ -240,7 +240,7 @@ class BadWords
             '/go f yourself/i',
 
             // Symbols
-            '/[fƒ][uμ0][c¢ς\*][kκ\*]/iu',
+            '/[fƒ][uμ0][cx¢ς\*][kκ\*]/iu',
             '/\bf_u?ck/i',
             '/F-ING/i',
             '/\*\*\*\*ING/i',
