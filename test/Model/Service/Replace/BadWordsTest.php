@@ -96,9 +96,9 @@ class ReplaceBadWordsTest extends TestCase
          * symbols
          */
 
-        $string = '8=D 8==D 8=========D';
+        $string = '8=D 8==D 8=========D ( . ) ( . )';
         $this->assertSame(
-            "8=D $r $r",
+            "8=D $r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
