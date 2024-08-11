@@ -14,9 +14,9 @@ class ReplaceImmatureWordsTest extends TestCase
         );
     }
 
-    public function testReplaceImmatureWords()
+    public function test_replaceImmatureWords_blankReplacement_expectedString()
     {
-        $string = "\t\tthis sentence has line breaks and no bad words\r\n\n";;
+        $string = "\t\tthis sentence has line breaks and no bad words\r\n\n";
         $this->assertSame(
             $string,
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
@@ -80,6 +80,15 @@ class ReplaceImmatureWordsTest extends TestCase
         $this->assertSame(
             ' questions',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
+        );
+    }
+
+    public function test_replaceImmatureWords_replacementSymbols_expectedString()
+    {
+        $string = 'damn';
+        $this->assertSame(
+            '!@#$%^&',
+            $this->replaceImmatureWordsService->replaceImmatureWords($string, '!@#$%^&')
         );
     }
 }
