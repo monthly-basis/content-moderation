@@ -52,7 +52,7 @@ class BadWords
             '/a§š/i',
 
             // Variants
-            '/\bas(s|\W)hole/i',
+            '/\ba[sz][sz\W]h[0o]les?/i',
             '/\ba holes\b/i',
             '/dumb?ass/i',
             '/dumba\W\W/i',
