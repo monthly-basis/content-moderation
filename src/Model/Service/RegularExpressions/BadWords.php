@@ -47,6 +47,10 @@ class BadWords
             '/dumb?ass/i',
             '/dumba\W\W/i',
 
+            /*
+             * ball
+             */
+            '/ballsacks?/i',
             '/suck balls?/i',
 
             '/bastard/i',
