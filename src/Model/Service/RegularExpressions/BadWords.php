@@ -191,7 +191,7 @@ class BadWords
             '/fu\W?king?/i',
 
             // Symbols
-            '/(f|ƒ)(u|μ)(c|¢|ς)(k|κ)/i',
+            '/(f|ƒ)[uμ0](c|¢|ς)(k|κ)/iu',
             '/\bf_u?ck/i',
 
             '/f(\W)*(u|v)e?\W*c\W*k/i',
