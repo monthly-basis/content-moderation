@@ -18,9 +18,13 @@ class SocialMediaTest extends TestCase
     {
         $replacement = 'social-media';
 
-        $string = 'join discord';
+        /*
+         * Discord
+         */
+
+        $string = 'join discord dis cord dis kord';
         $this->assertSame(
-            "join $replacement",
+            "join $replacement $replacement $replacement",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement)
         );
 
