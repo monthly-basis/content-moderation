@@ -282,6 +282,11 @@ class BadWords
             '/mast(e|u)rbat(ion)?/i',
 
             /*
+             * ligma
+             */
+            '/ligma/i',
+
+            /*
              * lolita
              */
 
