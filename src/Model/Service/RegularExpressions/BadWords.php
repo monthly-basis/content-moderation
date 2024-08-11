@@ -534,7 +534,7 @@ class BadWords
             /*
              * tit
              */
-            '/\bt[i1]ts?\b/i',
+            '/\bt[i1]t(s+)?\b/i',
             '/t[i1](dd?|tt)[i1]es/i',
 
             '/vag\s?ina/i',
