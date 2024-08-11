@@ -416,7 +416,12 @@ class BadWords
             '/t[i1](d|tt)[i1]es/i',
 
             '/vagina/i',
-            '/wh(o|0)re/i',
+
+            /*
+             * whore
+             */
+            '/wh[o\*0]re/i',
+
             '/w\s+h\s+o\s+r\s+e/i',
             '/xhamster/i',
             '/xvideos/i',
