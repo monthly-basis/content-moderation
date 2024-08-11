@@ -101,6 +101,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * anal
          */
+
         $string = 'anal sex anal beads';
         $this->assertSame(
             "anal sex $r",
@@ -200,6 +201,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * cock
          */
+
         $string = 'cockadoodledoo cock sucker c0ck suck a cock c#ck';
         $this->assertSame(
             "cockadoodledoo !@#$%^&er $r $r $r",
@@ -220,6 +222,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * coon
          */
+
         $string = 'coon koon racoon';
         $this->assertSame(
             "$r $r racoon",
@@ -235,6 +238,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * daddy
          */
+
         $string = 'harder daddy';
         $this->assertSame(
             "$r",
@@ -250,6 +254,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * dick
          */
+
         $string = 'dick dikk d**k d!#k d)/k d***k Emily Dickinson SuckMyD*ick';
         $this->assertSame(
             "$r $r $r $r d)/k d***k Emily Dickinson SuckMy$r",
@@ -263,8 +268,9 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
-         *
+         * eat
          */
+
         $string = 'eat me out beat me to it';
         $this->assertSame(
             "$r beat me to it",
@@ -443,26 +449,34 @@ class ReplaceBadWordsTest extends TestCase
             "$r $r $r $r {$r}a {$r} a In 1999 $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
         $string = ' nigleT nig night nicker nggas Nick Gurr noggers N!993R';
         $this->assertSame(
             " $r $r night $r {$r}s $r {$r}s $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
         $string = 'ΝIGGΕR nick gur n word /VIGGA knee gar knee garr mr.nword';
         $this->assertSame(
             "{$r}ΕR $r $r $r $r $r mr.{$r}",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
         $string = 'niqqa niqqer ngger niggr nggr Nick Ger Nick Gers negg@';
         $this->assertSame(
             "$r $r $r {$r}r $r $r {$r}s $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
         $string = 'nibba n19ga n1993r N1993RZ nea grrr 𝖓𝖎𝖌𝖌𝖊𝖗';
         $this->assertSame(
             "$r $r $r {$r}Z {$r}r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+
+        /*
+         * nude
+         */
 
         $string = 'nude nudes';
         $this->assertSame(
@@ -473,6 +487,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * nut
          */
+
         $string = 'no nut november';
         $this->assertSame(
             "$r",
@@ -530,6 +545,7 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * sex
          */
+
         $string = 'have sex have s*x';
         $this->assertSame(
             "$r $r",
@@ -539,9 +555,16 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * shit
          */
+
         $string = 'shit sh!t sh1t $h!t §h!ł ft/s h(t) SHlT it\'s hitting';
         $this->assertSame(
             "$r $r $r $r $r ft/s h(t) $r it's hitting",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'm/s hits';
+        $this->assertSame(
+            "m/s hits",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
