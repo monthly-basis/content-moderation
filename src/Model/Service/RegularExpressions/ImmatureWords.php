@@ -6,6 +6,11 @@ class ImmatureWords
     public function getRegularExpressionsOfImmatureWords(
     ): array {
         return [
+            /*
+             * emojis
+             */
+            '/👉👌/',
+
             '/\barses?\b/i',
             '/asf/i',
             '/boob(ies|s)?/i',
