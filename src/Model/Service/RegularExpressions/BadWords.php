@@ -199,6 +199,9 @@ class BadWords
             '/\bfu\W?k(ers?)?\b/i',
             '/fu\W?king?/i',
 
+            // Letters
+            '/f+u+c+k+/i',
+
             // Symbols
             '/[fƒ][uμ0][c¢ς\*][kκ\*]/iu',
             '/\bf_u?ck/i',
