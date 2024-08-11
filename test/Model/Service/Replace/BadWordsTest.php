@@ -109,6 +109,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * anus
+         */
+
+        $string = 'Hugh Janus';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * ass
          */
 

@@ -39,6 +39,11 @@ class BadWords
             '/\banal\b/i',
 
             /*
+             * anus
+             */
+            '/Hugh Janus/i',
+
+            /*
              * ass
              *
              * Cannot use word boundary (\b) around dollar sign because
