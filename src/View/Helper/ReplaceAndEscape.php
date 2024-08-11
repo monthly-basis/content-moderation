@@ -25,7 +25,8 @@ class ReplaceAndEscape extends AbstractHelper
 
     public function __invoke(
         string $string,
-        string $replacement = ''
+        string $replacement = '',
+        bool $replaceSocialMedia = false,
     ): string {
         // Remove "Bust in Silhouette" and "Kitchen Knife" emoji from string.
         $string = preg_replace('/(\x{1F464}|\x{1F52A})/u', '', $string);
@@ -33,7 +34,11 @@ class ReplaceAndEscape extends AbstractHelper
         $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
         $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
         $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
-        $string = $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement);
+
+        if ($replaceSocialMedia) {
+            $string = $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement);
+        }
+
         $string = $this->replaceSpacesService->replaceSpaces($string);
 
         return $this->escapeService->escape($string);

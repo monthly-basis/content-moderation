@@ -39,7 +39,55 @@ class ReplaceAndEscapeTest extends TestCase
         );
     }
 
-    public function test___invoke()
+    public function test___invoke_allBoolsOmitted_expectedString()
+    {
+        $string = '👤 🔪 hello world';
+
+        $this->replaceBadWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceBadWords')
+            ->with('  hello world')
+            ->willReturn('replace bad words result')
+            ;
+        $this->replaceImmatureWordsServiceMock
+            ->expects($this->once())
+            ->method('replaceImmatureWords')
+            ->with('replace bad words result')
+            ->willReturn('replace immature words result')
+            ;
+        $this->replaceEmailAddressesServiceMock
+            ->expects($this->once())
+            ->method('replaceEmailAddresses')
+            ->with('replace immature words result')
+            ->willReturn('replace email addresses result')
+            ;
+        $this->replaceSocialMediaServiceMock
+            ->expects($this->exactly(0))
+            ->method('replaceSocialMedia')
+            ;
+        $this->replaceSpacesServiceMock
+            ->expects($this->once())
+            ->method('replaceSpaces')
+            ->with('replace email addresses result')
+            ->willReturn('replace spaces result')
+            ;
+        $this->escapeServiceMock
+            ->expects($this->once())
+            ->method('escape')
+            ->with('replace spaces result')
+            ->willReturn('escaped string')
+            ;
+
+        $this->assertSame(
+            'escaped string',
+            $this->replaceAndEscapeHelper->__invoke(
+                string: $string,
+                replacement: '',
+            )
+        );
+    }
+
+    public function test___invoke_allBoolsTrue_expectedString()
     {
         $string = '👤 🔪 hello world';
 
@@ -82,7 +130,11 @@ class ReplaceAndEscapeTest extends TestCase
 
         $this->assertSame(
             'escaped string',
-            $this->replaceAndEscapeHelper->__invoke($string)
+            $this->replaceAndEscapeHelper->__invoke(
+                string: $string,
+                replacement: '',
+                replaceSocialMedia: true,
+            )
         );
     }
 }
