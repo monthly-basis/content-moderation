@@ -138,7 +138,7 @@ class BadWords
             '/dammit/i',
             '/damnit/i',
 
-            '/douche/i',
+            '/douche?/i',
 
             /*
              * daddy
