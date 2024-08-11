@@ -197,6 +197,9 @@ class BadWords
             // Spellings
             '/ni?gge?r/i',
 
+            // Symbols
+            '/negg@/i',
+
             // Variations
             '/knee garr?/i',
             '/nick g[eu]rr?/i',
