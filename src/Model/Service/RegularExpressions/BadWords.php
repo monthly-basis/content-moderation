@@ -214,7 +214,9 @@ class BadWords
              * shit
              */
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
-            '/\$h!t/i',
+
+            // Symbols
+            '/[\$\§]h![t\ł]/iu',
 
             '/\bstfu/i',
 
