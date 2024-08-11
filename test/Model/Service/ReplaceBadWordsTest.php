@@ -288,6 +288,11 @@ class ReplaceBadWordsTest extends TestCase
             " $r $r night $r {$r}s $r {$r}s {$r}3R",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
+        $string = 'ΝIGGΕR';
+        $this->assertSame(
+            "{$r}ΕR",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
 
         $string = 'penis Peni5 pennies';
         $this->assertSame(
