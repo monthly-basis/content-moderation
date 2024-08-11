@@ -86,6 +86,10 @@ class BadWords
             '/fleshlight/i',
             '/foreskin/i',
 
+            /*
+             * fuck
+             */
+
             '/\bf(###|\*\*\*|\-\-\-)/i',
             '/\bf[^\w\=\/\( ]+k/i',
             '/\bf\W+ck/i',
@@ -94,10 +98,8 @@ class BadWords
             '/\bfu\W?k\b/i',
             '/fu\W?king?/i',
 
-            // Foreign alphabets
-            '/ƒμςκ/i',
-
-            // Symbols
+            // Foreign alphabets and symbols
+            '/(f|ƒ)(u|μ)(c|¢|ς)(k|κ)/i',
             '/\bf_u?ck/i',
 
             '/f(\W)*(u|v)e?\W*c\W*k/i',
