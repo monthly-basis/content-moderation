@@ -649,6 +649,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * queef
+         */
+
+        $string = 'queef ᑫᑌᗴᗴᖴ';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * rape
          */
 
