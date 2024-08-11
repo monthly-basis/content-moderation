@@ -229,6 +229,11 @@ class BadWords
              */
             '/nudes?/i',
 
+            /*
+             * nut
+             */
+            '/no nut november/i',
+
             '/orgasm/i',
 
             '/penn?[iu][5s]/i',

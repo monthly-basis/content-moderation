@@ -356,6 +356,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * nut
+         */
+        $string = 'no nut november';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'penis Peni5 pennies pennis penus';
         $this->assertSame(
             "$r $r pennies $r $r",
