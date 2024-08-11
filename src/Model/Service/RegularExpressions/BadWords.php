@@ -432,7 +432,7 @@ class BadWords
              * pp
              */
 
-            '/(big|\bmy|small) (pp|pee ?pee)/i',
+            '/(big|\bmy|small|suck) (pp|pee ?pee)/i',
 
             /*
              * pussy
@@ -496,6 +496,10 @@ class BadWords
             '/(\b[s5]|[\$\§])[h\*][i1l\!\*\-¡][t\ł]/iu',
 
             '/s(l|1)(u|ü)t/i',
+
+            /*
+             * suck
+             */
             '/suck my/i',
 
             /*
