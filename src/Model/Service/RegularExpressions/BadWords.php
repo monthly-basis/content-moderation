@@ -140,7 +140,7 @@ class BadWords
             /*
              * cum
              */
-            '/\bcum+\b/i',
+            '/\b(?<!magna )(?<!summa )cum+\b/i',
 
             // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
             //'/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
