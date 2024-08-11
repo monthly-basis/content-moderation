@@ -114,8 +114,13 @@ class BadWords
             '/\bf off\b/i',
             '/\bfuc/i',
 
+            /*
+             * gay
+             */
+
             '/gay/i',
             '/\bg ay\b/i',
+            '/\bgae\b/i',
 
             '/god ?damn/i',
 
