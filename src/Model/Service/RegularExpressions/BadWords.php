@@ -9,7 +9,10 @@ namespace MonthlyBasis\ContentModeration\Model\Service\RegularExpressions;
  * In order to ensure that this code is functioning properly,
  * we must use explicit language in our own code.
  *
- * Sorry.
+ * @TODO Also, in future versions of this software, "bad" words will be
+ * divided into more-specific categories. For example, a word dealing
+ * with sex should be in a category called "sex" and should not always be
+ * categorized as "bad".
  */
 class BadWords
 {
