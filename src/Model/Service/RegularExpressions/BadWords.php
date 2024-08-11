@@ -193,6 +193,7 @@ class BadWords
             // Symbols
             '/(f|ƒ)[uμ0](c|¢|ς)(k|κ)/iu',
             '/\bf_u?ck/i',
+            '/F-ING/i',
 
             '/f(\W)*(u|v)e?\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
