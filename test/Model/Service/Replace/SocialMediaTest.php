@@ -60,9 +60,9 @@ class SocialMediaTest extends TestCase
             $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
-        $string = 'add me on tiktok tik tok t!k t0k';
+        $string = 'add me on tiktok tik tok t!k t0k TIKT0K';
         $this->assertSame(
-            "add me on $r $r $r",
+            "add me on $r $r $r $r",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
     }
