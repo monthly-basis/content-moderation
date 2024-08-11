@@ -167,36 +167,6 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
-         * blow
-         */
-
-        $string = 'blowjob BLOW JOB blow.j.o.b blow me';
-        $this->assertSame(
-            "$r $r $r $r",
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
-        /*
-         * boner
-         */
-
-        $string = 'boner';
-        $this->assertSame(
-            "$r",
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
-        /*
-         * boob
-         */
-
-        $string = 'boob boobs BOOOOOOOBSSSS';
-        $this->assertSame(
-            "$r $r {$r}SSS",
-            $this->replaceBadWordsService->replaceBadWords($string)
-        );
-
-        /*
          * bitch
          */
 
@@ -227,6 +197,36 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'bit cheerful a b*** a b** Bi**h bit$h bit happy';
         $this->assertSame(
             "bit cheerful $r $r $r $r bit happy",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
+         * blow
+         */
+
+        $string = 'blowjob BLOW JOB blow.j.o.b blow me';
+        $this->assertSame(
+            "$r $r $r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
+         * boner
+         */
+
+        $string = 'boner';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
+         * boob
+         */
+
+        $string = 'boob boobs BOOOOOOOBSSSS';
+        $this->assertSame(
+            "$r $r {$r}SSS",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
