@@ -3,7 +3,7 @@ namespace MonthlyBasis\ContentModeration;
 
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\ContentModeration\Controller as ContentModerationController;
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use MonthlyBasis\ContentModeration\View\Helper as ContentModerationHelper;

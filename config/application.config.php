@@ -3,7 +3,7 @@
 return [
     'modules' => [
         'MonthlyBasis\ContentModeration',
-        'LeoGalleguillos\String',
+        'MonthlyBasis\String',
         'Laminas\Router',
     ],
     // These are various options for the listeners attached to the ModuleManager
