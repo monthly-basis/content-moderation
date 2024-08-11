@@ -381,6 +381,11 @@ class BadWords
             '/\brapist/i',
 
             /*
+             * rim job
+             */
+            '/rim job/i',
+
+            /*
              * schlong
              */
             '/sc?hlong/i',
