@@ -529,6 +529,12 @@ class BadWords
             '/pussi(es)?/i',
 
             /*
+             * puta
+             */
+
+            '/\bputa\b/i',
+
+            /*
              * queef
              */
             '/[qᑫ][uᑌ][eᗴ][eᗴ][fᖴ]/iu',
