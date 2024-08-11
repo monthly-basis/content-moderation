@@ -313,6 +313,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * erection
+         */
+
+        $string = 'Hue G. Rection hue g rection';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * fag
          */
 
