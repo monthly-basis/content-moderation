@@ -84,19 +84,18 @@ class BadWords
             /*
              * bitch
              */
-            '/biach/i',
             '/b\W*(i\W*)?t\W*c\W*h(es)?\b/i',
             '/bi+(t|\W)c(h|\W)/i',
             '/bict?h/i',
             '/bi\dch/i',
             '/a b\*+/i',
-            '/biyach/i',
 
             // Symbols
             '/[bʙ][i1lïì\*][t\*]?[cʨçč\$\*]h/iu',
 
             // Variants
             '/\bbish\b/i',
+            '/biy?ach/i',
 
             /*
              * blow
