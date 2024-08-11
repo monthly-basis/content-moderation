@@ -450,10 +450,11 @@ class BadWords
              */
             '/p\s*u\s*s\s*s\s*y/i',
             '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
-            '/pussi(es)?/i',
 
             // Spellings
+            '/pus+y+/i',
             '/pusay/i',
+            '/pussi(es)?/i',
 
             /*
              * queef
