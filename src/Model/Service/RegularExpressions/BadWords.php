@@ -229,11 +229,8 @@ class BadWords
              * gay
              */
 
-            // Spaces
-            '/\bg ?a ?y\b/i',
-
             // Symbols
-            '/g[\.\_]?[a\@4][\.\_]?y(?!le)/i',
+            '/\bg[\s\.\_]?[a\@4][\s\.\_]?y(?!le)(?!-Lussac)/i',
 
             // Variations
             '/\bgae\b/i',
