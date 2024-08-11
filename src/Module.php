@@ -51,6 +51,11 @@ class Module
     {
         return [
             'factories' => [
+                ContentModerationService\Contains\BadWords::class => function ($sm) {
+                    return new ContentModerationService\Contains\BadWords(
+                        $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
+                    );
+                },
                 ContentModerationService\Contains\RepeatingCharacters::class => function ($sm) {
                     return new ContentModerationService\Contains\RepeatingCharacters(
                         $sm->get('config')['content-moderation']['contains-repeating-characters']
