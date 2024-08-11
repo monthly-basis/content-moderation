@@ -389,7 +389,7 @@ class BadWords
              * Mike
              */
 
-            '/Mike Hawk/i',
+            '/Mike ?Hawk/i',
             '/Mike Hunt/i',
 
             /*
