@@ -375,7 +375,7 @@ class BadWords
              * lolita
              */
 
-            '/lolita/i',
+            '/loli\W?ta/i',
 
             /*
              * Mike
