@@ -224,7 +224,6 @@ class BadWords
              * fuck
              */
 
-            '/\bf(###|\*\*\*|\-\-\-)/i',
             '/\bf[^\w\=\/\( ]+k/i',
             '/\bf\W+ck/i',
 
@@ -240,7 +239,7 @@ class BadWords
             '/shut t(he )?f up/i',
 
             // Symbols
-            '/[fƒ][uμ0\/][cx\(¢ς\*][kκ\*]/iu',
+            '/(\bf|[ƒ])[uμ0#\*\-\/][cx#\*\(\-¢ς\*][kκ#\*\-]/iu',
             '/\bf_u?ck/i',
             '/F-ING/i',
             '/\*\*\*\*ING/i',
