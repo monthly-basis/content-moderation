@@ -56,7 +56,7 @@ class BadWords
              */
             '/biach/i',
             '/b(1|l)tch/i',
-            '/b\W*(i\W*)?t\W*c\W*h\b/i',
+            '/b\W*(i\W*)?t\W*c\W*h(es)?\b/i',
             '/bi+(t|\W)c(h|\W)/i',
             '/bict?h/i',
             '/bi\dch/i',
