@@ -100,6 +100,11 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\SocialMedia::class)
                     );
                 },
+                ContentModerationService\Contains\Url\Fragments::class => function ($sm) {
+                    return new ContentModerationService\Contains\Url\Fragments(
+                        $sm->get(ContentModerationService\RegularExpressions\Url\Fragments::class)
+                    );
+                },
                 ContentModerationService\ContainsBadWords::class => function ($sm) {
                     return new ContentModerationService\ContainsBadWords(
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
