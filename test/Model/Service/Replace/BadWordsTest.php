@@ -397,9 +397,9 @@ class ReplaceBadWordsTest extends TestCase
             "$r $r $r {$r}r $r $r {$r}s $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = 'nibba n19ga n1993r N1993RZ nea grrr';
+        $string = 'nibba n19ga n1993r N1993RZ nea grrr 𝖓𝖎𝖌𝖌𝖊𝖗';
         $this->assertSame(
-            "$r $r $r {$r}Z {$r}r",
+            "$r $r $r {$r}Z {$r}r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
