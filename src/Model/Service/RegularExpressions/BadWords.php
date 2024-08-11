@@ -254,6 +254,11 @@ class BadWords
             '/\brapist/i',
 
             /*
+             * sex
+             */
+            '/have sex/i',
+
+            /*
              * shit
              */
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
