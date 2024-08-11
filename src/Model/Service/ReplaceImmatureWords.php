@@ -3,6 +3,9 @@ namespace MonthlyBasis\ContentModeration\Model\Service;
 
 use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 
+/**
+ * @deprecated Use ContentModerationService\Replace\ImmatureWords() instead.
+ */
 class ReplaceImmatureWords
 {
     public function __construct(
