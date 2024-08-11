@@ -65,6 +65,9 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
+                ContentModerationService\Contains\Email::class => function ($sm) {
+                    return new ContentModerationService\Contains\Email();
+                },
                 ContentModerationService\Contains\ImmatureWords::class => function ($sm) {
                     return new ContentModerationService\Contains\ImmatureWords(
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
