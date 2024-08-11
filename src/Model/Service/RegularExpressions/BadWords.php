@@ -237,6 +237,7 @@ class BadWords
             // Phrases
             '/\bf you\b/i',
             '/go f yourself/i',
+            '/shut tf up/i',
 
             // Symbols
             '/[fƒ][uμ0][cx¢ς\*][kκ\*]/iu',
