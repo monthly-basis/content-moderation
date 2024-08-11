@@ -35,10 +35,10 @@ class ToHtml
         $messageEscaped = $this->escapeService->escape($message);
 
         /*
-         * Trim here in case any of the above replacements left whitespace at
-         * edges of string.
+         * Trim escaped message here in case any of the above replacements left
+         * whitespace at edges of string.
          */
-        $message = trim($message);
+        $messageEscaped = trim($messageEscaped);
 
         $pattern = '|https?://\S+|i';
         $messageEscaped = preg_replace_callback(
