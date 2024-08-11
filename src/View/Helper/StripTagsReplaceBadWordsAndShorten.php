@@ -1,8 +1,8 @@
 <?php
 namespace MonthlyBasis\ContentModeration\View\Helper;
 
-use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 use Laminas\View\Helper\AbstractHelper;
+use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 
 class StripTagsReplaceBadWordsAndShorten extends AbstractHelper
 {
