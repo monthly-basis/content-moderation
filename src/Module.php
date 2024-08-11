@@ -13,61 +13,6 @@ class Module
     public function getConfig()
     {
         return [
-            'controllers' => [
-                'factories' => [
-                    ContentModerationController\Api\V0\ContainsBadWords::class => function ($sm) {
-                        return new ContentModerationController\Api\V0\ContainsBadWords(
-                            $sm->get(ContentModerationService\ContainsBadWords::class)
-                        );
-                    },
-                    ContentModerationController\Index::class => function ($sm) {
-                        return new ContentModerationController\Index();
-                    },
-                ],
-            ],
-            'router' => [
-                'routes' => [
-                    'index' => [
-                        'type' => Literal::class,
-                        'options' => [
-                            'route'    => '/',
-                            'defaults' => [
-                                'controller' => ContentModerationController\Index::class,
-                                'action'     => 'index',
-                            ],
-                        ],
-                    ],
-                    'api' => [
-                        'type' => Literal::class,
-                        'options' => [
-                            'route'    => '/api',
-                        ],
-                        'may_terminate' => false,
-                        'child_routes' => [
-                            'v0' => [
-                                'type' => Literal::class,
-                                'options' => [
-                                    'route'    => '/v0',
-                                ],
-                                'may_terminate' => false,
-                                'child_routes' => [
-                                    'contains-bad-words' => [
-                                        'type' => Literal::class,
-                                        'options' => [
-                                            'route'    => '/contains-bad-words',
-                                            'defaults' => [
-                                                'controller' => ContentModerationController\Api\V0\ContainsBadWords::class,
-                                                'action'     => 'index',
-                                            ],
-                                        ],
-                                        'may_terminate' => true,
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-            ],
             'view_helpers' => [
                 'aliases' => [
                     'containsBadWords'                   => ContentModerationHelper\ContainsBadWords::class,
@@ -97,21 +42,6 @@ class Module
                             $sm->get(ContentModerationService\ToHtml::class)
                         );
                     },
-                ],
-            ],
-            'view_manager' => [
-                'display_not_found_reason' => true,
-                'doctype'                  => 'HTML5',
-                'not_found_template'       => 'error/404',
-                'exception_template'       => 'error/index',
-                'template_map' => [
-                    'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-                    'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-                    'error/404'               => __DIR__ . '/../view/error/404.phtml',
-                    'error/index'             => __DIR__ . '/../view/error/index.phtml',
-                ],
-                'template_path_stack' => [
-                    'application' => __DIR__ . '/../view',
                 ],
             ],
         ];
