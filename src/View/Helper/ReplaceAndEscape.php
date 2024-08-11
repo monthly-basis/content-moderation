@@ -11,12 +11,14 @@ class ReplaceAndEscape extends AbstractHelper
         ContentModerationService\Replace\BadWords $replaceBadWordsService,
         ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
+        ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
         ContentModerationService\Replace\Spaces $replaceSpacesService,
         StringService\Escape $escapeService
     ) {
         $this->replaceBadWordsService       = $replaceBadWordsService;
         $this->replaceEmailAddressesService = $replaceEmailAddressesService;
         $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
+        $this->replaceSocialMediaService    = $replaceSocialMediaService;
         $this->replaceSpacesService         = $replaceSpacesService;
         $this->escapeService                = $escapeService;
     }
@@ -31,6 +33,7 @@ class ReplaceAndEscape extends AbstractHelper
         $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
         $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
         $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
+        $string = $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement);
         $string = $this->replaceSpacesService->replaceSpaces($string);
 
         return $this->escapeService->escape($string);

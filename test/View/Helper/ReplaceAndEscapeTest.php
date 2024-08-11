@@ -19,6 +19,9 @@ class ReplaceAndEscapeTest extends TestCase
         $this->replaceImmatureWordsServiceMock = $this->createMock(
             ContentModerationService\Replace\ImmatureWords::class
         );
+        $this->replaceSocialMediaServiceMock = $this->createMock(
+            ContentModerationService\Replace\SocialMedia::class
+        );
         $this->replaceSpacesServiceMock = $this->createMock(
             ContentModerationService\Replace\Spaces::class
         );
@@ -30,6 +33,7 @@ class ReplaceAndEscapeTest extends TestCase
             $this->replaceBadWordsServiceMock,
             $this->replaceEmailAddressesServiceMock,
             $this->replaceImmatureWordsServiceMock,
+            $this->replaceSocialMediaServiceMock,
             $this->replaceSpacesServiceMock,
             $this->escapeServiceMock
         );
@@ -43,27 +47,38 @@ class ReplaceAndEscapeTest extends TestCase
             ->expects($this->once())
             ->method('replaceBadWords')
             ->with('  hello world')
-            ->willReturn('replace bad words result');
+            ->willReturn('replace bad words result')
+            ;
         $this->replaceImmatureWordsServiceMock
             ->expects($this->once())
             ->method('replaceImmatureWords')
             ->with('replace bad words result')
-            ->willReturn('replace immature words result');
+            ->willReturn('replace immature words result')
+            ;
         $this->replaceEmailAddressesServiceMock
             ->expects($this->once())
             ->method('replaceEmailAddresses')
             ->with('replace immature words result')
-            ->willReturn('replace email addresses result');
+            ->willReturn('replace email addresses result')
+            ;
+        $this->replaceSocialMediaServiceMock
+            ->expects($this->once())
+            ->method('replaceSocialMedia')
+            ->with('replace email addresses result')
+            ->willReturn('replace social media result')
+            ;
         $this->replaceSpacesServiceMock
             ->expects($this->once())
             ->method('replaceSpaces')
-            ->with('replace email addresses result')
-            ->willReturn('replace spaces result');
+            ->with('replace social media result')
+            ->willReturn('replace spaces result')
+            ;
         $this->escapeServiceMock
             ->expects($this->once())
             ->method('escape')
             ->with('replace spaces result')
-            ->willReturn('escaped string');
+            ->willReturn('escaped string')
+            ;
 
         $this->assertSame(
             'escaped string',
