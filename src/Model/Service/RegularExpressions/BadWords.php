@@ -495,7 +495,7 @@ class BadWords
              * tit
              */
             '/\bt[i1]ts?\b/i',
-            '/t[i1](d|tt)[i1]es/i',
+            '/t[i1](dd?|tt)[i1]es/i',
 
             '/vagina/i',
 
