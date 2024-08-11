@@ -20,9 +20,13 @@ class BadWordsTest extends TestCase
 {
     protected function setUp(): void
     {
+        $this->inputResultsInFlagsServiceMock = $this->createMock(
+            ContentModerationService\OpenAi\InputResultsInFlags::class
+        );
         $this->regularExpressionsOfBadWordsService = new ContentModerationService\RegularExpressions\BadWords();
         $this->containsBadWordsService = new ContentModerationService\Contains\BadWords(
-            $this->regularExpressionsOfBadWordsService
+            $this->inputResultsInFlagsServiceMock,
+            $this->regularExpressionsOfBadWordsService,
         );
     }
 
