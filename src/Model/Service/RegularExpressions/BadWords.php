@@ -291,6 +291,7 @@ class BadWords
             '/f+(u+|x)(c+k+|q)/i',
             '/fcuk/i',
             '/fawk/i',
+            '/fkuc/i',
             '/fook/i',
             '/fuxk/i',
 
