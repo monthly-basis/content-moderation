@@ -154,7 +154,7 @@ class ReplaceBadWordsTest extends TestCase
          * ball
          */
 
-        $string = 'balls';
+        $string = 'balls'; // Starts and ends with "balls"
         $this->assertSame(
             "$r",
             $this->replaceBadWordsService->replaceBadWords($string)
@@ -169,6 +169,12 @@ class ReplaceBadWordsTest extends TestCase
         $string = 'baseball your balls ball sacks Ballsinyojaws Balls in yo jaws';
         $this->assertSame(
             "baseball $r $r {$r}jaws $r jaws",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        $string = 'big balls bigballs';
+        $this->assertSame(
+            "$r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
