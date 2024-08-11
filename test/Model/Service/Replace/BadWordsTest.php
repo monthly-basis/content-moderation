@@ -539,9 +539,9 @@ class ReplaceBadWordsTest extends TestCase
         /*
          * shit
          */
-        $string = 'shit sh!t sh1t $h!t §h!ł ft/s h(t) SHlT';
+        $string = 'shit sh!t sh1t $h!t §h!ł ft/s h(t) SHlT it\'s hitting';
         $this->assertSame(
-            "$r $r $r $r $r ft/s h(t) $r",
+            "$r $r $r $r $r ft/s h(t) $r it's hitting",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
