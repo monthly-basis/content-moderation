@@ -13,6 +13,7 @@ class ImmatureWords
             '/dee(s|z)\s?nut(s|z)/i',
             '/dumb\b/i',
             '/f\W*a\W*r\W*t/i',
+            '/Hugh Jass/i',
             '/idfk/i',
             '/idiot/i',
             '/lmf?ao/i',
