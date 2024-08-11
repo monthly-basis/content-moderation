@@ -2,6 +2,7 @@
     "name": "monthly-basis/content-moderation",
     "license": "MIT",
     "require": {
+        "laminas/laminas-mvc": "^3.0.1",
         "laminas/laminas-test": "^3.1",
         "leo-galleguillos/string": "^1.0",
         "monthly-basis/laminas-test": "^2.0"
