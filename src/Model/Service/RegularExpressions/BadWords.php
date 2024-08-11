@@ -117,7 +117,7 @@ class BadWords
             '/ngga/i',
             '/n(i|!)99/i',
             '/\bnicker\b/i',
-            '/nick gurr/i',
+            '/nick gurr?/i',
             '/niglet/i',
             '/\bnig\b/i',
             '/nogger/i',
