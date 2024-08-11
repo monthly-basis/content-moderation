@@ -39,6 +39,8 @@ class BadWords
             '/\ba holes\b/i',
             '/a§š/i',
 
+            '/suck balls?/i',
+
             '/bastard/i',
 
             /*
