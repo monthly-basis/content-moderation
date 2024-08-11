@@ -10,6 +10,9 @@ class InputResultsInFlags
     ) {
     }
 
+    /**
+     * @throws \Exception If Open AI API timeout is reached, \Exception is thrown.
+     */
     public function doesInputResultInFlags(string $input): bool
     {
         $response = $this->openAiService->moderation([
