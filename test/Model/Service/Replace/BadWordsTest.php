@@ -631,9 +631,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'kill your self kill yourselves';
+        $string = 'kill your self kill yourselves Kil ur self';
         $this->assertSame(
-            "$r $r",
+            "$r $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
