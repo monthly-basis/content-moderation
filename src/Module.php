@@ -17,6 +17,7 @@ class Module
                 'aliases' => [
                     'containsBadWords'                   => ContentModerationHelper\ContainsBadWords::class,
                     'escapeAndReplaceBadWords'           => ContentModerationHelper\EscapeAndReplaceBadWords::class,
+                    'replaceAndEscape'                   => ContentModerationHelper\ReplaceAndEscape::class,
                     'stripTagsReplaceBadWordsAndShorten' => ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class,
                     'toHtml'                             => ContentModerationHelper\ToHtml::class,
                 ],
@@ -30,6 +31,14 @@ class Module
                         return new ContentModerationHelper\EscapeAndReplaceBadWords(
                             $sm->get(StringService\Escape::class),
                             $sm->get(ContentModerationService\ReplaceBadWords::class)
+                        );
+                    },
+                    ContentModerationHelper\ReplaceAndEscape::class => function ($sm) {
+                        return new ContentModerationHelper\ReplaceAndEscape(
+                            $sm->get(ContentModerationService\Replace\BadWords::class),
+                            $sm->get(ContentModerationService\Replace\ImmatureWords::class),
+                            $sm->get(ContentModerationService\Replace\Spaces::class),
+                            $sm->get(StringService\Escape::class)
                         );
                     },
                     ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
@@ -99,6 +108,9 @@ class Module
                     return new ContentModerationService\Replace\ImmatureWords(
                         $sm->get(ContentModerationService\RegularExpressions\ImmatureWords::class)
                     );
+                },
+                ContentModerationService\Replace\Spaces::class => function ($sm) {
+                    return new ContentModerationService\Replace\Spaces();
                 },
                 /**
                  * @deprecated Use ContentModerationService\Replace\BadWords() instead.
