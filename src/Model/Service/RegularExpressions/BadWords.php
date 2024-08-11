@@ -268,6 +268,12 @@ class BadWords
             '/mast(e|u)rbat(ion)?/i',
 
             /*
+             * lolita
+             */
+
+            '/lolita/i',
+
+            /*
              * Mike Hunt
              */
             '/Mike Hunt/i',
