@@ -54,9 +54,9 @@ class SocialMediaTest extends TestCase
          * Snapchat
          */
 
-        $string = 'snapchat on snap on snapchat my snap';
+        $string = 'snapchat on snap on snapchat my snap Add my sc';
         $this->assertSame(
-            "$r $r $r $r",
+            "$r $r $r $r $r",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 

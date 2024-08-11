@@ -23,9 +23,13 @@ class SocialMedia
             /*
              * Snapchat
              */
+
             // Prioritize longer phrase
             '/(my|on) snap(chat)?/i',
             '/snapchat/i',
+
+            // sc
+            '/add my sc/i',
 
             '/t[i!]k ?t[o0]k/i',
         ];
