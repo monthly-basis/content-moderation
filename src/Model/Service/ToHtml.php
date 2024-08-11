@@ -12,14 +12,14 @@ class ToHtml
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
         ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
         StringService\Escape $escapeService,
-        StringService\Url\ToHtml $toHtmlService
+        StringService\Url\ToHtml $urlToHtmlService
     ) {
         $this->replaceBadWordsService       = $replaceBadWordsService;
         $this->replaceEmailAddressesService = $replaceEmailAddressesService;
         $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
         $this->replaceSocialMediaService    = $replaceSocialMediaService;
         $this->escapeService                = $escapeService;
-        $this->toHtmlService                = $toHtmlService;
+        $this->urlToHtmlService             = $urlToHtmlService;
     }
 
     public function toHtml(string $message): string
@@ -54,6 +54,6 @@ class ToHtml
     protected function pregReplaceCallback(array $matches)
     {
         $url = $matches[0];
-        return $this->toHtmlService->toHtml($url);
+        return $this->urlToHtmlService->toHtml($url);
     }
 }
