@@ -205,15 +205,18 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * dick
+         */
         $string = 'dick dikk d**k d!#k d)/k d***k Emily Dickinson SuckMyD*ick';
         $this->assertSame(
             "$r $r $r $r d)/k d***k Emily Dickinson SuckMy$r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'd!ck i like dicks DDIICCKK big dick';
+        $string = 'd!ck i like dicks DDIICCKK big dick dig bick';
         $this->assertSame(
-            "$r i like $r $r big $r",
+            "$r i like $r $r big $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
