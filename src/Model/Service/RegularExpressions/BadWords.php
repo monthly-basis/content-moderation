@@ -155,7 +155,7 @@ class BadWords
             '/niglet/i',
             '/\bnig\b/i',
             '/nogger/i',
-            '/\bn word\b/i',
+            '/\bn ?word\b/i',
 
             '/orgasm/i',
 
