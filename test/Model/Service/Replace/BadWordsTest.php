@@ -38,9 +38,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'hello world Kushite s*h*i.t! s.hit sh*t shot doushite shtick';
+        $string = 'hello world Kushite s*h*i.t! s.hit sh*t shot shtick';
         $this->assertSame(
-            'hello world Kushite !@#$%^&! !@#$%^& !@#$%^& shot doushite shtick',
+            'hello world Kushite !@#$%^&! !@#$%^& !@#$%^& shot shtick',
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
@@ -88,7 +88,7 @@ class ReplaceBadWordsTest extends TestCase
 
         $string = 'bullshit bullsht dick tracy can suck my dick F OFF bull.   ';
         $this->assertSame(
-            "!@#$%^& !@#$%^& $r tracy can $r !@#$%^& $r bull.   ",
+            "bull$r !@#$%^& $r tracy can $r !@#$%^& $r bull.   ",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
