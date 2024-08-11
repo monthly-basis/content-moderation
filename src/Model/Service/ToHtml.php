@@ -10,12 +10,14 @@ class ToHtml
         ContentModerationService\Replace\BadWords $replaceBadWordsService,
         ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
         ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
+        ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
         StringService\Escape $escapeService,
         StringService\Url\ToHtml $toHtmlService
     ) {
         $this->replaceBadWordsService       = $replaceBadWordsService;
         $this->replaceEmailAddressesService = $replaceEmailAddressesService;
         $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
+        $this->replaceSocialMediaService    = $replaceSocialMediaService;
         $this->escapeService                = $escapeService;
         $this->toHtmlService                = $toHtmlService;
     }
@@ -26,6 +28,7 @@ class ToHtml
         $message = $this->replaceBadWordsService->replaceBadWords($message, '');
         $message = $this->replaceImmatureWordsService->replaceImmatureWords($message, '');
         $message = $this->replaceEmailAddressesService->replaceEmailAddresses($message);
+        $message = $this->replaceSocialMediaService->replaceSocialMedia($message, '');
 
         $messageEscaped = $this->escapeService->escape($message);
 
