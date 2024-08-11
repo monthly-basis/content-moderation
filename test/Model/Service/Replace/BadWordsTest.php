@@ -344,6 +344,12 @@ class ReplaceBadWordsTest extends TestCase
          * daddy
          */
 
+        $string = 'daddy'; // Starts and ends with "daddy"
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'harder daddy yes daddy me daddy';
         $this->assertSame(
             "$r $r $r",
