@@ -140,6 +140,12 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        $string = 'BITC*';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'bit cheerful a b*** a b**';
         $this->assertSame(
             "bit cheerful $r $r",
