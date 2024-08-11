@@ -116,6 +116,7 @@ class Module
                 },
                 ContentModerationService\ToHtml::class => function ($sm) {
                     return new ContentModerationService\ToHtml(
+                        $sm->get(ContentModerationService\Replace\ImmatureWords::class),
                         $sm->get(ContentModerationService\ReplaceBadWords::class),
                         $sm->get(StringService\Escape::class),
                         $sm->get(StringService\Url\ToHtml::class)
