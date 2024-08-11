@@ -21,6 +21,9 @@ class ToHtml
         bool $replaceImmatureWords = false,
         bool $replaceSocialMedia = false,
     ): string {
+        // Remove BOM (Byte Order Mark)
+        $string = preg_replace("/\xef\xbb\xbf/", '', $string);
+
         $string = $this->replaceBadWordsService->replaceBadWords($string, '');
         if ($replaceImmatureWords) {
             $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, '');
