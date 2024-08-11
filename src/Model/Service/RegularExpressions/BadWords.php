@@ -169,20 +169,22 @@ class BadWords
             /*
              * nigger
              */
-            '/knee garr?/i',
-            '/(n|ɴ|Ν)\W*(1|i|l|\!|\¡)\W*g\W*g/i',
+            '/[nɴΝ]\W*[1il\!\¡]\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
             '/n[\!i][9q][9q](a|er)?/i',
             '/\bnicker\b/i',
-            '/nick gurr?/i',
-            '/niglet/i',
             '/\bnig\b/i',
             '/nogger/i',
-            '/\bn ?word\b/i',
 
             // Spellings
             '/ni?gge?r/i',
+
+            // Variations
+            '/knee garr?/i',
+            '/nick gurr?/i',
+            '/niglet/i',
+            '/\bn ?word\b/i',
 
             '/orgasm/i',
 
