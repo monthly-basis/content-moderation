@@ -49,6 +49,7 @@ class BadWords
             /*
              * Cannot use word boundary (\b) around non-word characters (\W).
              */
+            '/biach/i',
             '/b(1|l)tch/i',
             '/b\W*(i\W*)?t\W*c\W*h\b/i',
             '/bi+(t|\W)c(h|\W)/i',
