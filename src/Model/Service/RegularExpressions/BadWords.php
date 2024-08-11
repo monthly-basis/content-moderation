@@ -45,7 +45,7 @@ class BadWords
              * dollar sign is not a word character.
              * So, just hard-code some variations for now.
              */
-            '/\ba\s*ss(es)?\b/i',
+            '/\ba\.?\s*ss(es)?\b/i',
             '/\bazz\b/i',
 
             // Spaces

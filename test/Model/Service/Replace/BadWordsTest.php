@@ -124,9 +124,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'a55h01e dumbass dumbas Dumas method badass';
+        $string = 'a55h01e dumbass dumbas Dumas method badass a.ss';
         $this->assertSame(
-            "$r $r $r Dumas method $r",
+            "$r $r $r Dumas method $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
