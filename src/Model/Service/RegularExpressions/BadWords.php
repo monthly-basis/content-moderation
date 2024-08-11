@@ -235,7 +235,7 @@ class BadWords
             '/\bf you\b/i',
             '/go f yourself/i',
             '/gtfo/i',
-            '/\bs(hut )?t(he )?f ?up?/i',
+            '/\bs(hut )?\W?t(he )?\W?f ?\W?up?/i',
 
             // Symbols
             '/(\bf|[ƒḟ])[uμ0#\*\-\/][cx#\*\(\-¢ς\*][kκ#\*\-]/iu',
