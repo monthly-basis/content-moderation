@@ -29,7 +29,7 @@ class SocialMedia
             '/snapchat/i',
 
             // sc
-            '/add my sc/i',
+            '/add (me on|my) sc/i',
 
             '/t[i!]k ?t[o0]k/i',
         ];
