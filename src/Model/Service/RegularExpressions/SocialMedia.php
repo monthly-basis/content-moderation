@@ -11,6 +11,7 @@ class SocialMedia
             '/instagram/i',
             '/snapchat/i',
             '/twitch/i',
+            '/twitter/i',
             '/youtube/i',
         ];
     }

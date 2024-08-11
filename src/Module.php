@@ -66,6 +66,11 @@ class Module
                         $sm->get('config')['content-moderation']['contains-repeating-characters']
                     );
                 },
+                ContentModerationService\Contains\SocialMedia::class => function ($sm) {
+                    return new ContentModerationService\Contains\SocialMedia(
+                        $sm->get(ContentModerationService\RegularExpressions\SocialMedia::class)
+                    );
+                },
                 ContentModerationService\ContainsBadWords::class => function ($sm) {
                     return new ContentModerationService\ContainsBadWords(
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
