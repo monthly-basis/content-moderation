@@ -109,14 +109,15 @@ class BadWords
              * dick
              */
 
-            // letters
+            // Letters
             '/d+i+c+k+\b/i',
 
-            // symbols
+            // Symbols
             '/d\W?[\!1i][ck]k\b/i',
             '/d[\!\#\*]{2}k/i',
 
-            // variations
+            // Variations
+            '/big dick/i',
             '/dickhead/i',
             '/dicks/i',
 
