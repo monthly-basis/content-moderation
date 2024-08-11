@@ -57,7 +57,7 @@ class ImmatureWordsTest extends TestCase
             '     scrape',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
-        
+
         $string = 'damn';
         $this->assertSame(
             '',
