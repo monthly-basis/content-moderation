@@ -183,7 +183,7 @@ class BadWords
 
             // Symbols
             '/(?<!moby[\-\s])d\W?[i\!\*1][ck]k\b/i',
-            '/d[\!\#\*]{2}k/i',
+            '/(?<!moby[\-\s])[dđ][iį\!\#\*][cč\#\*][kķ]\b/iu',
 
             // Variations
             '/dickhead/i',
