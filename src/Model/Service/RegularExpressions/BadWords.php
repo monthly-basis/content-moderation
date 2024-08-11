@@ -485,11 +485,11 @@ class BadWords
             '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
             // Spellings
-            '/bull(sht|[^\w\s]{4})/i',
+            '/bull(shit|[^\w\s]{4})/i',
             '/dip ?shit/i',
 
             // Symbols
-            '/(?<!Ku)s[\*\.]?h[\*]?i[\.]?t/iu',
+            '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
             '/(\b[s5]|[\$\§])[h\*][i1l\!\*\-¡][t\ł]/iu',
 
             '/s(l|1)(u|ü)t/i',
