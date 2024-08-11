@@ -52,7 +52,7 @@ class RegularExpressionsOfBadWords
             '/a b\*+/i',
             '/biyach/i',
 
-            '/blow\s?job/i',
+            '/blow\W*j\W*o\W*b/i',
 
             '/\bboobs\b/i',
             '/bullshi?t/i',
