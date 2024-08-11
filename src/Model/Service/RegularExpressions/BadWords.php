@@ -208,7 +208,7 @@ class BadWords
              */
 
             // Spaces
-            '/\bg ay\b/i',
+            '/\bg ?a ?y\b/i',
 
             // Symbols
             '/g[\.\_]?[\@a][\.\_]?y/i',
