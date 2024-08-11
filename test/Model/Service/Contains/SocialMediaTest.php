@@ -14,7 +14,7 @@ class SocialMediaTest extends TestCase
         );
     }
 
-    public function testContainsImmatureWords()
+    public function test_containsSocialMedia()
     {
         $this->assertFalse(
             $this->containsSocialMediaService->containsSocialMedia('hello world')
