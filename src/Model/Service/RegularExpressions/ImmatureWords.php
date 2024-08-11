@@ -22,6 +22,7 @@ class ImmatureWords
             '/p\W*o\W*o\W*p/i',
             '/retar(d|t)(ed)?/i',
             '/stupid/i',
+            '/sucks?/i',
             '/wtf/i',
         ];
     }
