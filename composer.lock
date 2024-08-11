@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a2b9200a4c488af69442aada28d6553",
+    "content-hash": "55b0ad7fd084b8d8afd97cfd98e07c14",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1268,16 +1268,16 @@
         },
         {
             "name": "leo-galleguillos/string",
-            "version": "v1.0.41",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/String.git",
-                "reference": "72d8ba75a620b8218ad37abeba6e369c8a3e07e1"
+                "reference": "8dc32fd2bde6d22e4b277b77b872258ff91c39d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/72d8ba75a620b8218ad37abeba6e369c8a3e07e1",
-                "reference": "72d8ba75a620b8218ad37abeba6e369c8a3e07e1",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/8dc32fd2bde6d22e4b277b77b872258ff91c39d1",
+                "reference": "8dc32fd2bde6d22e4b277b77b872258ff91c39d1",
                 "shasum": ""
             },
             "require": {
@@ -1294,7 +1294,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-06-16T21:23:11+00:00"
+            "time": "2020-08-01T01:23:13+00:00"
         },
         {
             "name": "monthly-basis/laminas-test",
@@ -2687,7 +2687,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
