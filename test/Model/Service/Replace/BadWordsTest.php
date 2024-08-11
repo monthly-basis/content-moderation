@@ -230,9 +230,9 @@ class ReplaceBadWordsTest extends TestCase
          * boob
          */
 
-        $string = 'boob boobs BOOOOOOOBSSSS';
+        $string = 'boob boobs BOOOOOOOBSSSS bewb bewbs';
         $this->assertSame(
-            "$r $r {$r}SSS",
+            "$r $r {$r}SSS $r $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

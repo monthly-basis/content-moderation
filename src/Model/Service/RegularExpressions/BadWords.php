@@ -121,6 +121,7 @@ class BadWords
              */
 
             '/\bbo{2,}bs?/i',
+            '/bewbs?/i',
 
             /*
              * brazzers
