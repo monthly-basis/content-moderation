@@ -113,6 +113,7 @@ class BadWords
              * cooch
              */
             '/\bcooch(ie)?/i',
+            '/coochieman/i',
 
             /*
              * coon
