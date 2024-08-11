@@ -654,9 +654,9 @@ class ReplaceBadWordsTest extends TestCase
          * pp
          */
 
-        $string = 'BIG PP my pp small pp academy ppl';
+        $string = 'BIG PP my pp small pp academy ppl big pee pee';
         $this->assertSame(
-            "$r $r $r academy ppl",
+            "$r $r $r academy ppl $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
