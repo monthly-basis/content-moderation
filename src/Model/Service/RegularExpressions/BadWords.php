@@ -109,15 +109,16 @@ class BadWords
              * cock
              */
 
-            '/\bcocks?\b/i',
-
             // Spellings
             '/co{2,}ck/i',
 
             // Phrases
             '/cockandballs/i',
             '/massive co[ck]/i',
-            '/suck a co[ck]/i',
+            '/suck a co(ck?|k)/i',
+
+            // Spaces
+            '/\bc\s*o\s*c\s*k(\s*s)?\b/i',
 
             // Symbols
             '/c[0\#]ck/i',
