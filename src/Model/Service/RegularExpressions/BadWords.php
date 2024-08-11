@@ -130,7 +130,7 @@ class BadWords
              */
 
             // Letters
-            '/d+i+c+k+\b/i',
+            '/d+i+c+k+s?\b/i',
 
             // Symbols
             '/d\W?[\!1i][ck]k\b/i',
@@ -138,7 +138,6 @@ class BadWords
 
             // Variations
             '/dickhead/i',
-            '/dicks/i',
 
             '/f(a|4)g/i',
             '/fap/',
