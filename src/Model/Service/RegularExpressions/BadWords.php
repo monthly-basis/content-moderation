@@ -88,8 +88,15 @@ class BadWords
             /*
              * dick
              */
-            '/d\W?(!|1|i)(c|k)k\b/i',
+
+            // letters
+            '/d+i+c+k+\b/i',
+
+            // symbols
+            '/d\W?[\!1i][ck]k\b/i',
             '/d[\!\#\*]{2}k/i',
+
+            // variations
             '/dickhead/i',
             '/dicks/i',
 
