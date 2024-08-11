@@ -243,11 +243,12 @@ class BadWords
              * gay
              */
 
+            // Spellings
+            '/\bgae\b/i',
+            '/\bgey\b/i',
+
             // Symbols
             '/\bg[\s\.\_]?[a\@4][\s\.\_]?y(?!le)(?!-Lussac)/i',
-
-            // Variations
-            '/\bgae\b/i',
 
             '/god ?damn?/i',
 
