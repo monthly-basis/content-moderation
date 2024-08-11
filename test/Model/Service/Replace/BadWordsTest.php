@@ -504,6 +504,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * schlong
+         */
+
+        $string = 'schlong shlong';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * sex
          */
         $string = 'have sex have s*x';

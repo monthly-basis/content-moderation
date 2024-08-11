@@ -330,6 +330,11 @@ class BadWords
             '/\brapist/i',
 
             /*
+             * schlong
+             */
+            '/sc?hlong/i',
+
+            /*
              * sex
              */
             '/have s[e\*]x/i',
