@@ -382,6 +382,9 @@ class BadWords
             // Spaces
             '/(?<!m\/)\bs\s*h\s*i\s*t\b/i',
 
+            // Spellings
+            '/dip ?shit/i',
+
             // Symbols
             '/\bs[\*\.]?h[\*]?i[\.]?t/iu',
             '/(\bs|[\$\§])h[i1l\!\*][t\ł]/iu',

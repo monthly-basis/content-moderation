@@ -611,9 +611,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'm/s hits 200m/s hit piece of ****';
+        $string = 'm/s hits 200m/s hit piece of **** dipshit dip shit';
         $this->assertSame(
-            "m/s hits 200m/s hit $r",
+            "m/s hits 200m/s hit $r $r dip $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
