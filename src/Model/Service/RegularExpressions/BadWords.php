@@ -198,7 +198,7 @@ class BadWords
 
             '/f(\W)*(u|v)e?\W*c\W*k/i',
             '/\bf\W*c\W*k\b/i',
-            '/\bfuc/i',
+            '/\bfuc(?!tion)/i',
 
             // Spellings
             '/fcuk/i',
