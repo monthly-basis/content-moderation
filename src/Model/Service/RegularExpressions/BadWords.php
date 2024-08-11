@@ -252,6 +252,7 @@ class BadWords
 
             // Variations
             '/knee garr?/i',
+            '/Nea grr/i',
             '/nick g[eu]rr?/i',
             '/niglet/i',
             '/\bn ?word\b/i',
