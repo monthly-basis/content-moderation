@@ -48,6 +48,9 @@ class BadWords
             '/\ba\s*ss(es)?\b/i',
             '/\bazz\b/i',
 
+            // Spaces
+            '/\ba\s+s\s+s\b/i',
+
             // Symbols
             '/\ba\*\*/i',
             '/a(s|\$)\$/i',
