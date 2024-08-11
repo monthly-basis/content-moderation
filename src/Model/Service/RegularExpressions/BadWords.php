@@ -65,7 +65,11 @@ class BadWords
 
             '/\bcum\b/i',
 
-            '/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
+            // The following results in a PREG_BACKTRACK_LIMIT_ERROR in some cases.
+            //'/\bc(\W|\_| )*(u|\W) ?n ?ts?\b/i',
+            '/\bc\s*u\s*n\s*t/i',
+            '/\bc(\W|_)*u\W*n\W*t(\W*s)?\b/i',
+            '/\bc\Wnt/i',
 
             '/dammit/i',
             '/damnit/i',
