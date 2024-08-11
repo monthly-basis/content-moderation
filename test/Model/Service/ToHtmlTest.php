@@ -9,14 +9,14 @@ class ToHtmlTest extends TestCase
 {
     protected function setUp(): void
     {
+        $this->replaceBadWordsServiceMock = $this->createMock(
+            ContentModerationService\Replace\BadWords::class
+        );
         $this->replaceEmailAddressesServiceMock = $this->createMock(
             ContentModerationService\Replace\EmailAddresses::class
         );
         $this->replaceImmatureWordsServiceMock = $this->createMock(
             ContentModerationService\Replace\ImmatureWords::class
-        );
-        $this->replaceBadWordsServiceMock = $this->createMock(
-            ContentModerationService\ReplaceBadWords::class
         );
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
@@ -26,9 +26,9 @@ class ToHtmlTest extends TestCase
         );
 
         $this->toHtmlService = new ContentModerationService\ToHtml(
+            $this->replaceBadWordsServiceMock,
             $this->replaceEmailAddressesServiceMock,
             $this->replaceImmatureWordsServiceMock,
-            $this->replaceBadWordsServiceMock,
             $this->escapeServiceMock,
             $this->toHtmlServiceMock
         );
