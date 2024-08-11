@@ -13,8 +13,8 @@ namespace MonthlyBasis\ContentModeration\Model\Service;
  */
 class RegularExpressionsOfBadWords
 {
-    public function getRegularExpressionsOfBadWords(
-    ): array {
+    public function getRegularExpressionsOfBadWords(): array
+    {
         return [
             /*
              * Test string to trigger bad word detectors in production
