@@ -22,9 +22,9 @@ class SocialMediaTest extends TestCase
          * Discord
          */
 
-        $string = 'join discord dis cord dis kord d i s c o r d';
+        $string = 'join discord dis cord dis kord d i s c o r d D!sc0rd';
         $this->assertSame(
-            "join $r $r $r $r",
+            "join $r $r $r $r $r",
             $this->replaceSocialMediaService->replaceSocialMedia($string, $r)
         );
 
