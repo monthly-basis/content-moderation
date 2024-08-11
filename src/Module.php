@@ -16,7 +16,9 @@ class Module
             'controllers' => [
                 'factories' => [
                     ContentModerationController\Api\V0\ContainsBadWords::class => function ($sm) {
-                        return new ContentModerationController\Api\V0\ContainsBadWords();
+                        return new ContentModerationController\Api\V0\ContainsBadWords(
+                            $sm->get(ContentModerationService\ContainsBadWords::class)
+                        );
                     },
                     ContentModerationController\Index::class => function ($sm) {
                         return new ContentModerationController\Index();

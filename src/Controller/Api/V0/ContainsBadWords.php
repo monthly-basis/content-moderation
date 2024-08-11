@@ -3,11 +3,14 @@ namespace MonthlyBasis\ContentModeration\Controller\Api\V0;
 
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
+use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 
 class ContainsBadWords extends AbstractActionController
 {
-    public function __construct()
-    {
+    public function __construct(
+        ContentModerationService\ContainsBadWords $containsBadWordsService
+    ) {
+        $this->containsBadWordsService = $containsBadWordsService;
     }
 
     public function indexAction()
@@ -18,8 +21,12 @@ class ContainsBadWords extends AbstractActionController
         );
 
         if (isset($_GET['string'])) {
+            $containsBadWords = $this->containsBadWordsService->containsBadWords(
+                $_GET['string']
+            );
             $array = [
-                'success' => true,
+                'contains-bad-words' => $containsBadWords,
+                'success'            => true,
             ];
         } else {
             $array = [
