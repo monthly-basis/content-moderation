@@ -8,38 +8,20 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class ReplaceAndEscape extends AbstractHelper
 {
     public function __construct(
-        ContentModerationService\Replace\BadWords $replaceBadWordsService,
-        ContentModerationService\Replace\EmailAddresses $replaceEmailAddressesService,
-        ContentModerationService\Replace\ImmatureWords $replaceImmatureWordsService,
-        ContentModerationService\Replace\SocialMedia $replaceSocialMediaService,
-        ContentModerationService\Replace\Spaces $replaceSpacesService,
-        StringService\Escape $escapeService
-    ) {
-        $this->replaceBadWordsService       = $replaceBadWordsService;
-        $this->replaceEmailAddressesService = $replaceEmailAddressesService;
-        $this->replaceImmatureWordsService  = $replaceImmatureWordsService;
-        $this->replaceSocialMediaService    = $replaceSocialMediaService;
-        $this->replaceSpacesService         = $replaceSpacesService;
-        $this->escapeService                = $escapeService;
-    }
+        protected ContentModerationService\Replace $replaceService,
+        protected StringService\Escape $escapeService,
+    ) {}
 
     public function __invoke(
         string $string,
         string $replacement = '',
         bool $replaceSocialMedia = false,
     ): string {
-        // Remove "Bust in Silhouette" and "Kitchen Knife" emoji from string.
-        $string = preg_replace('/(\x{1F464}|\x{1F52A})/u', '', $string);
-
-        $string = $this->replaceBadWordsService->replaceBadWords($string, $replacement);
-        $string = $this->replaceImmatureWordsService->replaceImmatureWords($string, $replacement);
-        $string = $this->replaceEmailAddressesService->replaceEmailAddresses($string);
-
-        if ($replaceSocialMedia) {
-            $string = $this->replaceSocialMediaService->replaceSocialMedia($string, $replacement);
-        }
-
-        $string = $this->replaceSpacesService->replaceSpaces($string);
+        $string = $this->replaceService->replace(
+            string: $string,
+            replacement: $replacement,
+            replaceSocialMedia: $replaceSocialMedia,
+        );
 
         return $this->escapeService->escape($string);
     }
