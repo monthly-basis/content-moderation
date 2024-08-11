@@ -1,7 +1,7 @@
 <?php
 namespace MonthlyBasis\ContentModeration\Model\Service\Replace;
 
-class Email
+class EmailAddresses
 {
     public function replaceEmailAddresses($string): string
     {

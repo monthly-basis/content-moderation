@@ -113,8 +113,8 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressions\BadWords::class)
                     );
                 },
-                ContentModerationService\Replace\Email::class => function ($sm) {
-                    return new ContentModerationService\Replace\Email();
+                ContentModerationService\Replace\EmailAddresses::class => function ($sm) {
+                    return new ContentModerationService\Replace\EmailAddresses();
                 },
                 ContentModerationService\Replace\ImmatureWords::class => function ($sm) {
                     return new ContentModerationService\Replace\ImmatureWords(
@@ -148,7 +148,7 @@ class Module
                 },
                 ContentModerationService\ToHtml::class => function ($sm) {
                     return new ContentModerationService\ToHtml(
-                        $sm->get(ContentModerationService\Replace\Email::class),
+                        $sm->get(ContentModerationService\Replace\EmailAddresses::class),
                         $sm->get(ContentModerationService\Replace\ImmatureWords::class),
                         $sm->get(ContentModerationService\ReplaceBadWords::class),
                         $sm->get(StringService\Escape::class),
