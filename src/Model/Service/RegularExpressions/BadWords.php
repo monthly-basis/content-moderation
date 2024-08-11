@@ -361,8 +361,12 @@ class BadWords
             /*
              * porn
              */
-            '/\bp\s*o\s*(r|ɾ)\s*n/i',
-            '/\bp(o|\W)rn/i',
+
+            // Spaces
+            '/\bp\s*o\s*r\s*n/i',
+
+            // Symbols
+            '/p[o\W][rɾ]n/i',
 
             // Spaces and Symbols
             '/\bp[\W_]*o\W*r[\W_]*n\b/i',
