@@ -580,6 +580,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * jerk off
+         */
+
+        $string = 'jerk off jerking off';
+        $this->assertSame(
+            "$r $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * jigaboo
          */
 

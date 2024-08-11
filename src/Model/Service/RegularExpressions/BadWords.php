@@ -321,6 +321,12 @@ class BadWords
             '/kike/i',
 
             /*
+             * jerk off
+             */
+
+            '/jerk(ing)? off/i',
+
+            /*
              * kill
              */
             '/k[i1]ll ?y[o0]ur ?s[e3]l(f|ves)/i',
