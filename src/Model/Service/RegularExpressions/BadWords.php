@@ -163,12 +163,15 @@ class BadWords
             /*
              * pussy
              */
-
             '/p\s*u\s*s\s*s\s*y/i',
             '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
             '/pussi(es)?/i',
 
+            /*
+             * shit
+             */
             '/\bs\W*h(\W*(i|1)\W*|\W+)t/i',
+            '/\$h!t/i',
 
             '/\bstfu/i',
 
