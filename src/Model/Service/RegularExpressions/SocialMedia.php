@@ -12,7 +12,7 @@ class SocialMedia
             '/\bon ig\b/i',
             '/instagram/i',
 
-            '/on snap/i',
+            '/(my|on) snap/i',
             '/snapchat/i',
 
             '/tik ?tok/i',
