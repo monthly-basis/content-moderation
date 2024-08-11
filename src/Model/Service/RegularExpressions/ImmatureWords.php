@@ -9,6 +9,7 @@ class ImmatureWords
             '/\barses?\b/i',
             '/asf/i',
             '/boob(ies|s)?/i',
+            '/booty/i',
             '/b\W*u\W*t\W*t\b/i',
             '/damn/i',
             '/de(e|z)(s|z)\s?nut(s|z)/i',
