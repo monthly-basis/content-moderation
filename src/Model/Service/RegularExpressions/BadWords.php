@@ -71,6 +71,7 @@ class BadWords
             /*
              * ball
              */
+
             '/^balls$/i',
             '/ball ?sacks?/i',
             '/balls ?in ?yo/i',
@@ -79,11 +80,16 @@ class BadWords
             '/suck balls?/i',
             '/your balls/i',
 
+            /*
+             * bastard
+             */
+
             '/bastard/i',
 
             /*
              * bitch
              */
+
             '/b\W*(i\W*)?t\W*c\W*h(es)?\b/i',
             '/bi+(t|\W)c(h|\W)/i',
             '/bict?h/i',
@@ -100,19 +106,26 @@ class BadWords
             /*
              * blow
              */
+
             '/blow me/i',
             '/blow\W*j\W*o\W*b/i',
 
             /*
              * boner
              */
+
             '/boner/i',
+
+            /*
+             * boobs
+             */
 
             '/\bbo{2,}bs?/i',
 
             /*
              * brazzers
              */
+
             '/brazzers?/i',
 
             /*
@@ -155,11 +168,13 @@ class BadWords
             /*
              * coon
              */
+
             '/\b[ck]oon\b/i',
 
             /*
              * cum
              */
+
             '/\bcu+m+s?(?! laude)\b/i',
             '/cumming\b/i',
 
@@ -293,21 +308,25 @@ class BadWords
             /*
              * handjob
              */
+
             '/hand(\s|\W)*job/i',
 
             /*
              * hentai
              */
+
             '/hentai/i',
 
             /*
              * hoe
              */
+
             '/\bh[o0]e/i',
 
             /*
              * homo
              */
+
             '/\bhomo\b(?! habilis)(?! sapien)/i',
 
             /*
@@ -329,13 +348,19 @@ class BadWords
             /*
              * kill
              */
+
             '/k[i1]ll ?y[o0]ur ?s[e3]l(f|ves)/i',
             '/\bkys\b/i',
 
             /*
-             *
+             * lesbian
              */
+
             '/lesb(ian|o)/i',
+
+            /*
+             * masturbation
+             */
 
             '/mast(e|u)rbat(ion)?/i',
 
@@ -354,19 +379,26 @@ class BadWords
             /*
              * Mike
              */
+
             '/Mike Hawk/i',
             '/Mike Hunt/i',
+
+            /*
+             * milf
+             */
 
             '/milfs?\b/i',
 
             /*
              * mommy
              */
+
             '/mommy milk/i',
 
             /*
              * nigger
              */
+
             '/[nɴΝ]\W*[1il\!\¡]\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
@@ -391,11 +423,13 @@ class BadWords
             /*
              * nude
              */
+
             '/nudes?/i',
 
             /*
              * nut
              */
+
             '/no nut november/i',
             '/nut ?sa(cks?|x)/i',
 
@@ -405,16 +439,22 @@ class BadWords
 
             '/love oral/i',
 
+            /*
+             * orgasm
+             */
+
             '/orgasm/i',
 
             /*
              * pedo
              */
+
             '/\bpedo\b/i',
 
             /*
              * penis
              */
+
             '/p[e3]nn?[iu1][s\$5]/i',
 
             // Spacing
@@ -422,6 +462,10 @@ class BadWords
 
             // Spellings
             '/peen/i',
+
+            /*
+             * pervert
+             */
 
             '/perv(ert|s|\b)/i',
 
@@ -452,6 +496,7 @@ class BadWords
             /*
              * pussy
              */
+
             '/p\s*u\s*s\s*s\s*y/i',
             '/p\W*u\W*[s\$]\W*[s\$]\W*y/i',
 
