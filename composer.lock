@@ -1383,16 +1383,16 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "7f049390b756d34ba5940a8fb47634fbb51f79ab"
+                "reference": "d74d2da21beae5aceff1e8c07b901066b0e1b719"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/7f049390b756d34ba5940a8fb47634fbb51f79ab",
-                "reference": "7f049390b756d34ba5940a8fb47634fbb51f79ab",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/d74d2da21beae5aceff1e8c07b901066b0e1b719",
+                "reference": "d74d2da21beae5aceff1e8c07b901066b0e1b719",
                 "shasum": ""
             },
             "require": {
@@ -1441,7 +1441,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-02-22T22:17:01+00:00"
+            "time": "2022-07-14T16:30:30+00:00"
         },
         {
             "name": "monthly-basis/laminas-test",
@@ -1480,16 +1480,16 @@
         },
         {
             "name": "monthly-basis/string",
-            "version": "v3.3.1",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/monthly-basis/string.git",
-                "reference": "5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780"
+                "reference": "2b34166a2530e75b5385050e3bcfb3fd38561e48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monthly-basis/string/zipball/5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780",
-                "reference": "5c9782af3cd511ab9cb0ec3f6c4ae9cf9b7b9780",
+                "url": "https://api.github.com/repos/monthly-basis/string/zipball/2b34166a2530e75b5385050e3bcfb3fd38561e48",
+                "reference": "2b34166a2530e75b5385050e3bcfb3fd38561e48",
                 "shasum": ""
             },
             "require": {
@@ -1508,9 +1508,9 @@
             ],
             "support": {
                 "issues": "https://github.com/monthly-basis/string/issues",
-                "source": "https://github.com/monthly-basis/string/tree/v3.3.1"
+                "source": "https://github.com/monthly-basis/string/tree/v3.6.3"
             },
-            "time": "2022-01-11T21:44:42+00:00"
+            "time": "2022-07-10T17:22:22+00:00"
         },
         {
             "name": "myclabs/deep-copy",
