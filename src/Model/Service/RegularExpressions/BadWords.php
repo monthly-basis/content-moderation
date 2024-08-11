@@ -299,8 +299,14 @@ class BadWords
 
             '/phuck/i',
 
+            /*
+             * porn
+             */
             '/\bp\s*o\s*(r|ɾ)\s*n/i',
             '/\bp(o|\W)rn/i',
+
+            // Spaces and Symbols
+            '/\bp[\W_]*o\W*r[\W_]*n\b/i',
 
             /*
              * pussy
