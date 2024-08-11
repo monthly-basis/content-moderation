@@ -181,6 +181,7 @@ class BadWords
 
             // Phrases
             '/dig bick/i',
+            '/big dik/i',
 
             // Letters
             '/(?<!moby[\-\s])d+i+c+k+s?\b/i',
