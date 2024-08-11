@@ -229,7 +229,7 @@ class BadWords
             '/\bf\W*a\W*g\b/i',
 
             '/\bfu\W?k+(ers?)?\b/i',
-            '/fu\W?king?/i',
+            '/\bfu?[c\W]?king?\b/i',
 
             // Letters
             '/f+u+(c+k+|q)/i',
