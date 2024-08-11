@@ -58,9 +58,9 @@ class ReplaceImmatureWordsTest extends TestCase
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
-        $string = 'fart of art';
+        $string = 'fart farts of art far that';
         $this->assertSame(
-            ' of art',
+            '  of art far that',
             $this->replaceImmatureWordsService->replaceImmatureWords($string)
         );
 
