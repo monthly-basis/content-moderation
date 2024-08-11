@@ -143,7 +143,7 @@ class Module
                 },
                 ContentModerationService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new ContentModerationService\StripTagsReplaceBadWordsAndShorten(
-                        $sm->get(ContentModerationService\ReplaceBadWords::class),
+                        $sm->get(ContentModerationService\Replace\BadWords::class),
                         $sm->get(StringService\Shorten::class)
                     );
                 },

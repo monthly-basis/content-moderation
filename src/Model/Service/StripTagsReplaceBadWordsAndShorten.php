@@ -7,7 +7,7 @@ use MonthlyBasis\ContentModeration\Model\Service as ContentModerationService;
 class StripTagsReplaceBadWordsAndShorten
 {
     public function __construct(
-        ContentModerationService\ReplaceBadWords $replaceBadWordsService,
+        ContentModerationService\Replace\BadWords $replaceBadWordsService,
         StringService\Shorten $shortenService
     ) {
         $this->replaceBadWordsService = $replaceBadWordsService;
