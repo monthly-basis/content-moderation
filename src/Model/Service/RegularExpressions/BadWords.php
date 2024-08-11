@@ -357,7 +357,7 @@ class BadWords
             '/Mike Hawk/i',
             '/Mike Hunt/i',
 
-            '/\bmilf\b/i',
+            '/milfs?\b/i',
 
             /*
              * nigger
