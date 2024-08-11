@@ -73,6 +73,7 @@ class Module
                     'containsBadWords'                   => ContentModerationHelper\ContainsBadWords::class,
                     'escapeAndReplaceBadWords'           => ContentModerationHelper\EscapeAndReplaceBadWords::class,
                     'stripTagsReplaceBadWordsAndShorten' => ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class,
+                    'toHtml'                             => ContentModerationHelper\ToHtml::class,
                 ],
                 'factories' => [
                     ContentModerationHelper\ContainsBadWords::class => function ($sm) {
@@ -89,6 +90,11 @@ class Module
                     ContentModerationHelper\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                         return new ContentModerationHelper\StripTagsReplaceBadWordsAndShorten(
                             $sm->get(ContentModerationService\StripTagsReplaceBadWordsAndShorten::class)
+                        );
+                    },
+                    ContentModerationHelper\ToHtml::class => function ($sm) {
+                        return new ContentModerationHelper\ToHtml(
+                            $sm->get(ContentModerationService\ToHtml::class)
                         );
                     },
                 ],
@@ -142,6 +148,12 @@ class Module
                     return new ContentModerationService\StripTagsReplaceBadWordsAndShorten(
                         $sm->get(ContentModerationService\ReplaceBadWords::class),
                         $sm->get(StringService\Shorten::class)
+                    );
+                },
+                ContentModerationService\ToHtml::class => function ($sm) {
+                    return new ContentModerationService\ToHtml(
+                        $sm->get(ContentModerationService\ReplaceBadWords::class),
+                        $sm->get(StringService\Escape::class)
                     );
                 },
             ],
