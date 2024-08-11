@@ -171,13 +171,13 @@ class BadWords
             '/dig bick/i',
 
             // Letters
-            '/d+i+c+k+s?\b/i',
+            '/(?<!moby[\-\s])d+i+c+k+s?\b/i',
 
             // Spaces
             '/d\s+i\s+c\s+k\b/i',
 
             // Symbols
-            '/d\W?[i\!\*1][ck]k\b/i',
+            '/(?<!moby[\-\s])d\W?[i\!\*1][ck]k\b/i',
             '/d[\!\#\*]{2}k/i',
 
             // Variations
