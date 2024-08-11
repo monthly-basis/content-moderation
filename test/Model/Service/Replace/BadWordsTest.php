@@ -384,7 +384,7 @@ class ReplaceBadWordsTest extends TestCase
         );
         $string = ' nigleT nig night nicker nggas Nick Gurr noggers N!993R';
         $this->assertSame(
-            " $r $r night $r {$r}s $r {$r}s {$r}3R",
+            " $r $r night $r {$r}s $r {$r}s $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
         $string = 'ΝIGGΕR nick gur n word /VIGGA knee gar knee garr mr.nword';
@@ -397,9 +397,9 @@ class ReplaceBadWordsTest extends TestCase
             "$r $r $r {$r}r $r $r {$r}s $r",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
-        $string = 'nibba';
+        $string = 'nibba n19ga n1993r N1993RZ';
         $this->assertSame(
-            "$r",
+            "$r $r $r {$r}Z",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 

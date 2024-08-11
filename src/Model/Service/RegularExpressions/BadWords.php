@@ -239,7 +239,6 @@ class BadWords
             '/[nɴΝ]\W*[1il\!\¡]\W*g\W*g/i',
             '/\/VIGGA/i',
             '/ngga/i',
-            '/n[\!i][9bq][9bq](a|er)?/i',
             '/\bnicker\b/i',
             '/\bnig\b/i',
             '/nogger/i',
@@ -248,6 +247,7 @@ class BadWords
             '/ni?gge?r/i',
 
             // Symbols
+            '/n[\!1i][9bgq][9bgq](a|[3e]r)?/i',
             '/negg@/i',
 
             // Variations
