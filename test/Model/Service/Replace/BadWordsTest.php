@@ -144,9 +144,9 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
-        $string = 'd*mb*ss';
+        $string = 'd*mb*ss speed*mass GravitationalField*mass';
         $this->assertSame(
-            "$r",
+            "$r speed*mass GravitationalField*mass",
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
