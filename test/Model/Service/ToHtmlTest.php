@@ -27,9 +27,6 @@ class ToHtmlTest extends TestCase
         $this->escapeServiceMock = $this->createMock(
             StringService\Escape::class
         );
-        $this->urlToHtmlServiceMock = $this->createMock(
-            StringService\Url\ToHtml::class
-        );
 
         $this->toHtmlService = new ContentModerationService\ToHtml(
             $this->replaceBadWordsServiceMock,
@@ -38,7 +35,6 @@ class ToHtmlTest extends TestCase
             $this->replaceLineBreaksServiceMock,
             $this->replaceSocialMediaServiceMock,
             $this->escapeServiceMock,
-            $this->urlToHtmlServiceMock
         );
     }
 
@@ -82,20 +78,9 @@ class ToHtmlTest extends TestCase
             ->with('replace line breaks return value')
             ->willReturn(" https://www.jiskha.com &lt;b&gt;bold&lt;/b&gt;\n\n\n\n\n&lt;sup&gt;sup&lt;/sup&gt; https://www.yahoo.com ")
             ;
-        $this->urlToHtmlServiceMock
-            ->expects($this->exactly(2))
-            ->method('toHtml')
-            ->withConsecutive(
-                ['https://www.jiskha.com'],
-                ['https://www.yahoo.com']
-            )
-            ->willReturnOnConsecutiveCalls(
-                '<a href="https://www.jiskha.com">https://www.jiskha.com</a>',
-                '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>'
-            );
 
         $this->assertSame(
-            "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
+            "https://www.jiskha.com <b>bold</b><br>\n<br>\n<sup>sup</sup> https://www.yahoo.com",
             $this->toHtmlService->toHtml(
                 string: $string,
                 replaceImmatureWords: true,
@@ -140,20 +125,9 @@ class ToHtmlTest extends TestCase
             ->with('replace line breaks return value')
             ->willReturn(" https://www.jiskha.com &lt;b&gt;bold&lt;/b&gt;\n\n\n\n\n&lt;sup&gt;sup&lt;/sup&gt; https://www.yahoo.com ")
             ;
-        $this->urlToHtmlServiceMock
-            ->expects($this->exactly(2))
-            ->method('toHtml')
-            ->withConsecutive(
-                ['https://www.jiskha.com'],
-                ['https://www.yahoo.com']
-            )
-            ->willReturnOnConsecutiveCalls(
-                '<a href="https://www.jiskha.com">https://www.jiskha.com</a>',
-                '<a href="https://www.yahoo.com" target="_blank" rel="nofollow external noopener">https://www.yahoo.com</a>'
-            );
 
         $this->assertSame(
-            "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
+            "https://www.jiskha.com <b>bold</b><br>\n<br>\n<sup>sup</sup> https://www.yahoo.com",
             $this->toHtmlService->toHtml(
                 $string
             )
