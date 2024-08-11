@@ -52,12 +52,7 @@ class BadWords
             '/\ba\s+s\s+s\b/i',
 
             // Symbols
-            '/\ba\*\*/i',
-            '/a(s|\$)\$/i',
-            '/a\$(s|\$)/i',
-            '/@ss/i',
-            '/@\$\$/i',
-            '/a§š/i',
+            '/(\ba|[@])[s§\$\*]([š\$\*]|s\b)/iu',
 
             // Variants
             '/\ba[s5z][s5z\W]h[0o][l1]es?/i',
