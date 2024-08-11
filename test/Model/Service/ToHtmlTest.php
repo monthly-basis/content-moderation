@@ -42,7 +42,7 @@ class ToHtmlTest extends TestCase
         );
     }
 
-    public function test_toHtml_string_expectedString()
+    public function test_toHtml_optionsSet_expectedString()
     {
         $string = "string which gets processed by services";
 
@@ -98,6 +98,7 @@ class ToHtmlTest extends TestCase
             "<a href=\"https://www.jiskha.com\">https://www.jiskha.com</a> <b>bold</b><br>\n<br>\n<sup>sup</sup> <a href=\"https://www.yahoo.com\" target=\"_blank\" rel=\"nofollow external noopener\">https://www.yahoo.com</a>",
             $this->toHtmlService->toHtml(
                 string: $string,
+                replaceImmatureWords: true,
                 replaceSocialMedia: true,
             )
         );
@@ -114,15 +115,13 @@ class ToHtmlTest extends TestCase
             ->willReturn('replace bad words return value')
             ;
         $this->replaceImmatureWordsServiceMock
-            ->expects($this->once())
+            ->expects($this->exactly(0))
             ->method('replaceImmatureWords')
-            ->with('replace bad words return value')
-            ->willReturn('replace immature words return value')
             ;
         $this->replaceEmailAddressesServiceMock
             ->expects($this->once())
             ->method('replaceEmailAddresses')
-            ->with('replace immature words return value')
+            ->with('replace bad words return value')
             ->willReturn('replace email addresses return value')
             ;
         $this->replaceSocialMediaServiceMock
