@@ -34,6 +34,11 @@ class BadWords
             '/8={2,}D/i',
 
             /*
+             * anal
+             */
+            '/anal beads/i',
+
+            /*
              * ass
              *
              * Cannot use word boundary (\b) around dollar sign because

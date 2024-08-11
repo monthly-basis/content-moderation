@@ -98,6 +98,15 @@ class ReplaceBadWordsTest extends TestCase
             $this->replaceBadWordsService->replaceBadWords($string)
         );
 
+        /*
+         * anal
+         */
+        $string = 'anal sex anal beads';
+        $this->assertSame(
+            "anal sex $r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
         $string = 'ass @$$ asset asses assess as*hole as S pass area** a§š';
         $this->assertSame(
             "$r $r asset $r assess $r as S pass area** $r",
