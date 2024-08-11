@@ -74,6 +74,11 @@ class Module
                         $sm->get(ContentModerationService\RegularExpressionsOfBadWords::class)
                     );
                 },
+                ContentModerationService\ReplaceImmatureWords::class => function ($sm) {
+                    return new ContentModerationService\ReplaceImmatureWords(
+                        $sm->get(ContentModerationService\RegularExpressionsOfImmatureWords::class)
+                    );
+                },
                 ContentModerationService\StripTagsReplaceBadWordsAndShorten::class => function ($sm) {
                     return new ContentModerationService\StripTagsReplaceBadWordsAndShorten(
                         $sm->get(ContentModerationService\ReplaceBadWords::class),
