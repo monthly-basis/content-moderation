@@ -12,6 +12,7 @@ class RegularExpressionsOfImmatureWords
             '/damn/i',
             '/dumb\b/i',
             '/f\W*a\W*r\W*t/i',
+            '/idfk/i',
             '/idiot/i',
             '/lmf?ao/i',
             '/p\W*o\W*o\W*p/i',
