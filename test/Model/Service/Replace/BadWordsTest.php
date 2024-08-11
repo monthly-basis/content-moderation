@@ -1044,6 +1044,16 @@ class ReplaceBadWordsTest extends TestCase
         );
 
         /*
+         * stripper
+         */
+
+        $string = 'stripper';
+        $this->assertSame(
+            "$r",
+            $this->replaceBadWordsService->replaceBadWords($string)
+        );
+
+        /*
          * suck
          */
 
